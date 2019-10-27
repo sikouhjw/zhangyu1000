@@ -58,6 +58,7 @@
 \def\geq{\geqslant}
 \def\ee{\mathrm{e}}
 \def\uppi{\pi}
+\def\CC{\mathrm{C}}
 \edef\lim{\lim\limits}
 
 \def\theenumi{\arabic{enumi}}
@@ -72,80 +73,82 @@
 
 
 \begin{document}
-	\maketitle
-	\frontmatter
-	\input{chapter/chap0.tex}
+	% \maketitle
+	% \frontmatter
+	% \input{chapter/chap0.tex}
 	% \tableofcontents
 	\mainmatter
-	\input{chapter/chap1.tex}
+	% \input{chapter/chap1.tex}
 	
-	\subsection{数列极限}
+	\section{一元函数微分学}
+	\subsection{一点的导数问题}
 
 	\begin{ti}
-		求 $\lim_{n \to \infty} n^{3} \left( \sin\frac{1}{n} - \frac{1}{2} \sin\frac{2}{n} \right)$.
+		设 $f(x)$ 在 $x = 1$ 处可导，$f'(1) = 1$，求 $\lim_{x \to 1} \frac{f(x) - f(1)}{x^{10} - 1}$.
 	\end{ti}
 
 	\begin{ti}
-		求 $\lim_{n \to \infty} \left( \sqrt{n + 3\sqrt{n}} - \sqrt{n - \sqrt{n}} \right)$.
+		设 $f(x)$ 在 $x = 0$ 处连续，且 $\lim_{x \to 0} \left[ \frac{\ee^{f(x)} - \cos x + \sin x}{x} \right] = 0$，求 $f(0)$，并讨论 $f(x)$ 在 $x = 0$ 处是否可导？若可导，请求出 $f'(0)$.
 	\end{ti}
 
 	\begin{ti}
-		求 $\lim_{n \to \infty} \left[ \sqrt{n}\left( \sqrt{n+1} - \sqrt{n} \right) + \frac{1}{2} \right]^{\frac{\sqrt{n+1} + \sqrt{n}}{\sqrt{n+1} - \sqrt{n}}}$.
-	\end{ti}
-
-	\begin{ti}
-		求 $\lim_{n \to \infty} n^{2} \left( a^{\frac{1}{n}} - a^{\frac{1}{n+1}} \right)$，其中 $a > 0$.
-	\end{ti}
-
-	\begin{ti}
-		求 $\lim_{n \to \infty} \left( 1 + 2^{n} + 3^{n} \right)^{\frac{1}{n}}$.
-	\end{ti}
-
-	\begin{ti}
-		求 $\lim_{n \to \infty} \cos\frac{x}{2}\cos\frac{x}{4}\cdots \cos\frac{x}{2^{n}}$.
-	\end{ti}
-
-	\begin{ti}
-		求 $\lim_{n \to \infty} n^{2}\left( \arctan\frac{a}{n} - \arctan \frac{a}{n+1} \right)$，$a > 0$.
-	\end{ti}
-
-	\begin{ti}
-		设 $\lim_{n \to \infty} \frac{n^{99}}{n^{k} - (n-1)^{k}}$ 存在且不为零，则常数 $k =$
-		
-		\noindent\hone{2}.
-	\end{ti}
-
-	\begin{ti}
-		设数列 $\{ a_{n} \}$ 满足 $\lim_{n \to \infty}\frac{a_{n+1}}{a_{n}} = 1$，则\kuo.
-		\twoch{$\{ a_{n} \}$ 有界}{$\{ a_{n} \}$ 不存在极限}{$\{ a_{n} \}$ 自某项起同号}{$\{ a_{n} \}$ 自某项起单调}
-	\end{ti}
-
-	\begin{ti}
-		设数列 $\{ x_{n} \}$ 满足 $x_{n} > 0$，且 $\lim_{n \to \infty}\frac{x_{n+1}}{x_{n}} = \frac{1}{2}$，则\kuo.
-		\onech{$\lim_{n\to\infty}x_{n} = 0$}{$\lim_{n\to\infty}x_{n}$ 存在，但不为零}{$\lim_{n\to\infty}x_{n}$ 不存在}{$\lim_{n\to\infty}x_{n}$ 可能存在，也可能不存在}
-	\end{ti}
-
-	\begin{ti}
-		已知数列 $\{ a_{n} \}$ 单调，下列结论正确的是\kuo.
-		\twoch{$\lim_{n \to \infty}\left( \ee^{a_{n}} - 1 \right)$ 存在}{$\lim_{n \to \infty} \frac{1}{1 + a_{n}^{2}}$ 存在}{$\lim_{n \to \infty} \sin a_{n}$ 存在}{$\lim_{n \to \infty} \frac{1}{1 - a_{n}^{2}}$ 存在}
-	\end{ti}
-
-	\begin{ti}
-		设 $a_{1} = 1$，$a_{2} = 2$，$a_{n+2} = \frac{2a_{n}a_{n+1}}{a_{n} + a_{n+1}} (n=1,2,\cdots)$.
+		函数 $f(x)$ 在 $(-\infty,+\infty)$ 内有定义，在区间 $[0,2]$ 上，$f(x) = x\left( x^{2} - 4 \right)$. 假若对任意的 $x$ 都满足 $f(x) = k f(x + 2)$，其中 $k$ 为常数.
 		\begin{enumerate}
-			\item 求 $b_{n} = \frac{1}{a_{n+1}} - \frac{1}{a_{n}}$ 的表达式;
-			\item 求 $\sum_{k=1}^{n} b_{k}$ 和 $\lim_{n \to \infty} a_{n}$.
+			\item 写出 $f(x)$ 在 $[-2,0)$ 上的表达式;
+			\item 问 $k$ 为何值时，$f(x)$ 在 $x = 0$ 处可导？
 		\end{enumerate}
 	\end{ti}
 
 	\begin{ti}
-		设 $a_{1} = 3$，$a_{n+1} = a_{n}^{2} + a_{n}(n = 1,2,\cdots)$，求极限
-		\[
-			\lim_{n \to \infty} \left( \frac{1}{1 + a_{1}} + \frac{1}{1 + a_{2}} + \cdots + \frac{1}{1 + a_{n}} \right).
-		\]
+		设 $f(x)$ 在 $(-\infty,+\infty)$ 内有定义，且 $f'(0) = a(a \ne 0)$，又对任意的 $x,y \in (-\infty,+\infty)$，有 $f(x + y) = \frac{f(x) + f(y)}{1 - f(x)f(y)}$，求 $f(x)$.
 	\end{ti}
 	
 	\begin{ti}
-		已知 $x_{1} = \frac{1}{2}$，$2 x_{n+1} + x_{n}^{2} = 1$，求 $\lim_{n \to \infty} x_{n}$.
+		设 $f(x)$ 在 $(-\infty,+\infty)$ 内有定义，且对任意的 $x,x_{1},x_{2} \in (-\infty,+\infty)$，有
+		\[
+			f(x_{1} + x_{2}) = f(x_{1}) \cdot f(x_{2}),f(x) = 1 + xg(x),
+		\]
+		其中 $\lim_{x \to 0} g(x) = 1$. 证明：$f(x)$ 在 $(-\infty,+\infty)$ 内处处可导.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 定义在 $\mathbb{R}$ 上，对于任意的 $x_{1},x_{2}$，有 $|f(x_{1}) - f(x_{2})| \leq (x_{1} - x_{2})^{2}$，求证：$f(x)$ 是常值函数.
+	\end{ti}
+
+	\begin{ti}
+		设 $f''(1)$ 存在，且 $\lim_{x \to 1}\frac{f(x)}{x - 1} = 0$. 记
+		\[
+			\varphi(x) = \int_{0}^{1} f'[1 + (x - 1)t]\dd{t}.
+		\]
+		求 $\varphi(x)$ 在 $x = 1$ 的某个邻域内的导数，并讨论 $\varphi'(x)$ 在 $x = 1$ 处的连续性.
+	\end{ti}
+
+	\begin{ti}
+		设函数
+		\[
+			f(x) = \begin{cases}
+				x^{3} \sin\frac{1}{x}, & x \ne 0,\\
+				0, & x = 0.
+			\end{cases}
+		\]
+		讨论 $f(x)$ 在 $x = 0$ 的可导性以及 $f'(x)$ 在 $x = 0$ 的连续性.
+	\end{ti}
+
+	\begin{ti}
+		已知函数 $f(x) = \begin{cases}
+			\frac{\int_{x}^{2x} \ee^{t^{2}} \dd{t}}{x}, & x \ne 0,\\
+			a, & x = 0
+		\end{cases}$ 在 $x = 0$ 处可导. 求
+		\begin{enumerate}
+			\item $a$ 的值;
+			\item $f'(0)$.
+		\end{enumerate}
+	\end{ti}
+
+	\begin{ti}
+		若 $f(x) = \begin{cases}
+			\ln\left( 1 + x^{2} \right), & x \leq 0,\\
+			a \sin x + 2x, & x > 0
+		\end{cases}$ 是可导函数，则 $a = $\hone{2}.
 	\end{ti}
 \end{document}
