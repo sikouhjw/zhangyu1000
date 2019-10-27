@@ -1,0 +1,151 @@
+\documentclass[openany,twocolumn]{ctexbook}
+\usepackage{amsmath}
+\usepackage{fourier}
+\usepackage{physics}
+
+\usepackage{graphicx}
+\renewcommand\thefigure{\arabic{chapter}-\arabic{section}-\arabic{figure}}
+
+\usepackage{caption}
+\captionsetup{labelsep=space}
+
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,inner=1.5cm,outer=3cm]{geometry}
+\usepackage{theorem}
+\ctexset{
+	chapter={
+		name={},
+		number=0\arabic{chapter},
+	},
+	section={% 设置 section 格式
+		format={\zihao{4}\heiti\centering},% 4号黑体字居中
+		name={第,章},% 序号后跟顿号
+		aftername={\hspace{1em}},% 修改序号和标题直接的间距
+		number=\chinese{section},% 设置序号为中文
+		% beforeskip=30pt,%设置章节标题前的垂直间距
+		% fixskip=true,% 默认情况下，article、book 和report 类的标题与正文的距离除了由beforeskip和afterskip选项设置的垂直间距外，还会有一些多余的间距。fixskip 选项用于抑制这些多余间距
+	},
+	subsection={% 设置 subsection 格式
+		format={\zihao{-4}\heiti\raggedright},% 小4号宋体居左
+		name={,、},
+        aftername={\hspace{0bp}},% 修改序号和标题直接的间距
+		number=\chinese{subsection},% 设置序号格式
+	},
+	subsubsection={% 设置 subsubsection 格式
+		format={\zihao{-4}\heiti\raggedright},% 小4号宋体居左
+		name={},
+        aftername={\hspace{5bp}},% 修改序号和标题直接的间距
+		number={\arabic{section}.\arabic{subsection}.\arabic{subsubsection}},% 设置序号格式
+	},
+}
+
+{
+	\theoremstyle{change}
+	\theoremheaderfont{\bfseries}
+	\theorembodyfont{\normalfont}
+	\newtheorem{ti}{}[section]
+}
+\renewcommand{\theti}{\arabic{section}.\arabic{ti}}
+
+\usepackage{ulem}
+\newcommand{\hone}[1]{ \uline{\hspace{#1 pc}}}
+\def\kuo{ (\hspace{1pc})}
+
+\newcommand{\fourch}[4]{\\\begin{tabular}{*{4}{@{}p{1.97cm}}}(A)~#1 & (B)~#2 & (C)~#3 & (D)~#4\end{tabular}} % 一行
+\newcommand{\twoch}[4]{\\\begin{tabular}{*{2}{@{}p{3.94cm}}}(A)~#1 & (B)~#2\end{tabular}\\\begin{tabular}{*{2}{@{}p{3.94cm}}}(C)~#3 & (D)~#4\end{tabular}}  %两行
+\newcommand{\onech}[4]{\\(A)~#1 \\ (B)~#2 \\ (C)~#3 \\ (D)~#4}  % 四行
+
+\def\leq{\leqslant}
+\def\geq{\geqslant}
+\def\ee{\mathrm{e}}
+\def\uppi{\pi}
+\edef\lim{\lim\limits}
+
+\def\theenumi{\arabic{enumi}}
+\def\labelenumi{(\theenumi)}
+
+% \setCJKmainfont{SourceHanSerifCN-Regular}
+
+\usepackage{hyperref}
+
+\title{张宇考研数学题源探析经典 1000 题\\(习题分册·数学一)}
+\author{张宇}
+
+
+\begin{document}
+	\maketitle
+	\frontmatter
+	\input{chapter/chap0.tex}
+	% \tableofcontents
+	\mainmatter
+	\input{chapter/chap1.tex}
+	
+	\subsection{数列极限}
+
+	\begin{ti}
+		求 $\lim_{n \to \infty} n^{3} \left( \sin\frac{1}{n} - \frac{1}{2} \sin\frac{2}{n} \right)$.
+	\end{ti}
+
+	\begin{ti}
+		求 $\lim_{n \to \infty} \left( \sqrt{n + 3\sqrt{n}} - \sqrt{n - \sqrt{n}} \right)$.
+	\end{ti}
+
+	\begin{ti}
+		求 $\lim_{n \to \infty} \left[ \sqrt{n}\left( \sqrt{n+1} - \sqrt{n} \right) + \frac{1}{2} \right]^{\frac{\sqrt{n+1} + \sqrt{n}}{\sqrt{n+1} - \sqrt{n}}}$.
+	\end{ti}
+
+	\begin{ti}
+		求 $\lim_{n \to \infty} n^{2} \left( a^{\frac{1}{n}} - a^{\frac{1}{n+1}} \right)$，其中 $a > 0$.
+	\end{ti}
+
+	\begin{ti}
+		求 $\lim_{n \to \infty} \left( 1 + 2^{n} + 3^{n} \right)^{\frac{1}{n}}$.
+	\end{ti}
+
+	\begin{ti}
+		求 $\lim_{n \to \infty} \cos\frac{x}{2}\cos\frac{x}{4}\cdots \cos\frac{x}{2^{n}}$.
+	\end{ti}
+
+	\begin{ti}
+		求 $\lim_{n \to \infty} n^{2}\left( \arctan\frac{a}{n} - \arctan \frac{a}{n+1} \right)$，$a > 0$.
+	\end{ti}
+
+	\begin{ti}
+		设 $\lim_{n \to \infty} \frac{n^{99}}{n^{k} - (n-1)^{k}}$ 存在且不为零，则常数 $k =$
+		
+		\noindent\hone{2}.
+	\end{ti}
+
+	\begin{ti}
+		设数列 $\{ a_{n} \}$ 满足 $\lim_{n \to \infty}\frac{a_{n+1}}{a_{n}} = 1$，则\kuo.
+		\twoch{$\{ a_{n} \}$ 有界}{$\{ a_{n} \}$ 不存在极限}{$\{ a_{n} \}$ 自某项起同号}{$\{ a_{n} \}$ 自某项起单调}
+	\end{ti}
+
+	\begin{ti}
+		设数列 $\{ x_{n} \}$ 满足 $x_{n} > 0$，且 $\lim_{n \to \infty}\frac{x_{n+1}}{x_{n}} = \frac{1}{2}$，则\kuo.
+		\onech{$\lim_{n\to\infty}x_{n} = 0$}{$\lim_{n\to\infty}x_{n}$ 存在，但不为零}{$\lim_{n\to\infty}x_{n}$ 不存在}{$\lim_{n\to\infty}x_{n}$ 可能存在，也可能不存在}
+	\end{ti}
+
+	\begin{ti}
+		已知数列 $\{ a_{n} \}$ 单调，下列结论正确的是\kuo.
+		\twoch{$\lim_{n \to \infty}\left( \ee^{a_{n}} - 1 \right)$ 存在}{$\lim_{n \to \infty} \frac{1}{1 + a_{n}^{2}}$ 存在}{$\lim_{n \to \infty} \sin a_{n}$ 存在}{$\lim_{n \to \infty} \frac{1}{1 - a_{n}^{2}}$ 存在}
+	\end{ti}
+
+	\begin{ti}
+		设 $a_{1} = 1$，$a_{2} = 2$，$a_{n+2} = \frac{2a_{n}a_{n+1}}{a_{n} + a_{n+1}} (n=1,2,\cdots)$.
+		\begin{enumerate}
+			\item 求 $b_{n} = \frac{1}{a_{n+1}} - \frac{1}{a_{n}}$ 的表达式;
+			\item 求 $\sum_{k=1}^{n} b_{k}$ 和 $\lim_{n \to \infty} a_{n}$.
+		\end{enumerate}
+	\end{ti}
+
+	\begin{ti}
+		设 $a_{1} = 3$，$a_{n+1} = a_{n}^{2} + a_{n}(n = 1,2,\cdots)$，求极限
+		\[
+			\lim_{n \to \infty} \left( \frac{1}{1 + a_{1}} + \frac{1}{1 + a_{2}} + \cdots + \frac{1}{1 + a_{n}} \right).
+		\]
+	\end{ti}
+	
+	\begin{ti}
+		已知 $x_{1} = \frac{1}{2}$，$2 x_{n+1} + x_{n}^{2} = 1$，求 $\lim_{n \to \infty} x_{n}$.
+	\end{ti}
+\end{document}
