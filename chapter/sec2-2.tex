@@ -1,0 +1,173 @@
+\subsection{导数计算}
+	
+	\begin{ti}
+		设 $y = \ee^{x^{2}}$，求 $\frac{\dd{y}}{\dd{x}}, \frac{\dd{y}}{\dd{\left( x^{2} \right)}}, \frac{\dd^{2}{y}}{\dd{x^{2}}}$
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x) = (\cos x - 4)\sin x + 3x$.
+		\begin{enumerate}
+			\item 求 $\frac{\dd{f(x)}}{\dd{\left( x^{2} \right)}}$;
+			\item 当 $x \to 0$ 时，$f(x)$ 为 $x$ 的几阶无穷小？
+		\end{enumerate}
+	\end{ti}
+
+	\begin{ti}
+		设 $f'(0) = 1$，$f''(0) = 1$，求证：在 $x = 0$ 处，有
+		\[
+			\frac{\dd^{2}}{\dd{x^{2}}} f\left( x^{2} \right) = \frac{\dd^{2}}{\dd{x^{2}}} f^{2}(x).
+		\]
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 为可微函数，证明：若 $x = 1$ 时，有 $\frac{\dd{f\left( x^{2} \right)}}{\dd{x}} = \frac{\dd{f^{2}(x)}}{\dd{x}}$，则必有 $f'(1) = 0$ 或 $f(1) = 1$.
+	\end{ti}
+	
+	\begin{ti}
+		设函数 $f(x) = x^{3} + 2x - 4$，$g(x) = f[f(x)]$，则 $g'(0) =$\hone{2}.
+	\end{ti}
+
+	\begin{ti}
+		设 $y = f\left( \frac{3x - 2}{3x + 2} \right)$ 且 $f'(x) = \arctan x^{2}$，求 $\left. \frac{\dd{y}}{\dd{x}} \right|_{x = 0}$.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x) = \begin{cases}
+			x^{3x}, & x > 0,\\
+			x + 1, & x \leq 0,
+		\end{cases}$ 求 $f''(x)$.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 在 $(-\infty,+\infty)$ 内连续且大于 $0$，
+		\[
+			g(x) = \begin{cases}
+				\frac{\int_{0}^{x} tf(t) \dd{t}}{\int_{0}^{x} f(t) \dd{t}}, & x \ne 0,\\
+				0, & x = 0.
+			\end{cases}
+		\]
+		\begin{enumerate}
+			\item 求 $g'(x)$;
+			\item 证明：$g'(x)$ 在 $(-\infty,+\infty)$ 内连续.
+		\end{enumerate}
+	\end{ti}
+
+	\begin{ti}
+		已知可微函数 $y = y(x)$ 由方程 $y = - y\ee^{x} + 2\ee^{y} \sin x - 7x$ 所确定，求 $y''(0)$.
+	\end{ti}
+
+	\begin{ti}
+		设函数 $y = y(x)$ 由参数方程 $\begin{cases}
+			x = 1 + t^{2},\\
+			y = \cos t
+		\end{cases}$ 所确定，求：
+		\begin{enumerate}
+			\item $\frac{\dd{y}}{\dd{x}}$ 和 $\frac{\dd^{2}y}{\dd{x^{2}}}$;
+			\item $\lim_{x \to 1^{+}} \frac{\dd{y}}{\dd{x}}$ 和 $\lim_{x \to 1^{+}} \frac{\dd^{2}y}{\dd{x^{2}}}$.
+		\end{enumerate}
+	\end{ti}
+
+	\begin{ti}
+		设函数 $f(x)$ 二阶可导，$f'(0) = 1$，$f''(0) = 2$，且 $\begin{cases}
+			x = f(t) - \uppi,\\
+			y = f\left( \ee^{3t} - 1 \right),
+		\end{cases}$ 求 $\left. \frac{\dd{y}}{\dd{x}} \right|_{t = 0}$，$\left. \frac{\dd^{2}y}{\dd{x^{2}}} \right|_{t = 0}$.
+	\end{ti}
+
+	\begin{ti}
+		设函数 $y = f(x)$ 是由
+		\[
+			\begin{cases}
+				x^{x} + tx - t^{2} = 0,\\
+				\arctan(ty) = \ln\left( 1 + t^{2}y^{2} \right)
+			\end{cases}
+		\]
+		确定，求 $\frac{\dd{y}}{\dd{x}}$.
+	\end{ti}
+
+	\begin{ti}
+		设 $u = f\left[ \varphi(x) + y^{2} \right]$，其中 $y = y(x)$ 由方程 $y + \ee^{y} = x$ 确定，且 $f(x), \varphi(x)$ 均有二阶导数，求 $\frac{\dd{u}}{\dd{x}}$ 和 $\frac{\dd^{2}u}{\dd{x^{2}}}$.
+	\end{ti}
+
+	\begin{ti}
+		设 $y = x^{3} + 3x + 1$，则 $\left. \frac{\dd{x}}{\dd{y}} \right|_{y = 1}=$\hone{2}.
+	\end{ti}
+
+	\begin{ti}
+		设 $x = f(y)$ 是函数 $y = x + \ln x$ 的反函数，求 $\frac{\dd^{2}f}{\dd{y^{2}}}$.
+	\end{ti}
+
+	\begin{ti}
+		设 $y = f(x)$ 与 $x = g(y)$ 互为反函数，$y = f(x)$ 可导，且 $f'(x) \ne 0$，$f(3) = 5$，
+		\[
+			h(x) = f\left[ \frac{1}{3} g^{2}\left( x^{2} + 3x + 1 \right) \right],
+		\]
+		求 $h'(1)$.
+	\end{ti}
+
+	\begin{ti}
+		设 $y = \left[ (1 + x)(3 + x)^{9} \right]^{\frac{1}{2}} (2 + x)^{4}$，求 $y'(0)$.
+	\end{ti}
+
+	\begin{ti}
+		已知 $u = g(\sin y)$，其中 $g'(v)$ 存在，$y = f(x)$ 由参数方程
+		\[
+			\begin{cases}
+				x = a \cos t,\\
+				y = b \sin t
+			\end{cases}
+			\left( 0 < t < \frac{\uppi}{2}, a \ne 0 \right)
+		\]
+		所确定，求 $\dd{u}$.
+	\end{ti}
+
+	\begin{ti}
+		设 $x = f(t) \cos t - f'(t) \sin t$，$y = f(t) \sin t + f'(t) \cos t$，$f''(t)$ 存在，试证：
+		\[
+			(\dd{x})^{2} + (\dd{y})^{2} = \left[ f(t) + f''(t) \right]^{2} (\dd{t})^{2}.
+		\]
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x) = x \ee^{-x}$，则 $f^{(n)}(x) = $\kuo.
+		\twoch{$(-1)^{n} (1 + n) x \ee^{-x}$}{$(-1)^{n} (1 - n) x \ee^{-x}$}{$(-1)^{n} (x + n) \ee^{-x}$}{$(-1)^{n} (x - n) \ee^{-x}$}
+	\end{ti}
+
+	\begin{ti}
+		若 $f(x) = x^{5} \ee^{6x}$，则 $f^{(2019)}(0) = $\hone{4}.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x) = \frac{x}{1 - 2x^{4}}$，则 $f^{(101)}(0) = $\hone{4}.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x) = \ee^{x} \sin x$，则 $f^{(7)}(x) = $\hone{4}.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x) = \lim_{n \to \infty} x \cos 2x \cos \frac{x}{2} \cos \frac{x}{4} \cdots \cos \frac{x}{2^{n}}(x > 0)$.
+		\begin{enumerate}
+			\item 求证 $f(x) = \cos 2x \sin x$;
+			\item 求 $f^{(20)}(x)$.
+		\end{enumerate}
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x) = \left( x^{2} - 3x + 2 \right)^{n} \cos \frac{\uppi x^{2}}{16}$，求 $f^{(n)}(2)$.
+	\end{ti}
+
+	\begin{ti}
+		设 $y = \arcsin x$.
+		\begin{enumerate}
+			\item 证明其满足方程 $\left( 1 - x^{2} \right) y^{(n+2)} - (2n + 1) x y^{(n+1)} - n^{2} y^{(n)} = 0 (n \geq 0)$;
+			\item 求 $\left. y^{(n)} \right|_{x = 0}$.
+		\end{enumerate}
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x) = g'(x)$，$g(x) = \begin{cases}
+			\frac{\ee^{x} - 1}{x}, & x \ne 0,\\
+			1, & x = 0,
+		\end{cases}$ 求 $f^{(n)}(0)$.
+	\end{ti}

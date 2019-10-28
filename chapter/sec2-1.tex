@@ -1,0 +1,147 @@
+\section{一元函数微分学}
+	\subsection{一点的导数问题}
+
+	\begin{ti}
+		设 $f(x)$ 在 $x = 1$ 处可导，$f'(1) = 1$，求 $\lim_{x \to 1} \frac{f(x) - f(1)}{x^{10} - 1}$.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 在 $x = 0$ 处连续，且 $\lim_{x \to 0} \left[ \frac{\ee^{f(x)} - \cos x + \sin x}{x} \right] = 0$，求 $f(0)$，并讨论 $f(x)$ 在 $x = 0$ 处是否可导？若可导，请求出 $f'(0)$.
+	\end{ti}
+
+	\begin{ti}
+		函数 $f(x)$ 在 $(-\infty,+\infty)$ 内有定义，在区间 $[0,2]$ 上，$f(x) = x\left( x^{2} - 4 \right)$. 假若对任意的 $x$ 都满足 $f(x) = k f(x + 2)$，其中 $k$ 为常数.
+		\begin{enumerate}
+			\item 写出 $f(x)$ 在 $[-2,0)$ 上的表达式;
+			\item 问 $k$ 为何值时，$f(x)$ 在 $x = 0$ 处可导？
+		\end{enumerate}
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 在 $(-\infty,+\infty)$ 内有定义，且 $f'(0) = a(a \ne 0)$，又对任意的 $x,y \in (-\infty,+\infty)$，有 $f(x + y) = \frac{f(x) + f(y)}{1 - f(x)f(y)}$，求 $f(x)$.
+	\end{ti}
+	
+	\begin{ti}
+		设 $f(x)$ 在 $(-\infty,+\infty)$ 内有定义，且对任意的 $x,x_{1},x_{2} \in (-\infty,+\infty)$，有
+		\[
+			f(x_{1} + x_{2}) = f(x_{1}) \cdot f(x_{2}),f(x) = 1 + xg(x),
+		\]
+		其中 $\lim_{x \to 0} g(x) = 1$. 证明：$f(x)$ 在 $(-\infty,+\infty)$ 内处处可导.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 定义在 $\mathbb{R}$ 上，对于任意的 $x_{1},x_{2}$，有 $|f(x_{1}) - f(x_{2})| \leq (x_{1} - x_{2})^{2}$，求证：$f(x)$ 是常值函数.
+	\end{ti}
+
+	\begin{ti}
+		设 $f''(1)$ 存在，且 $\lim_{x \to 1}\frac{f(x)}{x - 1} = 0$. 记
+		\[
+			\varphi(x) = \int_{0}^{1} f'[1 + (x - 1)t]\dd{t}.
+		\]
+		求 $\varphi(x)$ 在 $x = 1$ 的某个邻域内的导数，并讨论 $\varphi'(x)$ 在 $x = 1$ 处的连续性.
+	\end{ti}
+
+	\begin{ti}
+		设函数
+		\[
+			f(x) = \begin{cases}
+				x^{3} \sin\frac{1}{x}, & x \ne 0,\\
+				0, & x = 0.
+			\end{cases}
+		\]
+		讨论 $f(x)$ 在 $x = 0$ 的可导性以及 $f'(x)$ 在 $x = 0$ 的连续性.
+	\end{ti}
+
+	\begin{ti}
+		已知函数 $f(x) = \begin{cases}
+			\frac{\int_{x}^{2x} \ee^{t^{2}} \dd{t}}{x}, & x \ne 0,\\
+			a, & x = 0
+		\end{cases}$ 在 $x = 0$ 处可导. 求
+		\begin{enumerate}
+			\item $a$ 的值;
+			\item $f'(0)$.
+		\end{enumerate}
+	\end{ti}
+
+	\begin{ti}
+		若 $f(x) = \begin{cases}
+			\ln\left( 1 + x^{2} \right), & x \leq 0,\\
+			a \sin x + 2x, & x > 0
+		\end{cases}$ 是可导函数，则 $a = $\hone{2}.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x) = \begin{cases}
+			\frac{1 - \cos x}{\sqrt{x}}, & x > 0,\\
+			x^{2} g(x), & x \leq 0,
+		\end{cases}$ 其中 $g(x)$ 是有界函数，则 $f(x)$ 在 $x = 0$ 处\kuo.
+		\twoch{极限不存在}{极限存在，但不连续}{连续，但不可导}{可导}
+	\end{ti}
+
+	\begin{ti}
+		设函数 $f(x)$ 是定义在 $(-1,1)$ 内的奇函数，且 $\lim_{x \to 0^{+}} \frac{f(x)}{x} = a \ne 0$，则 $f(x)$ 在 $x = 0$ 处的导数为\kuo.
+		\fourch{$a$}{$-a$}{$0$}{不存在}
+	\end{ti}
+
+	\begin{ti}
+		设函数 $f(x)$ 在 $x = 0$ 处连续，且 $\lim_{x \to 0} \frac{f\left( x^{2} \right)}{x^{2}} = 1$，则\kuo.
+		\twoch{$f(0) = 0$ 且 $f_{-}'(0)$ 存在}{$f(0) = 1$ 且 $f_{-}'(0)$ 存在}{$f(0) = 0$ 且 $f_{+}'(0)$ 存在}{$f(0) = 1$ 且 $f_{+}'(0)$ 存在}
+	\end{ti}
+
+	\begin{ti}
+		设 $g(x)$ 在 $x = 0$ 处二阶可导，且 $g(0) = g'(0) = 0$，设
+		\[
+			f(x) = \begin{cases}
+				\frac{g(x)}{x}, & x \ne 0,\\
+				0, & x = 0,
+			\end{cases}
+		\]
+		则 $f(x)$ 在 $x = 0$ 处\kuo.
+		\onech{不连续}{连续，但不可导}{可导，但导函数不连续}{可导且导函数连续}
+	\end{ti}
+
+	\begin{ti}
+		若 $f(x) = \ee^{10x} x (x + 1) (x + 2) \cdots (x + 10)$，则 $f'(0) = $
+		
+		\noindent\hone{2}.
+	\end{ti}
+
+	\begin{ti}
+		已知 $f(x) = \frac{(x - 1) (x - 2) (x - 3) \cdots (x - 100)}{(x + 1) (x + 2) (x + 3) \cdots (x + 100)}$，求 $f'(1)$.
+	\end{ti}
+
+	\begin{ti}
+		设函数 $f(x) = \left( \ee^{x} - 1 \right) \left( \ee^{2x} - 2 \right) \cdots \left( \ee^{nx} - n \right)$，其中 $n$ 为正整数，则 $f'(0) = $\kuo.
+		\twoch{$(-1)^{n-1}(n - 1)!$}{$(-1)^{n}(n - 1)!$}{$(-1)^{n-1}n!$}{$(-1)^{n}n!$}
+	\end{ti}
+
+	\begin{ti}
+		已知 $f(x) = \sqrt{1 + x} + \arcsin\frac{1 - x}{1 + x^{2}}$，求 $f'(1)$.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x) = \sqrt{\frac{(1 + x)\sqrt{x}}{\ee^{x - 1}}} + \arcsin\frac{1 - x}{\sqrt{1 + x^{2}}}$，求 $f'(1)$.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 可导，$F(x) = f(x) (1 + |\sin x|)$，若使 $F(x)$ 在 $x = 0$ 处可导，则必有\kuo.
+		\twoch{$f(0) = 0$}{$f'(0) = 0$}{$f(0) + f'(0) = 0$}{$f(0) - f'(0) = 0$}
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 在 $x = a$ 处连续，$F(x) = f(x) |x - a|$，则 $f(a) = 0$ 是 $F(x)$ 在 $x = a$ 处可导的\kuo.
+		\onech{充要条件}{充分非必要条件}{必要非充分条件}{既非充分又非必要条件}
+	\end{ti}
+
+	\begin{ti}
+		函数 $F(x) = \left( x^{2} - x - 2 \right)\left| x^{3} - x \right|$ 不可导的点的个数为\kuo.
+		\fourch{$1$}{$2$}{$3$}{$4$}
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x) = \left| \begin{smallmatrix}
+			1 & x - 1 & 2 x - 1\\
+			1 & x - 2 & 3 x - 2\\
+			1 & x - 3 & 4 x - 3
+		\end{smallmatrix} \right|$，证明：存在 $\xi \in (0,1)$，使得 $f'(\xi) = 0$.
+	\end{ti}

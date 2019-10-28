@@ -6,6 +6,13 @@
 \usepackage{graphicx}
 \renewcommand\thefigure{\arabic{chapter}-\arabic{section}-\arabic{figure}}
 
+\setlength{\headheight}{13pt}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[C]{\slshape 仅供学习使用，严禁商业使用}
+\fancyfoot[LE,RO]{\TeX}
+
+
 \usepackage{caption}
 \captionsetup{labelsep=space}
 
@@ -77,78 +84,37 @@
 	% \frontmatter
 	% \input{chapter/chap0.tex}
 	% \tableofcontents
-	\mainmatter
+	% \mainmatter
 	% \input{chapter/chap1.tex}
 	
-	\section{一元函数微分学}
-	\subsection{一点的导数问题}
+	\subsection{导数应用}
 
 	\begin{ti}
-		设 $f(x)$ 在 $x = 1$ 处可导，$f'(1) = 1$，求 $\lim_{x \to 1} \frac{f(x) - f(1)}{x^{10} - 1}$.
+		曲线 $\begin{cases}
+			x = \ee^{t} \sin 2t,\\
+			y = \ee^{t} \cos t
+		\end{cases}$ 在点 $t = 0$ 处的切线方程为\hone{6}.
 	\end{ti}
 
 	\begin{ti}
-		设 $f(x)$ 在 $x = 0$ 处连续，且 $\lim_{x \to 0} \left[ \frac{\ee^{f(x)} - \cos x + \sin x}{x} \right] = 0$，求 $f(0)$，并讨论 $f(x)$ 在 $x = 0$ 处是否可导？若可导，请求出 $f'(0)$.
-	\end{ti}
-
-	\begin{ti}
-		函数 $f(x)$ 在 $(-\infty,+\infty)$ 内有定义，在区间 $[0,2]$ 上，$f(x) = x\left( x^{2} - 4 \right)$. 假若对任意的 $x$ 都满足 $f(x) = k f(x + 2)$，其中 $k$ 为常数.
-		\begin{enumerate}
-			\item 写出 $f(x)$ 在 $[-2,0)$ 上的表达式;
-			\item 问 $k$ 为何值时，$f(x)$ 在 $x = 0$ 处可导？
-		\end{enumerate}
-	\end{ti}
-
-	\begin{ti}
-		设 $f(x)$ 在 $(-\infty,+\infty)$ 内有定义，且 $f'(0) = a(a \ne 0)$，又对任意的 $x,y \in (-\infty,+\infty)$，有 $f(x + y) = \frac{f(x) + f(y)}{1 - f(x)f(y)}$，求 $f(x)$.
-	\end{ti}
-	
-	\begin{ti}
-		设 $f(x)$ 在 $(-\infty,+\infty)$ 内有定义，且对任意的 $x,x_{1},x_{2} \in (-\infty,+\infty)$，有
+		若曲线 $C: y = f(x)$ 由方程
 		\[
-			f(x_{1} + x_{2}) = f(x_{1}) \cdot f(x_{2}),f(x) = 1 + xg(x),
+			2x - y = 2\arctan(y - x)
 		\]
-		其中 $\lim_{x \to 0} g(x) = 1$. 证明：$f(x)$ 在 $(-\infty,+\infty)$ 内处处可导.
+		确定，则曲线 $C$ 在点 $\left( 1 + \frac{\uppi}{2}, 2 + \frac{\uppi}{2} \right)$ 处的切线方程是 $y = $\hone{6}.
 	\end{ti}
 
 	\begin{ti}
-		设 $f(x)$ 定义在 $\mathbb{R}$ 上，对于任意的 $x_{1},x_{2}$，有 $|f(x_{1}) - f(x_{2})| \leq (x_{1} - x_{2})^{2}$，求证：$f(x)$ 是常值函数.
+		曲线 $r = \cos 2 \theta$ 在 $\theta = \frac{\uppi}{4}$ 处的切线方程为
+		
+		\noindent\hone{6}.
 	\end{ti}
 
 	\begin{ti}
-		设 $f''(1)$ 存在，且 $\lim_{x \to 1}\frac{f(x)}{x - 1} = 0$. 记
-		\[
-			\varphi(x) = \int_{0}^{1} f'[1 + (x - 1)t]\dd{t}.
-		\]
-		求 $\varphi(x)$ 在 $x = 1$ 的某个邻域内的导数，并讨论 $\varphi'(x)$ 在 $x = 1$ 处的连续性.
+		已知曲线的极坐标方程 $r = 1 - \cos \theta$，求曲线上对应于 $\theta = \frac{\uppi}{6}$ 处的切线与法线的直角坐标方程.
 	\end{ti}
 
 	\begin{ti}
-		设函数
-		\[
-			f(x) = \begin{cases}
-				x^{3} \sin\frac{1}{x}, & x \ne 0,\\
-				0, & x = 0.
-			\end{cases}
-		\]
-		讨论 $f(x)$ 在 $x = 0$ 的可导性以及 $f'(x)$ 在 $x = 0$ 的连续性.
-	\end{ti}
-
-	\begin{ti}
-		已知函数 $f(x) = \begin{cases}
-			\frac{\int_{x}^{2x} \ee^{t^{2}} \dd{t}}{x}, & x \ne 0,\\
-			a, & x = 0
-		\end{cases}$ 在 $x = 0$ 处可导. 求
-		\begin{enumerate}
-			\item $a$ 的值;
-			\item $f'(0)$.
-		\end{enumerate}
-	\end{ti}
-
-	\begin{ti}
-		若 $f(x) = \begin{cases}
-			\ln\left( 1 + x^{2} \right), & x \leq 0,\\
-			a \sin x + 2x, & x > 0
-		\end{cases}$ 是可导函数，则 $a = $\hone{2}.
+		已知两曲线由 $y = f(x)$ 与 $xy + \ee^{x + y} = 1$ 所确定，且在点 $(0,0)$ 处的切线相同，写出此切线方程，并求极限 $\lim_{n \to \infty} n f\left( \frac{2}{n} \right)$.
 	\end{ti}
 \end{document}
