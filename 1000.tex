@@ -2,46 +2,82 @@
 \usepackage{amsmath}
 \usepackage{fourier}
 \usepackage{physics}
-
+\usepackage{siunitx}
+\usepackage{lastpage}
 \usepackage{graphicx}
 \renewcommand\thefigure{\arabic{chapter}-\arabic{section}-\arabic{figure}}
 
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,inner=1.5cm,outer=3cm]{geometry}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,calc}
+
+\newcommand\score[2]{
+\pgfmathsetmacro\pgfxa{#1+1}
+\tikzstyle{scorestars}=[star, star points=5, star point ratio=2.25, draw,inner sep=0.15em,anchor=outer point 3]
+\begin{tikzpicture}[baseline]
+  \foreach \i in {1,...,#2} {
+	\pgfmathparse{(\i<=#1?"black":"white")}
+	\edef\starcolor{\pgfmathresult}
+	\draw (\i*1em,0) node[name=star\i,scorestars,fill=\starcolor]  {};
+   }
+   \pgfmathparse{(#1>int(#1)?int(#1+1):0}
+   \let\partstar=\pgfmathresult
+   \ifnum\partstar>0
+	 \pgfmathsetmacro\starpart{#1-(int(#1))}
+	 \path [clip] ($(star\partstar.outer point 3)!(star\partstar.outer point 2)!(star\partstar.outer point 4)$) rectangle 
+	($(star\partstar.outer point 2 |- star\partstar.outer point 1)!\starpart!(star\partstar.outer point 1 -| star\partstar.outer point 5)$);
+	 \fill (\partstar*1em,0) node[scorestars,fill=black]  {};
+   \fi
+,\end{tikzpicture}
+}
+
 \setlength{\headheight}{13pt}
+\makeatletter
 \usepackage{fancyhdr}
 \pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LO]{\slshape \rightmark}
+\fancyhead[RE]{\slshape \leftmark}
+\fancyhead[LE,RO]{
+\@ifundefined{lastpage@lastpage}{%
+	\score{0}{10}%
+}{%
+	\score{10 * \thepage / \lastpage@lastpage}{10}%
+}%
+}
 \fancyhead[C]{\slshape 仅供学习使用，严禁商业使用}
-\fancyfoot[LE,RO]{\TeX}
-
+\fancyfoot[C]{\thepage}
+% \fancyfoot[LE,RO]{\TeX}
+\makeatother
 
 \usepackage{caption}
 \captionsetup{labelsep=space}
 
-\usepackage[a4paper,top=2.5cm,bottom=2.5cm,inner=1.5cm,outer=3cm]{geometry}
+
 \usepackage{theorem}
 \ctexset{
 	chapter={
 		name={},
 		number=0\arabic{chapter},
 	},
-	section={% 设置 section 格式
-		format={\zihao{4}\heiti\centering},% 4号黑体字居中
-		name={第,章},% 序号后跟顿号
-		aftername={\hspace{1em}},% 修改序号和标题直接的间距
-		number=\chinese{section},% 设置序号为中文
-		% beforeskip=30pt,%设置章节标题前的垂直间距
-		% fixskip=true,% 默认情况下，article、book 和report 类的标题与正文的距离除了由beforeskip和afterskip选项设置的垂直间距外，还会有一些多余的间距。fixskip 选项用于抑制这些多余间距
+	section={
+		format={\zihao{4}\heiti\centering},
+		name={第,章},
+		aftername={\hspace{1em}},
+		number=\chinese{section},
 	},
-	subsection={% 设置 subsection 格式
-		format={\zihao{-4}\heiti\raggedright},% 小4号宋体居左
+	subsection={
+		format={\zihao{-4}\heiti\raggedright},
 		name={,、},
-        aftername={\hspace{0bp}},% 修改序号和标题直接的间距
-		number=\chinese{subsection},% 设置序号格式
+		aftername={\hspace{0bp}},
+		number=\chinese{subsection},
 	},
-	subsubsection={% 设置 subsubsection 格式
-		format={\zihao{-4}\heiti\raggedright},% 小4号宋体居左
+	subsubsection={
+		format={\zihao{-4}\heiti\raggedright},
 		name={},
-        aftername={\hspace{5bp}},% 修改序号和标题直接的间距
-		number={\arabic{section}.\arabic{subsection}.\arabic{subsubsection}},% 设置序号格式
+		aftername={\hspace{5bp}},
+		number={\arabic{section}.\arabic{subsection}.\arabic{subsubsection}},
 	},
 }
 
@@ -57,9 +93,9 @@
 \newcommand{\hone}[1]{ \uline{\hspace{#1 pc}}}
 \def\kuo{ (\hspace{1pc})}
 
-\newcommand{\fourch}[4]{\\\begin{tabular}{*{4}{@{}p{1.97cm}}}(A)~#1 & (B)~#2 & (C)~#3 & (D)~#4\end{tabular}} % 一行
-\newcommand{\twoch}[4]{\\\begin{tabular}{*{2}{@{}p{3.94cm}}}(A)~#1 & (B)~#2\end{tabular}\\\begin{tabular}{*{2}{@{}p{3.94cm}}}(C)~#3 & (D)~#4\end{tabular}}  %两行
-\newcommand{\onech}[4]{\\(A)~#1 \\ (B)~#2 \\ (C)~#3 \\ (D)~#4}  % 四行
+\newcommand{\fourch}[4]{\noindent\begin{tabular}{*{4}{@{}p{1.97cm}}}(A)~#1 & (B)~#2 & (C)~#3 & (D)~#4\end{tabular}} % 一行
+\newcommand{\twoch}[4]{\noindent\begin{tabular}{*{2}{@{}p{3.94cm}}}(A)~#1 & (B)~#2\end{tabular}\\\begin{tabular}{*{2}{@{}p{3.94cm}}}(C)~#3 & (D)~#4\end{tabular}}  %两行
+\newcommand{\onech}[4]{\noindent(A)~#1 \\ (B)~#2 \\ (C)~#3 \\ (D)~#4}  % 四行
 
 \def\leq{\leqslant}
 \def\geq{\geqslant}
@@ -71,7 +107,12 @@
 \def\theenumi{\arabic{enumi}}
 \def\labelenumi{(\theenumi)}
 
-% \setCJKmainfont{SourceHanSerifCN-Regular}
+% \setCJKmainfont{SourceHanSerifCN}[
+% UprightFont    = *-Regular,
+% BoldFont       = *-Bold,
+% ItalicFont     = *-Regular,
+% BoldItalicFont = *-Bold
+% ]
 
 \usepackage{hyperref}
 
@@ -87,34 +128,68 @@
 	% \mainmatter
 	% \input{chapter/chap1.tex}
 	
-	\subsection{导数应用}
+	\subsection{中值定理、方程的根、不等式}
 
 	\begin{ti}
-		曲线 $\begin{cases}
-			x = \ee^{t} \sin 2t,\\
-			y = \ee^{t} \cos t
-		\end{cases}$ 在点 $t = 0$ 处的切线方程为\hone{6}.
+		设函数 $f(x)$ 在 $[a,b]$ 上连续，在 $(a,b)$ 内可导，且 $f(a) = f(b) = 0$，求证：
+		\begin{enumerate}
+			\item 存在 $\xi \in (a,b)$，使 $f(\xi) + \xi f'(\xi) = 0$;
+			\item 存在 $\eta \in (a,b)$，使 $\eta f(\eta) + f'(\eta) = 0$.
+		\end{enumerate}
 	\end{ti}
 
 	\begin{ti}
-		若曲线 $C: y = f(x)$ 由方程
+		设函数 $f(x)$ 在 $[-2,2]$ 上二阶可导，且 $\left| f(x) \right| \leq 1$，又 $f^{2}(0) + \left[ f'(0) \right]^{2} = 4$. 试证：在 $(-2,2)$ 内至少存在一点 $\xi$，使得 $f(\xi) + f''(\xi) = 0$.
+	\end{ti}
+
+	\begin{ti}
+		设函数 $f(x)$ 在 $[a,b]$ 上连续，在 $(a,b)$ 内可导且 $f(a) \ne f(b)$. 证明：存在 $\xi,\eta \in (a,b)$，使得 $\frac{f'(\xi)}{2\xi} = \frac{f'(\eta)}{b + a}$.
+	\end{ti}
+
+	\begin{ti}
+		设函数 $f(x)$ 在闭区间 $[a,b]$ 上连续 $(a,b > 0)$，在 $(a,b)$ 内可导. 证明：在 $(a,b)$ 内至少存在一点 $\xi$，使等式 $\frac{1}{a - b} \left| \begin{smallmatrix}
+			a & b\\
+			f(a) & f(b)
+		\end{smallmatrix} \right| = f(\xi) - \xi f'(\xi)$ 成立.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 在闭区间 $[1,2]$ 上可导，证明：存在一点 $\xi \in (1,2)$，使
 		\[
-			2x - y = 2\arctan(y - x)
+			f(2) - 2f(1) = \xi f'(\xi) - f(\xi).
 		\]
-		确定，则曲线 $C$ 在点 $\left( 1 + \frac{\uppi}{2}, 2 + \frac{\uppi}{2} \right)$ 处的切线方程是 $y = $\hone{6}.
 	\end{ti}
 
 	\begin{ti}
-		曲线 $r = \cos 2 \theta$ 在 $\theta = \frac{\uppi}{4}$ 处的切线方程为
-		
-		\noindent\hone{6}.
+		设 $f(x), g(x)$ 在 $[a,b]$ 上二阶可导，且 $f(a) = f(b) = g(a) = 0$，证明：存在 $\xi \in (a,b)$，使 $f''(\xi) g(\xi) + 2 f'(\xi) g'(\xi) + f(\xi) g''(\xi) = 0$.
 	\end{ti}
 
 	\begin{ti}
-		已知曲线的极坐标方程 $r = 1 - \cos \theta$，求曲线上对应于 $\theta = \frac{\uppi}{6}$ 处的切线与法线的直角坐标方程.
+		设 $f(x)$ 在闭区间 $[-1,1]$ 上具有三阶连续导数，且 $f(-1) = 0$，$f(1) = 1$，$f'(0) = 0$. 证明：在 $[-1,1]$ 内存在 $\xi$，使得 $f'''(\xi) = 3$.
 	\end{ti}
 
 	\begin{ti}
-		已知两曲线由 $y = f(x)$ 与 $xy + \ee^{x + y} = 1$ 所确定，且在点 $(0,0)$ 处的切线相同，写出此切线方程，并求极限 $\lim_{n \to \infty} n f\left( \frac{2}{n} \right)$.
+		设 $f(x), g(x)$ 在 $[a,b]$ 上二阶可导，$g''(x) \ne 0$，$f(a) = f(b) = g(a) = g(b) = 0$. 证明：
+		\begin{enumerate}
+			\item 在 $(a,b)$ 内，$g(x) \ne 0$;
+			\item 在 $(a,b)$ 内至少存在一点 $\xi$，使 $\frac{f(\xi)}{g(\xi)} = \frac{f''(\xi)}{g''(\xi)}$.
+		\end{enumerate}
+	\end{ti}
+
+	\begin{ti}
+		$f(x)$ 在 $[a,b]$ 上连续，在 $(a,b)$ 内可导，且 $f'(x) \ne 0$. 证明：存在 $\xi, \eta \in (a,b)$，使得
+		\[
+			\frac{f'(\xi)}{f'(\eta)} = \frac{\ee^{b} - \ee^{a}}{b - a} \ee^{-\eta}.
+		\]
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 在 $[0,1]$ 上可导，$f(0) = 0$，$\left| f'(x) \right| \leq \left| f(x) \right|$，则 $f(1) = $\hone{2}.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 在 $[0,4]$ 上一阶可导且 $f'(x) \geq \frac{1}{4}$，$f(2) \geq 0$，则在下列区间上必有 $f(x) \geq \frac{1}{4}$ 成立的是\kuo.
+
+		\fourch{$[0,1]$}{$[1,2]$}{$[2,3]$}{$[3,4]$}
 	\end{ti}
 \end{document}
