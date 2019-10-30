@@ -1,0 +1,184 @@
+\subsection{中值定理、方程的根、不等式}
+
+	\begin{ti}
+		设函数 $f(x)$ 在 $[a,b]$ 上连续，在 $(a,b)$ 内可导，且 $f(a) = f(b) = 0$，求证：
+		\begin{enumerate}
+			\item 存在 $\xi \in (a,b)$，使 $f(\xi) + \xi f'(\xi) = 0$;
+			\item 存在 $\eta \in (a,b)$，使 $\eta f(\eta) + f'(\eta) = 0$.
+		\end{enumerate}
+	\end{ti}
+
+	\begin{ti}
+		设函数 $f(x)$ 在 $[-2,2]$ 上二阶可导，且 $\left| f(x) \right| \leq 1$，又 $f^{2}(0) + \left[ f'(0) \right]^{2} = 4$. 试证：在 $(-2,2)$ 内至少存在一点 $\xi$，使得 $f(\xi) + f''(\xi) = 0$.
+	\end{ti}
+
+	\begin{ti}
+		设函数 $f(x)$ 在 $[a,b]$ 上连续，在 $(a,b)$ 内可导且 $f(a) \ne f(b)$. 证明：存在 $\xi,\eta \in (a,b)$，使得 $\frac{f'(\xi)}{2\xi} = \frac{f'(\eta)}{b + a}$.
+	\end{ti}
+
+	\begin{ti}
+		设函数 $f(x)$ 在闭区间 $[a,b]$ 上连续 $(a,b > 0)$，在 $(a,b)$ 内可导. 证明：在 $(a,b)$ 内至少存在一点 $\xi$，使等式 $\frac{1}{a - b} \left| \begin{smallmatrix}
+			a & b\\
+			f(a) & f(b)
+		\end{smallmatrix} \right| = f(\xi) - \xi f'(\xi)$ 成立.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 在闭区间 $[1,2]$ 上可导，证明：存在一点 $\xi \in (1,2)$，使
+		\[
+			f(2) - 2f(1) = \xi f'(\xi) - f(\xi).
+		\]
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x), g(x)$ 在 $[a,b]$ 上二阶可导，且 $f(a) = f(b) = g(a) = 0$，证明：存在 $\xi \in (a,b)$，使 $f''(\xi) g(\xi) + 2 f'(\xi) g'(\xi) + f(\xi) g''(\xi) = 0$.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 在闭区间 $[-1,1]$ 上具有三阶连续导数，且 $f(-1) = 0$，$f(1) = 1$，$f'(0) = 0$. 证明：在 $[-1,1]$ 内存在 $\xi$，使得 $f'''(\xi) = 3$.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x), g(x)$ 在 $[a,b]$ 上二阶可导，$g''(x) \ne 0$，$f(a) = f(b) = g(a) = g(b) = 0$. 证明：
+		\begin{enumerate}
+			\item 在 $(a,b)$ 内，$g(x) \ne 0$;
+			\item 在 $(a,b)$ 内至少存在一点 $\xi$，使 $\frac{f(\xi)}{g(\xi)} = \frac{f''(\xi)}{g''(\xi)}$.
+		\end{enumerate}
+	\end{ti}
+
+	\begin{ti}
+		$f(x)$ 在 $[a,b]$ 上连续，在 $(a,b)$ 内可导，且 $f'(x) \ne 0$. 证明：存在 $\xi, \eta \in (a,b)$，使得
+		\[
+			\frac{f'(\xi)}{f'(\eta)} = \frac{\ee^{b} - \ee^{a}}{b - a} \ee^{-\eta}.
+		\]
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 在 $[0,1]$ 上可导，$f(0) = 0$，$\left| f'(x) \right| \leq \left| f(x) \right|$，则 $f(1) = $\hone{2}.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 在 $[0,4]$ 上一阶可导且 $f'(x) \geq \frac{1}{4}$，$f(2) \geq 0$，则在下列区间上必有 $f(x) \geq \frac{1}{4}$ 成立的是\kuo.
+
+		\fourch{$[0,1]$}{$[1,2]$}{$[2,3]$}{$[3,4]$}
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 二阶可导，$f''(x) < 0$，$f'(0) \leq \frac{1}{3}$，$f(0) = 0$，$f(1) = \frac{1}{2}$，并设 $0 < x_{n} < 1$，且 $x_{n+1} = f(x_{n}), n = 1,2,\cdots$.
+		\begin{enumerate}
+			\item 证明 $\frac{f(x)}{x}$ 在 $(0,+\infty)$ 内单调减少;
+			\item 证明 $\lim_{n \to \infty} x_{n}$ 存在.
+		\end{enumerate}
+	\end{ti}
+
+	\begin{ti}
+		设 $\xi_{a}$ 为函数 $f(x) = \arctan x$ 在区间 $[0,a]$ 上使用拉格朗日中值定理时的中值，求 $\lim_{a \to 0^{+}} \frac{\xi_{a}}{a}$.
+	\end{ti}
+
+	\begin{ti}
+		设函数 $f(x) = \arctan x$，若 $f(x) = f'(\xi) \sin x$，求极限 $\lim_{x \to 0} \frac{\xi^{2}}{x^{2}}$.
+	\end{ti}
+
+	\begin{ti}
+		设函数 $f(x)$ 在闭区间 $[a,b]$ 上连续，在开区间 $(a,b)$ 内可导，$f'(x) \ne 0$，且 $f(a) = 0$，$f(b) = 2$. 证明在开区间 $(a,b)$ 内存在两个不同的点 $\xi,\eta$，使
+		\[
+			f'(\eta) \left[ f(\xi) + \xi f'(\xi) \right] = f'(\xi) \left[ b f'(\eta) - 1 \right].
+		\]
+	\end{ti}
+
+	\begin{ti}
+		讨论常数 $a$ 的值，确定曲线 $y = a \ee^{x}$ 与 $y = 1 + x$ 的公共点的个数.
+	\end{ti}
+
+	\begin{ti}
+		讨论方程 $2x^{3} - 9x^{2} + 12x - a = 0$ 实根的情况.
+	\end{ti}
+
+	\begin{ti}
+		讨论方程 $a x \ee^{x} + b = 0 (a > 0)$ 实根的情况.
+	\end{ti}
+
+	\begin{ti}
+		证明：方程 $x^{\alpha} = \ln x (\alpha < 0)$ 在 $(0,+\infty)$ 内有且仅有一个实根.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 可导，证明：$f(x)$ 的两个零点之间一定有 $f(x) + f'(x)$ 的零点.
+	\end{ti}
+
+	\begin{ti}
+		设 $F(x) = \int_{-1}^{1} |x - t| \ee^{-t^{2}} \dd{t} - \frac{1}{2} \left( \ee^{-1} + 1 \right)$，讨论 $F(x)$ 在区间 $[-1,1]$ 上的零点个数.
+	\end{ti}
+
+	\begin{ti}
+		证明：当 $x \geq 1$ 时，$\arctan x - \frac{1}{2} \arccos \frac{2x}{1 + x^{2}} \equiv \frac{\uppi}{4}$.
+	\end{ti}
+
+	\begin{ti}
+		设 $\lim_{x \to 0} \frac{f(x)}{x} = 1$，且 $f''(x) > 0$. 证明：$f(x) \geq x$.
+	\end{ti}
+
+	\begin{ti}
+		证明：当 $0 < a < b < \uppi$ 时，
+		\[
+			b \sin b + 2 \cos b + \uppi b > a \sin a + 2 \cos a + \uppi a.
+		\]
+	\end{ti}
+
+	\begin{ti}
+		设 $b > a > \ee$，证明：$a^{b} > b^{a}$.
+	\end{ti}
+
+	\begin{ti}
+		设一质点在单位时间内由点 $A$ 从静止开始做直线运动至点 $B$ 停止，$A,B$ 两点间距离为 $1$，证明：该质点在 $(0,1)$ 内总有一时刻的加速度的绝对值不小于 $4$.
+	\end{ti}
+
+	\begin{ti}
+		在区间 $[0,a]$ 上 $\left| f''(x) \right| \leq M$，且 $f(x)$ 在 $(0,a)$ 内取得最大值. 求证：$\left| f'(0) \right| + \left| f'(a) \right| \leq Ma$.
+	\end{ti}
+
+	\begin{ti}
+		设 $x \in (0,1)$，证明下面不等式
+		\begin{enumerate}
+			\item $(1 + x) \ln^{2}(1 + x) < x^{2}$;
+			\item $\frac{1}{\ln 2} - 1 < \frac{1}{\ln(1 + x)} - \frac{1}{x} < \frac{1}{2}$.
+		\end{enumerate}
+	\end{ti}
+
+	\begin{ti}
+		证明：$\cos \sqrt{2} x \leq - x^{2} + \sqrt{1 + x^{4}}$，其中 $x \in \bigl( 0, \frac{\sqrt{2}\uppi}{4} \bigr)$.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 在 $[a,b]$ 上二阶可导，且 $f'(a) = f'(b) = 0$，证明存在 $\xi \in (a,b)$，使
+		\[
+			\left| f''(\xi) \right| \geq \frac{4}{(b - a)^{2}} \left| f(b) - f(a) \right|.
+		\]
+	\end{ti}
+
+	\begin{ti}
+		已知 $f(x)$ 二阶可导，且 $f(x) > 0$，$f(x) f''(x) - \bigl[ f'(x) \bigr]^{2} \geq 0 (x \in \mathbb{R})$.
+		\begin{enumerate}
+			\item 证明 $f(x_{1}) f(x_{2}) \geq f^{2}\left( \frac{x_{1} + x_{2}}{2} \right)(x_{1}, x_{2} \in \mathbb{R})$;
+			\item 若 $f(0) = 1$，证明 $f(x) \geq \ee^{f'(0) x} (x \in \mathbb{R})$.
+		\end{enumerate}
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 在 $[a,b]$ 上具有二阶导数，且 $f''(x) > 0$，证明：
+		\[
+			f\left( \frac{a + b}{2} \right) < \frac{1}{b - a} \int_{a}^{b} f(t) \dd{t} < \frac{1}{2} \left[ f(a) + f(b) \right].
+		\]
+	\end{ti}
+
+	\begin{ti}
+		证明：$\ee^{x} + \ee^{-x} \geq 2x^{2} + 2 \cos x, -\infty < x < +\infty$.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 在区间 $[0,+\infty)$ 内具有二阶导数，且 $\bigl|f(x)\bigr| \leq 1, 0 < \bigl| f''(x) \bigr| \leq 2 (0 \leq x < +\infty)$. 证明：$\bigl| f'(x) \bigr| \leq 2\sqrt{2}$.
+	\end{ti}
+
+	\begin{ti}
+		若用 $\frac{2(x - 1)}{x + 1}$ 来近似 $\ln x$，证明当 $x \in [1,2]$ 时，其误差不超过 $\frac{1}{12} (x - 1)^{3}$.
+	\end{ti}

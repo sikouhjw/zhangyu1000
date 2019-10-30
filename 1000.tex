@@ -1,6 +1,7 @@
 \documentclass[openany,twocolumn]{ctexbook}
-\usepackage{amsmath}
+\usepackage{amsmath,upgreek}
 \usepackage{fourier}
+\usepackage{esint}
 \usepackage{physics}
 \usepackage{siunitx}
 \usepackage{lastpage}
@@ -8,6 +9,7 @@
 \renewcommand\thefigure{\arabic{chapter}-\arabic{section}-\arabic{figure}}
 
 \usepackage[a4paper,top=2.5cm,bottom=2.5cm,inner=1.5cm,outer=3cm]{geometry}
+% \usepackage[toc]{multitoc}
 
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric,calc}
@@ -39,13 +41,13 @@
 \fancyhf{}
 \fancyhead[LO]{\slshape \rightmark}
 \fancyhead[RE]{\slshape \leftmark}
-\fancyhead[LE,RO]{
-\@ifundefined{lastpage@lastpage}{%
-	\score{0}{10}%
-}{%
-	\score{10 * \thepage / \lastpage@lastpage}{10}%
-}%
-}
+% \fancyhead[LE,RO]{
+% \@ifundefined{lastpage@lastpage}{%
+% 	\score{0}{10}%
+% }{%
+% 	\score{10 * \thepage / \lastpage@lastpage}{10}%
+% }%
+% }
 \fancyhead[C]{\slshape 仅供学习使用，严禁商业使用}
 \fancyfoot[C]{\thepage}
 % \fancyfoot[LE,RO]{\TeX}
@@ -100,7 +102,6 @@
 \def\leq{\leqslant}
 \def\geq{\geqslant}
 \def\ee{\mathrm{e}}
-\def\uppi{\pi}
 \def\CC{\mathrm{C}}
 \edef\lim{\lim\limits}
 
@@ -114,7 +115,7 @@
 % BoldItalicFont = *-Bold
 % ]
 
-\usepackage{hyperref}
+\usepackage[bookmarksopen=true,bookmarksnumbered=true,hidelinks]{hyperref}
 
 \title{张宇考研数学题源探析经典 1000 题\\(习题分册·数学一)}
 \author{张宇}
@@ -128,68 +129,26 @@
 	% \mainmatter
 	% \input{chapter/chap1.tex}
 	
-	\subsection{中值定理、方程的根、不等式}
+	\subsection{变限积分}
+	\paragraph{1. 直接求导}
 
 	\begin{ti}
-		设函数 $f(x)$ 在 $[a,b]$ 上连续，在 $(a,b)$ 内可导，且 $f(a) = f(b) = 0$，求证：
-		\begin{enumerate}
-			\item 存在 $\xi \in (a,b)$，使 $f(\xi) + \xi f'(\xi) = 0$;
-			\item 存在 $\eta \in (a,b)$，使 $\eta f(\eta) + f'(\eta) = 0$.
-		\end{enumerate}
+		设 $f(x)$ 连续，$f(0) = 1$，则曲线 $y = \int_{0}^{x} f(t) \dd{t}$ 在 $(0,0)$ 处的切线方程是\hone{6}.
 	\end{ti}
 
 	\begin{ti}
-		设函数 $f(x)$ 在 $[-2,2]$ 上二阶可导，且 $\left| f(x) \right| \leq 1$，又 $f^{2}(0) + \left[ f'(0) \right]^{2} = 4$. 试证：在 $(-2,2)$ 内至少存在一点 $\xi$，使得 $f(\xi) + f''(\xi) = 0$.
+		函数 $F(x) = \int_{1}^{x} \bigl( 1 - \ln \sqrt{t} \bigr) \dd{t} (x > 0)$ 的递减区间为\hone{6}.
 	\end{ti}
 
 	\begin{ti}
-		设函数 $f(x)$ 在 $[a,b]$ 上连续，在 $(a,b)$ 内可导且 $f(a) \ne f(b)$. 证明：存在 $\xi,\eta \in (a,b)$，使得 $\frac{f'(\xi)}{2\xi} = \frac{f'(\eta)}{b + a}$.
+		设 $f(x)$ 是连续函数，且 $\int_{0}^{x^{3} - 1} f(t) \dd{t} = x$，则 $f(7) = $\hone{4}.
 	\end{ti}
 
 	\begin{ti}
-		设函数 $f(x)$ 在闭区间 $[a,b]$ 上连续 $(a,b > 0)$，在 $(a,b)$ 内可导. 证明：在 $(a,b)$ 内至少存在一点 $\xi$，使等式 $\frac{1}{a - b} \left| \begin{smallmatrix}
-			a & b\\
-			f(a) & f(b)
-		\end{smallmatrix} \right| = f(\xi) - \xi f'(\xi)$ 成立.
+		设 $f(x)$ 为连续函数，且 $F(x) = \int_{\frac{1}{x}}^{\ln x} f(t) \dd{t}$，则 $F'(x) = $\hone{6}.
 	\end{ti}
 
 	\begin{ti}
-		设 $f(x)$ 在闭区间 $[1,2]$ 上可导，证明：存在一点 $\xi \in (1,2)$，使
-		\[
-			f(2) - 2f(1) = \xi f'(\xi) - f(\xi).
-		\]
-	\end{ti}
-
-	\begin{ti}
-		设 $f(x), g(x)$ 在 $[a,b]$ 上二阶可导，且 $f(a) = f(b) = g(a) = 0$，证明：存在 $\xi \in (a,b)$，使 $f''(\xi) g(\xi) + 2 f'(\xi) g'(\xi) + f(\xi) g''(\xi) = 0$.
-	\end{ti}
-
-	\begin{ti}
-		设 $f(x)$ 在闭区间 $[-1,1]$ 上具有三阶连续导数，且 $f(-1) = 0$，$f(1) = 1$，$f'(0) = 0$. 证明：在 $[-1,1]$ 内存在 $\xi$，使得 $f'''(\xi) = 3$.
-	\end{ti}
-
-	\begin{ti}
-		设 $f(x), g(x)$ 在 $[a,b]$ 上二阶可导，$g''(x) \ne 0$，$f(a) = f(b) = g(a) = g(b) = 0$. 证明：
-		\begin{enumerate}
-			\item 在 $(a,b)$ 内，$g(x) \ne 0$;
-			\item 在 $(a,b)$ 内至少存在一点 $\xi$，使 $\frac{f(\xi)}{g(\xi)} = \frac{f''(\xi)}{g''(\xi)}$.
-		\end{enumerate}
-	\end{ti}
-
-	\begin{ti}
-		$f(x)$ 在 $[a,b]$ 上连续，在 $(a,b)$ 内可导，且 $f'(x) \ne 0$. 证明：存在 $\xi, \eta \in (a,b)$，使得
-		\[
-			\frac{f'(\xi)}{f'(\eta)} = \frac{\ee^{b} - \ee^{a}}{b - a} \ee^{-\eta}.
-		\]
-	\end{ti}
-
-	\begin{ti}
-		设 $f(x)$ 在 $[0,1]$ 上可导，$f(0) = 0$，$\left| f'(x) \right| \leq \left| f(x) \right|$，则 $f(1) = $\hone{2}.
-	\end{ti}
-
-	\begin{ti}
-		设 $f(x)$ 在 $[0,4]$ 上一阶可导且 $f'(x) \geq \frac{1}{4}$，$f(2) \geq 0$，则在下列区间上必有 $f(x) \geq \frac{1}{4}$ 成立的是\kuo.
-
-		\fourch{$[0,1]$}{$[1,2]$}{$[2,3]$}{$[3,4]$}
+		$\frac{\dd}{\dd{x}} \bigl[ \int_{0}^{x} \sin (x - t)^{2} \dd{t} \bigr] = $\hone{6}.
 	\end{ti}
 \end{document}
