@@ -1,0 +1,116 @@
+\subsection{变限积分}
+	\paragraph{1. 直接求导}
+
+	\begin{ti}
+		设 $f(x)$ 连续，$f(0) = 1$，则曲线 $y = \int_{0}^{x} f(t) \dd{t}$ 在 $(0,0)$ 处的切线方程是\hone{6}.
+	\end{ti}
+
+	\begin{ti}
+		函数 $F(x) = \int_{1}^{x} \bigl( 1 - \ln \sqrt{t} \bigr) \dd{t} (x > 0)$ 的递减区间为\hone{6}.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 是连续函数，且 $\int_{0}^{x^{3} - 1} f(t) \dd{t} = x$，则 $f(7) = $\hone{4}.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 为连续函数，且 $F(x) = \int_{\frac{1}{x}}^{\ln x} f(t) \dd{t}$，则 $F'(x) = $\hone{6}.
+	\end{ti}
+
+	\begin{ti}
+		$\frac{\dd}{\dd{x}} \bigl[ \int_{0}^{x} \sin (x - t)^{2} \dd{t} \bigr] = $\hone{6}.
+	\end{ti}
+
+	\begin{ti}
+		$\lim_{x \to 0} \frac{\int_{0}^{x} \sin^{2}t \dd{t}}{x^{3}} = $\hone{4}.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x) = \int_{0}^{\sin x} \sin 2t \dd{t}$，$g(x) = \int_{0}^{2x} \ln(1 + t) \dd{t}$，则当 $x \to 0$ 时，$f(x)$ 与 $g(x)$ 相比是\kuo.
+
+		\twoch{等价无穷小}{同阶但非等价无穷小}{高阶无穷小}{低阶无穷小}
+	\end{ti}
+
+	\begin{ti}
+		函数 $f(x) = \int_{0}^{x} \frac{1}{x} \bigl( t^{2} - t \bigr) \dd{t} (x > 0)$ 的最小值为
+		
+		\noindent\kuo.
+
+		\fourch{$-\frac{3}{16}$}{$-1$}{$0$}{$-\frac{1}{2}$}
+	\end{ti}
+
+	\begin{ti}
+		设函数 $f(x)$ 在 $[a,b]$ 上连续，且 $f(x) > 0$. 则方程 $\int_{a}^{x} f(t) \dd{t} + \int_{b}^{x} \frac{1}{f(t)} \dd{t} = 0$ 在 $(a,b)$ 内的根有\kuo.
+		
+		\twoch{$0$ 个}{$1$ 个}{$2$ 个}{无穷多个}
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 连续，$f(0) = 1$，$f'(0) = 2$，则下列曲线中与曲线 $y = f(x)$ 必有公共切线的是\kuo.
+
+		\twoch{$y = \int_{0}^{x} f(t) \dd{t}$}{$y = 1 + \int_{0}^{x} f(t) \dd{t}$}{$y = \int_{0}^{2x} f(t) \dd{t}$}{$y = 1 + \int_{0}^{2x} f(t) \dd{t}$}
+	\end{ti}
+
+	\begin{ti}
+		设正值函数 $f(x)$ 在 $[1,+\infty)$ 上连续，求函数
+		\[
+			F(x) = \int_{1}^{x} \Biggl[ \Biggl( \frac{2}{x} + \ln x \Biggr) - \Biggl( \frac{2}{t} + \ln t \Biggr) \Biggr] f(t) \dd{t}
+		\]
+		的最小值点.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 在 $x = 0$ 处可导，又
+		\[
+			g(x) = \begin{cases}
+				x + \frac{1}{2}, & x < 0,\\
+				\frac{\sin\frac{x}{2}}{x}, & x > 0,
+			\end{cases}
+		\]
+		求
+		\[
+			I = \lim_{x \to 0} \frac{ x f(x) (1 + x)^{- \frac{x+1}{x}} + g(x) \int_{0}^{2x} \cos t^{2} \dd{t} }{xg(x)}.
+		\]
+	\end{ti}
+
+	\paragraph{2. 拆分后再求导}
+
+	\begin{ti}
+		设 $\varphi(x)$ 在 $[a,b]$ 上连续，且 $\varphi(x) > 0$，则函数 $y = \varPhi(x) = \int_{a}^{b} |x - t| \varphi(t) \dd{t}$\kuo.
+
+		\onech{在 $(a,b)$ 内的图形为凸}{在 $(a,b)$ 内的图形为凹}{在 $(a,b)$ 内有拐点}{在 $(a,b)$ 内有间断点}
+	\end{ti}
+
+	\begin{ti}
+		设 $|t| \leq 1$，求积分 $I(t) = \int_{-1}^{1} |x - t| \ee^{2x} \dd{x}$ 的最大值.
+	\end{ti}
+
+	\paragraph{3. 换元后再求导}
+
+	\begin{ti}
+		设 $f(x)$ 连续，则 $\frac{\dd}{\dd{x}} \bigl[ \int_{0}^{x} t f\bigl( x^{2} - t^{2} \bigr) \dd{t} \bigr] = $\hone{2}
+		
+		\noindent\hone{4}.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x)$ 在 $[0,+\infty)$ 上可导，$f(0) = 0$，其反函数为 $g(x)$，若 $\int_{x}^{x + f(x)} g(t - x) \dd{t} = x^{2} \ln(1 + x)$. 求 $f(x)$.
+	\end{ti}
+
+	\begin{ti}
+		求 $\int_{0}^{x} f(t) g(x - t) \dd{t} (x \geq 0)$，其中，当 $x \geq 0$ 时，$f(x) = x$，且
+		\[
+			g(x) = \begin{cases}
+				\sin x, & 0 \leq x < \frac{\uppi}{2},\\
+				0, & x \geq \frac{\uppi}{2}.
+			\end{cases}
+		\]
+	\end{ti}
+
+	\begin{ti}
+		设函数 $f(x)$ 连续，且
+		\[
+			\int_{0}^{x} t f(2x - t) \dd{t} = \frac{1}{2} \arctan x^{2},
+		\]
+		已知 $f(1) = 1$，求 $\int_{1}^{2} f(x) \dd{x}$.
+	\end{ti}

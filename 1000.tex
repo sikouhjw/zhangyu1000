@@ -7,6 +7,10 @@
 \usepackage{lastpage}
 \usepackage{graphicx}
 \renewcommand\thefigure{\arabic{chapter}-\arabic{section}-\arabic{figure}}
+\usepackage{floatrow}
+\usepackage{subcaption}
+\xeCJKDeclareCharClass{FullRight}{"2236}
+\newcommand\ratio[2]{#1^^^^2236#2}
 
 \usepackage[a4paper,top=2.5cm,bottom=2.5cm,inner=1.5cm,outer=3cm]{geometry}
 % \usepackage[toc]{multitoc}
@@ -33,6 +37,19 @@
    \fi
 ,\end{tikzpicture}
 }
+
+\usepackage{wallpaper}
+\renewcommand{\CenterWallPaper}[2]{%
+\AddToShipoutPicture{\put(\LenToUnit{\wpXoffset},\LenToUnit{\wpYoffset}){%
+	 \parbox[b][\paperheight]{\paperwidth}{%
+		\vfill
+		\centering
+		\tikz[opacity=0.05] \node[inner sep=0pt] {\includegraphics[width=#1\paperwidth,height=#1\paperheight,keepaspectratio]{#2}};%
+		\vfill
+	 }}
+  }
+}
+\CenterWallPaper{1}{figure/ctanlion.pdf}
 
 \setlength{\headheight}{13pt}
 \makeatletter
@@ -93,6 +110,7 @@
 
 \usepackage{ulem}
 \newcommand{\hone}[1]{ \uline{\hspace{#1 pc}}}
+\def\htwo{ \uline{\hspace{\fill}}}
 \def\kuo{ (\hspace{1pc})}
 
 \newcommand{\fourch}[4]{\noindent\begin{tabular}{*{4}{@{}p{1.97cm}}}(A)~#1 & (B)~#2 & (C)~#3 & (D)~#4\end{tabular}} % 一行
@@ -117,7 +135,7 @@
 
 \usepackage[bookmarksopen=true,bookmarksnumbered=true,hidelinks]{hyperref}
 
-\title{张宇考研数学题源探析经典 1000 题\\(习题分册·数学一)}
+\title{\href{https://github.com/sikouhjw/zhangyu1000}{张宇考研数学题源探析经典 1000 题\\(习题分册·数学一)}}
 \author{张宇}
 
 
@@ -129,26 +147,30 @@
 	% \mainmatter
 	% \input{chapter/chap1.tex}
 	
-	\subsection{变限积分}
-	\paragraph{1. 直接求导}
+	\subsection{一元积分不等式}
 
 	\begin{ti}
-		设 $f(x)$ 连续，$f(0) = 1$，则曲线 $y = \int_{0}^{x} f(t) \dd{t}$ 在 $(0,0)$ 处的切线方程是\hone{6}.
+		已知函数 $f(x)$ 在区间 $[a,b]$ 上连续并单调增加，求证：
+		\[
+			\int_{a}^{b} \Biggl( \frac{b - x}{b - a} \Biggr)^{n} f(x) \dd{x} \leq \frac{1}{n + 1} \int_{a}^{b} f(x) \dd{x} (n \in \mathbb N).
+		\]
 	\end{ti}
 
 	\begin{ti}
-		函数 $F(x) = \int_{1}^{x} \bigl( 1 - \ln \sqrt{t} \bigr) \dd{t} (x > 0)$ 的递减区间为\hone{6}.
+		设 $f(x)$ 在 $[a,b]$ 上连续，且 $f(x) > 0$，证明：
+		\[
+			\ln \left[ \frac{1}{b - a} \int_{a}^{b} f(x) \dd{x} \right] \geq \frac{1}{b - a} \int_{a}^{b} \ln f(x) \dd{x}.
+		\]
 	\end{ti}
 
 	\begin{ti}
-		设 $f(x)$ 是连续函数，且 $\int_{0}^{x^{3} - 1} f(t) \dd{t} = x$，则 $f(7) = $\hone{4}.
+		设 $f(x)$ 二阶可导，$f''(x) \geq 0$，$g(x)$ 为连续函数，若 $a > 0$，求证：
+		\[
+			\frac{1}{a} \int_{0}^{a} f\bigl[g(x)\bigr] \dd{x} \geq f\left[ \frac{1}{a} \int_{0}^{a} g(x) \dd{x} \right].
+		\]
 	\end{ti}
 
 	\begin{ti}
-		设 $f(x)$ 为连续函数，且 $F(x) = \int_{\frac{1}{x}}^{\ln x} f(t) \dd{t}$，则 $F'(x) = $\hone{6}.
-	\end{ti}
-
-	\begin{ti}
-		$\frac{\dd}{\dd{x}} \bigl[ \int_{0}^{x} \sin (x - t)^{2} \dd{t} \bigr] = $\hone{6}.
+		设 $f(x)$ 在闭区间 $[0,1]$ 上有二阶导数，且 $f\bigl( \frac{1}{2} \bigr) = 1$，$f''(x) > 0$，证明 $\int_{0}^{1} f(x) \dd{x} \geq 1$.
 	\end{ti}
 \end{document}
