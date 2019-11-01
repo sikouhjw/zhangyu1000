@@ -18,6 +18,11 @@
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric,calc}
 
+\usepackage{libertine}
+\newcommand{\libcirc}[1]{\pgfmathparse{
+    ifthenelse(#1 > 0 && #1 < 21, Hex(9311+#1), Hex(9450)
+    }\libertineGlyph{uni\pgfmathresult}}
+
 \newcommand\score[2]{
 \pgfmathsetmacro\pgfxa{#1+1}
 \tikzstyle{scorestars}=[star, star points=5, star point ratio=2.25, draw,inner sep=0.15em,anchor=outer point 3]
@@ -44,7 +49,7 @@
 	 \parbox[b][\paperheight]{\paperwidth}{%
 		\vfill
 		\centering
-		\tikz[opacity=0.05] \node[inner sep=0pt] {\includegraphics[width=#1\paperwidth,height=#1\paperheight,keepaspectratio]{#2}};%
+		\tikz[opacity=0.075] \node[inner sep=0pt] {\includegraphics[width=#1\paperwidth,height=#1\paperheight,keepaspectratio]{#2}};%
 		\vfill
 	 }}
   }
@@ -65,9 +70,8 @@
 % 	\score{10 * \thepage / \lastpage@lastpage}{10}%
 % }%
 % }
-\fancyhead[C]{\slshape 仅供学习使用，严禁商业使用}
+\fancyhead[C]{\slshape \href{https://github.com/sikouhjw/zhangyu1000}{仅供学习使用，严禁商业使用}}
 \fancyfoot[C]{\thepage}
-% \fancyfoot[LE,RO]{\TeX}
 \makeatother
 
 \usepackage{caption}
@@ -147,30 +151,5 @@
 	% \mainmatter
 	% \input{chapter/chap1.tex}
 	
-	\subsection{一元积分不等式}
-
-	\begin{ti}
-		已知函数 $f(x)$ 在区间 $[a,b]$ 上连续并单调增加，求证：
-		\[
-			\int_{a}^{b} \Biggl( \frac{b - x}{b - a} \Biggr)^{n} f(x) \dd{x} \leq \frac{1}{n + 1} \int_{a}^{b} f(x) \dd{x} (n \in \mathbb N).
-		\]
-	\end{ti}
-
-	\begin{ti}
-		设 $f(x)$ 在 $[a,b]$ 上连续，且 $f(x) > 0$，证明：
-		\[
-			\ln \left[ \frac{1}{b - a} \int_{a}^{b} f(x) \dd{x} \right] \geq \frac{1}{b - a} \int_{a}^{b} \ln f(x) \dd{x}.
-		\]
-	\end{ti}
-
-	\begin{ti}
-		设 $f(x)$ 二阶可导，$f''(x) \geq 0$，$g(x)$ 为连续函数，若 $a > 0$，求证：
-		\[
-			\frac{1}{a} \int_{0}^{a} f\bigl[g(x)\bigr] \dd{x} \geq f\left[ \frac{1}{a} \int_{0}^{a} g(x) \dd{x} \right].
-		\]
-	\end{ti}
-
-	\begin{ti}
-		设 $f(x)$ 在闭区间 $[0,1]$ 上有二阶导数，且 $f\bigl( \frac{1}{2} \bigr) = 1$，$f''(x) > 0$，证明 $\int_{0}^{1} f(x) \dd{x} \geq 1$.
-	\end{ti}
+	\subsection{多元函数的极值、最值问题}
 \end{document}

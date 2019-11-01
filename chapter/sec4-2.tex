@@ -1,0 +1,132 @@
+\subsection{多元微分法}
+
+	\begin{ti}
+		设 $F(u,v)$ 对其变元 $u,v$ 具有二阶连续偏导数，并设 $z = F\bigl( \frac{y}{x},x^{2} + y^{2} \bigr)$，则 $\frac{\partial^{2}z}{\partial x \partial y} = $\htwo.
+	\end{ti}
+
+	\begin{ti}
+		设 $u = y f \bigl( \frac{x}{y} \bigr) + x g \bigl( \frac{y}{x} \bigr)$，其中函数 $f,g$ 具有二阶连续偏导数，求 $x \frac{\partial^{2}u}{\partial x^{2}} + y \frac{\partial^{2}u}{\partial x \partial y}$.
+	\end{ti}
+
+	\begin{ti}
+		设函数 $z = f(u)$，方程 $u = \varphi(u) + \int_{y}^{x} P(t) \dd{t}$ 确定 $u$ 是 $x,y$ 的函数，其中 $f(u),\varphi(u)$ 可微，$P(t),\varphi'(u)$ 连续，且 $\varphi'(u) \ne 1$. 求 $P(y) \frac{\partial z}{\partial x} + P(x) \frac{\partial z}{\partial y}$.
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x,y) = \int_{0}^{xy} \ee^{-t^{2}} \dd{t}$，求 $\frac{x}{y} \cdot \frac{\partial^{2}f}{\partial x^{2}} - 2 \frac{\partial^{2}f}{\partial x \partial y} + \frac{y}{x} \cdot \frac{\partial^{2}f}{\partial y^{2}}$.
+	\end{ti}
+
+	\begin{ti}
+		设函数 $f(x,y)$ 可微，又 $f(0,0) = 0$，$f_{x}'(0,0) = a$，$f_{y}'(0,0) = b$，且 $\varphi(t) = f \bigl[ t, f \bigl( t, t^{2} \bigr) \bigr]$，求 $\varphi'(0)$.
+	\end{ti}
+
+	\begin{ti}
+		设函数 $u = u(x,y)$ 满足 $\frac{\partial^{2}u}{\partial x^{2}} = \frac{\partial^{2}u}{\partial y^{2}}$ 及
+		\[
+			u(x,2x) = x,u_{1}'(x,2x) = x^{2},
+		\]
+		$u$ 有二阶连续偏导数，则 $u_{11}''(x,2x) = $\kuo.
+
+		\fourch{$\frac{4}{3}x$}{$-\frac{4}{3}x$}{$\frac{3}{4}x$}{$-\frac{3}{4}x$}
+	\end{ti}
+
+	\begin{ti}
+		若函数 $u = x y f \bigl( \frac{x + y}{xy} \bigr)$，其中 $f$ 是可微函数，且 $x^{2} \frac{\partial u}{\partial x} - y^{2} \frac{\partial u}{\partial y} = G(x,y) u$，则函数 $G(x,y) = $\kuo.
+
+		\fourch{$x + y$}{$x - y$}{$x^{2} - y^{2}$}{$(x + y)^{2}$}
+	\end{ti}
+
+	\begin{ti}
+		设函数 $u = f \bigl( \ln \sqrt{x^{2} + y^{2}} \bigr)$，满足 $\frac{\partial^{2}u}{\partial x^{2}} + \frac{\partial^{2}u}{\partial y^{2}} = \bigl( x^{2} + y^{2} \bigr)^{\frac{3}{2}}$，且极限
+		\[
+			\lim_{x \to 0} \frac{\int_{0}^{1} f(xt) \dd{t}}{x} = -1,
+		\]
+		试求函数 $f(x)$ 的表达式.
+	\end{ti}
+
+	\begin{ti}
+		设 $u(x,y)$ 连续，证明无零值的函数 $u(x,y)$ 可分离变量(即 $u(x,y) = f(x) \cdot g(y)$)的充分必要条件是
+		\[
+			u \frac{\partial^{2}u}{\partial x \partial y} = \frac{\partial u}{\partial x} \frac{\partial u}{\partial y}.
+		\]
+	\end{ti}
+
+	\begin{ti}
+		设 $u = f(x,y,z)$ 有连续偏导数，$y = y(x)$ 和 $z = z(x)$ 分别由方程 $\ee^{xy} - y = 0$ 和 $\ee^{z} - xz = 0$ 所确定，求 $\frac{\dd{u}}{\dd{x}}$.
+	\end{ti}
+
+	\begin{ti}
+		已知函数 $F(u,v,w)$ 可微，
+		\[
+			F_{u}'(0,0,0) = 1,
+			F_{v}'(0,0,0) = 2,
+			F_{w}'(0,0,0) = 3,
+		\]
+		函数 $z = f(x,y)$ 由 $F \bigl( 2x - y + 3z, 4x^{2} - y^{2} + z^{2}, xyz \bigr) = 0$ 确定，且满足 $f(1,2) = 0$，则 $f_{x}'(1,2) = $\htwo.
+	\end{ti}
+
+	\begin{ti}
+		设 $u = f(x,y,z)$，$\varphi\bigl( x^{2},\ee^{y},z \bigr) = 0$，$y = \sin x$，其中 $f,\varphi$ 具有一阶连续的偏导数，且 $\frac{\partial \varphi}{\partial z} \ne 0$，求 $\frac{\dd{u}}{\dd{x}}$.
+	\end{ti}
+
+	\begin{ti}
+		已知 $\begin{cases}
+			z = x^{2} + y^{2},\\
+			x^{2} + 2y^{2} + 3z^{2} = 20,
+		\end{cases}$ 求 $\frac{\dd{y}}{\dd{x}},\frac{\dd{z}}{\dd{x}}$.
+	\end{ti}
+
+	\begin{ti}
+		利用变量代换 $u = x$，$v = \frac{y}{x}$，可将方程
+		\[
+			x \frac{\partial z}{\partial x} + y \frac{\partial z}{\partial y} = z
+		\]
+		化成新方程\kuo.
+
+		\twoch{$u \frac{\partial z}{\partial u} = z$}{$v \frac{\partial z}{\partial v} = z$}{$u \frac{\partial z}{\partial v} = z$}{$v \frac{\partial z}{\partial u} = z$}
+	\end{ti}
+
+	\begin{ti}
+		已知函数 $u = u(x,y)$ 满足方程 $\frac{\partial^{2}u}{\partial x^{2}} - \frac{\partial^{2}u}{\partial y^{2}} + k \bigl( \frac{\partial u}{\partial x} + \frac{\partial u}{\partial y} \bigr) = 0$. 试确定参数 $a,b$，利用变换 $u(x,y) = v(x,y) \ee^{ax + by}$ 将原方程变形，使新方程中不含有一阶偏导数项.
+	\end{ti}
+
+	\begin{ti}
+		设 $A,B,C$ 为常数，$B^{2} - AC > 0$，$A \ne 0$，$u(x,y)$ 具有二阶连续偏导数. 证明：必存在非奇异线性变换
+		\[
+			\xi = \lambda_{1}x + y, \eta = \lambda_{2}x + y(\lambda_{1},\lambda_{2} \text{ 为常数}),
+		\]
+		将方程 $A \frac{\partial^{2}u}{\partial x^{2}} + 2B \frac{\partial^{2}u}{\partial x \partial y} + C \frac{\partial^{2}u}{\partial y^{2}} = 0$ 化成 $\frac{\partial^{2}u}{\partial \xi \partial \eta} = 0$.
+	\end{ti}
+
+	\begin{ti}
+		设 $h(t)$ 为三阶可导函数，$u = h(xyz)$，$h(1) = f_{xy}''(0,0)$，$h'(1) = f_{yx}''(0,0)$，且满足
+		\[
+			\frac{\partial^{3}u}{\partial x \partial y \partial z} = x^{2} y^{2} z^{2} h'''(xyz),
+		\]
+		求 $u$ 的表达式，其中
+		\[
+			f(x,y) = \begin{cases}
+				x y \frac{x^{2} - y^{2}}{x^{2} + y^{2}}, & (x,y) \ne (0,0)\\
+				0, & (x,y) = (0,0).
+			\end{cases}
+		\]
+	\end{ti}
+
+	\begin{ti}
+		设 $z = z(u,v)$ 具有二阶连续偏导数，且 $z = z(x + y, x - y)$ 满足微分方程
+		\[
+			\frac{\partial^{2}z}{\partial x^{2}} + 2 \frac{\partial^{2}z}{\partial x \partial y} + \frac{\partial^{2}z}{\partial y^{2}} = 1.
+		\]
+		\begin{enumerate}
+			\item 求 $z = z(u,v)$ 所满足关于 $u,v$ 的微分方程;\label{4.29:1}
+			\item 由(\ref{4.29:1})求出 $z = z(x + y, x - y)$ 的一般表达式.
+		\end{enumerate}
+	\end{ti}
+
+	\begin{ti}
+		设 $f(u,v)$ 可微，证明曲面 $f(ax - bz, ay - cz) = 0$ 上任一点的切平面都与某一定直线平行，其中 $a,b,c$ 是不同时为零的常数.
+	\end{ti}
+
+	\begin{ti}
+		证明曲面 $\ee^{2x - z} = f \bigl( \uppi y - \sqrt{2}z \bigr)$ 是柱面，其中 $f$ 可微.
+	\end{ti}
