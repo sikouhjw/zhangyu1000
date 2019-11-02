@@ -144,12 +144,93 @@
 
 
 \begin{document}
-	% \maketitle
 	% \frontmatter
+	% \maketitle
 	% \input{chapter/chap0.tex}
 	% \tableofcontents
 	% \mainmatter
 	% \input{chapter/chap1.tex}
 	
 	\subsection{多元函数的极值、最值问题}
+
+	\begin{ti}
+		函数 $f(x,y) = \begin{cases}
+			\frac{\sin ( x^{2} + y^{2} )}{x^{2} + y^{2}}, & (x,y) \ne (0,0),\\
+			1, & (x,y) = (0,0)
+		\end{cases}$ 在 $D = \bigl\{ (x,y) \bigl| x^{2} + y^{2} \leq 1 \bigr\}$ 上\kuo.
+
+		\onech{有最大值，无最小值}{有最小值，无最大值}{既无最大值，又无最小值}{既有最大值，又有最小值}
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x,y)$ 在点 $(0,0)$ 的邻域内连续，且
+		\[
+			\lim_{(x,y) \to (0,0)} \frac{f(x,y) - 4xy}{x^{2} + y^{2}} = 1,
+		\]
+		则\kuo.
+
+		\onech{点 $(0,0)$ 是 $f(x,y)$ 的极小值点}{点 $(0,0)$ 是 $f(x,y)$ 的极大值点}{点 $(0,0)$ 不是 $f(x,y)$ 的极值点}{所给条件不足以判断点 $(0,0)$ 是否为 $f(x,y)$ 的极值点}
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x,y)$ 是连续函数，且 $\lim_{\substack{x \to 0\\ y \to 0}} \frac{f(x,y) - f(0,0)}{x^{3} + y^{3} - 3x^{2} - 3y^{2}} = 1$，则\kuo.
+
+		\onech{$f(0,0)$ 为 $f(x,y)$ 的极大值}{$f(0,0)$ 为 $f(x,y)$ 的极小值}{$f(0,0)$ 不是 $f(x,y)$ 的极值}{不能确定}
+	\end{ti}
+
+	\begin{ti}
+		已知函数 $f(x,y)$ 在点 $(0,0)$ 的某邻域内连续，且
+		\[
+			\lim_{\substack{x \to 0\\ y \to 0}} \frac{f(x,y) - axy}{\bigl( x^{2} + y^{2} \bigr)^{2}} = 1,
+		\]
+		其中 $a$ 为非零常数，则 $f(0,0)$\kuo.
+
+		\twoch{是极大值}{是极小值}{不是极值}{是否取极值与 $a$ 有关}
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x,y)$ 在点 $O(0,0)$ 的某邻域 $U$ 内连续，且 $\lim_{(x,y) \to (0,0)} \frac{f(x,y) - xy}{x^{2} + y^{2}} = a$，常数 $a > \frac{1}{2}$. 试讨论 $f(0,0)$ 是否为 $f(x,y)$ 的极值？若是极值，判断是极大值还是极小值？
+	\end{ti}
+
+	\begin{ti}
+		设 $u(x,y)$ 在平面有界闭区域 $D$ 上具有二阶连续偏导数，且
+		\[
+			\frac{\partial^{2}u}{\partial x \partial y} \ne 0,\frac{\partial^{2}u}{\partial x^{2}} \cdot \frac{\partial^{2}u}{\partial y^{2}} = 0,
+		\]
+		则 $u(x,y)$ 的\kuo.
+
+		\onech{最大值点和最小值点必定都在 $D$ 的内部}{最大值点和最小值点必定都在 $D$ 的边界上}{最大值点在 $D$ 的内部，最小值点在 $D$ 的边界上}{最小值点在 $D$ 的内部，最大值点在 $D$ 的边界上}
+	\end{ti}
+
+	\begin{ti}
+		已知函数 $z = z(x,y)$ 在区域 $D$ 内满足方程 $\frac{\partial^{2}z}{\partial x^{2}} \cdot \frac{\partial^{2}z}{\partial y^{2}} + a \frac{\partial z}{\partial x} + b \frac{\partial z}{\partial y} + c = 0$(常数 $c > 0$)，则在 $D$ 内函数 $z = z(x,y)$\kuo.
+
+		\twoch{存在极大值}{存在极小值}{无极值}{无法判断}
+	\end{ti}
+
+	\begin{ti}
+		函数 $z = x^{3} + y^{3} - 3x^{2} - 3y^{2}$ 的极小值点是\kuo.
+
+		\fourch{$(0,0)$}{$(2,2)$}{$(0,2)$}{$(2,0)$}
+	\end{ti}
+
+	\begin{ti}
+		若函数 $z = 2x^{2} + 2y^{2} + 3xy + ax + by + c$ 在点 $(-2,3)$ 处取得极小值 $-3$，则 $abc = $\htwo.
+	\end{ti}
+
+	\begin{ti}
+		设函数 $z = z(x,y)$ 是由方程
+		\[
+			x^{2} - 6xy + 10y^{2} - 2yz - z^{2} + 32 = 0
+		\]
+		确定，讨论函数 $z(x,y)$ 的极大值与极小值.
+	\end{ti}
+
+	\begin{ti}
+		函数 $f(x,y) = \ee^{-x} \bigl( ax + b - y^{2} \bigr)$，若 $f(-1,0)$ 为其极大值，则 $a,b$ 满足\htwo.
+	\end{ti}
+
+	\begin{ti}
+		已知矩形的周长为 $2p$，将它绕其中一边旋转一周而构成一旋转体(圆柱体)，求该圆柱体的半径与高各为多少时，该圆柱体体积最大？
+	\end{ti}
 \end{document}
