@@ -1,0 +1,145 @@
+\subsection{多元函数的极值、最值问题}
+
+	\begin{ti}
+		函数 $f(x,y) = \begin{cases}
+			\frac{\sin ( x^{2} + y^{2} )}{x^{2} + y^{2}}, & (x,y) \ne (0,0),\\
+			1, & (x,y) = (0,0)
+		\end{cases}$ 在 $D = \bigl\{ (x,y) \bigl| x^{2} + y^{2} \leq 1 \bigr\}$ 上\kuo.
+
+		\onech{有最大值，无最小值}{有最小值，无最大值}{既无最大值，又无最小值}{既有最大值，又有最小值}
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x,y)$ 在点 $(0,0)$ 的邻域内连续，且
+		\[
+			\lim_{(x,y) \to (0,0)} \frac{f(x,y) - 4xy}{x^{2} + y^{2}} = 1,
+		\]
+		则\kuo.
+
+		\onech{点 $(0,0)$ 是 $f(x,y)$ 的极小值点}{点 $(0,0)$ 是 $f(x,y)$ 的极大值点}{点 $(0,0)$ 不是 $f(x,y)$ 的极值点}{所给条件不足以判断点 $(0,0)$ 是否为 $f(x,y)$ 的极值点}
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x,y)$ 是连续函数，且 $\lim_{\substack{x \to 0\\ y \to 0}} \frac{f(x,y) - f(0,0)}{x^{3} + y^{3} - 3x^{2} - 3y^{2}} = 1$，则\kuo.
+
+		\onech{$f(0,0)$ 为 $f(x,y)$ 的极大值}{$f(0,0)$ 为 $f(x,y)$ 的极小值}{$f(0,0)$ 不是 $f(x,y)$ 的极值}{不能确定}
+	\end{ti}
+
+	\begin{ti}
+		已知函数 $f(x,y)$ 在点 $(0,0)$ 的某邻域内连续，且
+		\[
+			\lim_{\substack{x \to 0\\ y \to 0}} \frac{f(x,y) - axy}{\bigl( x^{2} + y^{2} \bigr)^{2}} = 1,
+		\]
+		其中 $a$ 为非零常数，则 $f(0,0)$\kuo.
+
+		\twoch{是极大值}{是极小值}{不是极值}{是否取极值与 $a$ 有关}
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x,y)$ 在点 $O(0,0)$ 的某邻域 $U$ 内连续，且 $\lim_{(x,y) \to (0,0)} \frac{f(x,y) - xy}{x^{2} + y^{2}} = a$，常数 $a > \frac{1}{2}$. 试讨论 $f(0,0)$ 是否为 $f(x,y)$ 的极值？若是极值，判断是极大值还是极小值？
+	\end{ti}
+
+	\begin{ti}
+		设 $u(x,y)$ 在平面有界闭区域 $D$ 上具有二阶连续偏导数，且
+		\[
+			\frac{\partial^{2}u}{\partial x \partial y} \ne 0,\frac{\partial^{2}u}{\partial x^{2}} \cdot \frac{\partial^{2}u}{\partial y^{2}} = 0,
+		\]
+		则 $u(x,y)$ 的\kuo.
+
+		\onech{最大值点和最小值点必定都在 $D$ 的内部}{最大值点和最小值点必定都在 $D$ 的边界上}{最大值点在 $D$ 的内部，最小值点在 $D$ 的边界上}{最小值点在 $D$ 的内部，最大值点在 $D$ 的边界上}
+	\end{ti}
+
+	\begin{ti}
+		已知函数 $z = z(x,y)$ 在区域 $D$ 内满足方程 $\frac{\partial^{2}z}{\partial x^{2}} \cdot \frac{\partial^{2}z}{\partial y^{2}} + a \frac{\partial z}{\partial x} + b \frac{\partial z}{\partial y} + c = 0$(常数 $c > 0$)，则在 $D$ 内函数 $z = z(x,y)$\kuo.
+
+		\twoch{存在极大值}{存在极小值}{无极值}{无法判断}
+	\end{ti}
+
+	\begin{ti}
+		函数 $z = x^{3} + y^{3} - 3x^{2} - 3y^{2}$ 的极小值点是\kuo.
+
+		\fourch{$(0,0)$}{$(2,2)$}{$(0,2)$}{$(2,0)$}
+	\end{ti}
+
+	\begin{ti}
+		若函数 $z = 2x^{2} + 2y^{2} + 3xy + ax + by + c$ 在点 $(-2,3)$ 处取得极小值 $-3$，则 $abc = $\htwo.
+	\end{ti}
+
+	\begin{ti}
+		设函数 $z = z(x,y)$ 是由方程
+		\[
+			x^{2} - 6xy + 10y^{2} - 2yz - z^{2} + 32 = 0
+		\]
+		确定，讨论函数 $z(x,y)$ 的极大值与极小值.
+	\end{ti}
+
+	\begin{ti}
+		函数 $f(x,y) = \ee^{-x} \bigl( ax + b - y^{2} \bigr)$，若 $f(-1,0)$ 为其极大值，则 $a,b$ 满足\htwo.
+	\end{ti}
+
+	\begin{ti}
+		已知矩形的周长为 $2p$，将它绕其中一边旋转一周而构成一旋转体(圆柱体)，求该圆柱体的半径与高各为多少时，该圆柱体体积最大？
+	\end{ti}
+
+	\begin{ti}
+		\begin{enumerate}
+			\item 设 $x > 0$，$y > 0$，$z > 0$，求函数 $f(x,y,z) = x y z^{3}$ 在约束条件 $x^{2} + y^{2} + z^{2} = 5 R^{2}$($R > 0$ 为常数)下的最大值;\label{4.44:1}
+			\item 由(\ref{4.44:1})的结论证明：当 $a > 0$，$b > 0$，$c > 0$ 时，
+			\[
+				a b c^{3} \leq 27 \Biggl( \frac{a + b + c}{5} \Biggr)^{5}.
+			\]
+		\end{enumerate}
+	\end{ti}
+
+	\begin{ti}
+		求二元函数 $z = f(x,y) = x^{2}y(4 - x - y)$ 在由直线 $x + y = 6$，$x$ 轴和 $y$ 轴所围成的闭区域 $D$ 上的极值、最大值与最小值.
+	\end{ti}
+
+	\begin{ti}
+		求
+		\[
+			f(x,y) = x + xy - x^{2} - y^{2}
+		\]
+		在闭区域 $D = \{ (x,y) | 0 \leq x \leq 1, 0 \leq y \leq 2 \}$ 上的最大值和最小值.
+	\end{ti}
+
+	\begin{ti}
+		求函数
+		\[
+			z = x^{2} + y^{2} + 2x + y
+		\]
+		在区域 $D = \bigl\{ (x,y) \bigl| x^{2} + y^{2} \leq 1 \bigr\}$ 上的最大值与最小值.
+	\end{ti}
+
+	\begin{ti}
+		求内接于椭球面 $\frac{x^{2}}{a^{2}} + \frac{y^{2}}{b^{2}} + \frac{z^{2}}{c^{2}} = 1$ 的长方体的最大体积.
+	\end{ti}
+
+	\begin{ti}
+		在第一象限的椭圆 $\frac{x^{2}}{4} + y^{2} = 1$ 上求一点，使过该点的法线与原点的距离最大.
+	\end{ti}
+
+	\begin{ti}
+		设正数 $a,b$ 的值，使得椭圆 $\frac{x^{2}}{a^{2}} + \frac{y^{2}}{b^{2}} = 1$ 包含圆 $x^{2} + y^{2} = 2y$，且面积最小.
+	\end{ti}
+
+	\begin{ti}
+		求证：$f(x,y) = Ax^{2} + 2Bxy + Cy^{2}$ 在约束条件 $1 - \frac{x^{2}}{a^{2}} - \frac{y^{2}}{b^{2}} = 0$ 下存在最大值和最小值，且它们是方程 $k^{2} - \bigl( Aa^{2} + Cb^{2} \bigr)k + \bigl( AC - B^{2} \bigr)a^{2}b^{2} = 0$ 的根.
+	\end{ti}
+
+	\begin{ti}
+		曲面 $x^{2} + 2y^{2} + 3z^{2} = 1$ 的切平面与三个坐标平面围成的有限区域的体积的最小值为\htwo.
+	\end{ti}
+
+	\begin{ti}
+		在 $xOz$ 面上有抛物线 $z = 2 - x^{2}$.
+		\begin{enumerate}
+			\item 求抛物线 $z = 2 - x^{2}$ 绕 $Oz$ 轴旋转所得的旋转抛物面方程;
+			\item 在旋转抛物面位于第一卦限部分上求一点，使该点处的切平面与三坐标面围成的四面体的体积最小;
+			\item 设 $V = \ln (4 - z)^{3} - 24 (\ln x + \ln y)$，其中 $x = x(y,z)$ 由方程 $z + x^{2} + y^{2} = 2$ 所确定，求 $\frac{\partial V}{\partial z}\bigl|_{(1,1,0)}$.
+		\end{enumerate}
+	\end{ti}
+
+	\begin{ti}
+		已知 $x,y,z$ 为实数，且 $\ee^{x} + y^{2} + |z| = 3$，求证 $\ee^{x} y^{2} |z| \leq 1$.
+	\end{ti}
