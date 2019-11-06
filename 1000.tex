@@ -2,6 +2,7 @@
 \usepackage{amsmath,amssymb,upgreek}
 \usepackage{fourier}
 \usepackage{esint}
+\usepackage{bm}
 \usepackage{physics}
 \usepackage{siunitx}
 \usepackage{lastpage}
@@ -17,11 +18,9 @@
 
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric,calc}
-
-\usepackage{libertine}
-\newcommand{\libcirc}[1]{\pgfmathparse{
-    ifthenelse(#1 > 0 && #1 < 21, Hex(9311+#1), Hex(9450)
-    }\libertineGlyph{uni\pgfmathresult}}
+\newcommand*{\circled}[1]{\lower.7ex\hbox{\tikz\draw (0pt, 0pt)%
+	circle (.5em) node {\makebox[1em][c]{\small #1}};}}
+\let\libcirc\circled
 
 \newcommand\score[2]{
 \pgfmathsetmacro\pgfxa{#1+1}
@@ -151,5 +150,5 @@
 	% \mainmatter
 	% \input{chapter/chap1.tex}
 	
-	\section{代数与几何}
+	\section{三重积分、曲线曲面积分}
 \end{document}
