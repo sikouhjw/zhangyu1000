@@ -1,0 +1,79 @@
+\subsection{第二型曲面积分}
+
+	\begin{ti}
+		设 $\varSigma$ 是球面 $x^{2} + y^{2} + z^{2} = a^{2} (a > 0)$ 的外侧，则 $\oiint_{\varSigma} xy^{2} \dd{y}\dd{z} + yz^{2} \dd{z}\dd{x} + zx^{2} \dd{x}\dd{y} = $\htwo.
+	\end{ti}
+
+	\begin{ti}
+		设 $\varSigma: x^{2} + y^{2} + z^{2} = 4 (z \geq 0)$，取上侧，试求曲面积分
+		\[
+			I = \iint_{\varSigma} \frac{x\dd{y}\dd{z} + y\dd{z}\dd{x} + z\dd{x}\dd{y}}{\sqrt{ x^{2} + (y - 1)^{2} + z^{2} }}.
+		\]
+	\end{ti}
+
+	\begin{ti}
+		设 $f(x,y,z)$ 为连续函数，$S$ 为曲面 $z = \frac{1}{2} \bigl( x^{2} + y^{2} \bigr)$ 介于 $z = 2$ 与 $z = 8$ 之间的上侧部分，求
+		\begin{align*}
+			\iint_{S} \bigl[ y f(x,y,z) + x \bigr] \dd{y} \dd{z} &+ \bigl[ x f(x,y,z) + y \bigr] \dd{z} \dd{x}\\
+			&+ \bigl[ 2xy f(x,y,z) + z \bigr] \dd{x} \dd{y}.
+		\end{align*}
+	\end{ti}
+
+	\begin{ti}
+		设 $S$ 为平面 $x - y + z = 1$ 介于三坐标平面间的有限部分，法向量与 $z$ 轴交角为锐角，$f(x,y,z)$ 连续，计算
+		\begin{align*}
+			\iint_{S} \bigl[ f(x,y,z) + x \bigr] \dd{y} \dd{z} &+ \bigl[ 2f(x,y,z) + y \bigr] \dd{z} \dd{x}\\
+			&+ \bigl[ f(x,y,z) + z \bigr] \dd{x} \dd{y}.
+		\end{align*}
+	\end{ti}
+
+	\begin{ti}
+		计算曲面积分
+		\begin{align*}
+			I = \iint_{\varSigma} \bigl( x^{3} + az^{2} \bigr) \dd{y} \dd{z} &+ \bigl( y^{3} + ax^{2} \bigr) \dd{z} \dd{x}\\
+			&+ \bigl( z^{3} + ay^{2} \bigr) \dd{x} \dd{y},
+		\end{align*}
+		其中 $\varSigma$ 为上半球面 $z = \sqrt{a^{2} - x^{2} - y^{2}}$ 的上侧.
+	\end{ti}
+
+	\begin{ti}
+		计算
+		\[
+			I = \oiint_{\varSigma} \frac{2 \dd{y} \dd{z}}{x \cos^{2}x} + \frac{\dd{z} \dd{x}}{\cos^{2}y} - \frac{\dd{x} \dd{y}}{z \cos^{2}z},
+		\]
+		其中 $\varSigma$ 为球面 $x^{2} + y^{2} + z^{2} = 1$ 的外侧.
+	\end{ti}
+
+	\begin{ti}
+		设向量场
+		\begin{align*}
+			\bm F = \Biggl( x^{2} y z^{2}, \frac{1}{z} \arctan \frac{y}{z} - x y^{2} z^{2}, &\frac{1}{y} \arctan \frac{y}{z}\\
+			&+ z(1 + xyz) \Biggr).
+		\end{align*}
+		\begin{enumerate}
+			\item 计算 $\div \bm F |_{(1,1,1)}$ 的值;
+			\item 设空间区域 $\varOmega$ 由锥面 $y^{2} + z^{2} = x^{2}$ 与球面 $x^{2} + y^{2} + z^{2} = a^{2}, x^{2} + y^{2} + z^{2} = 4 a^{2}$ 所围成 $(x > 0)$，其中 $a$ 为正常数，记 $\varOmega$ 表面的外侧为 $\varSigma$，计算积分
+			\begin{align*}
+				I =& \oiint_{\varSigma} x^{2} y z^{2} \dd{y} \dd{z} + \Biggl( \frac{1}{z} \arctan \frac{y}{z} - x y^{2} z^{2} \Biggr) \dd{z} \dd{x}\\
+				&+ \Biggl[ \frac{1}{y} \arctan \frac{y}{z} + z(1 + xyz) \Biggr] \dd{x} \dd{y}.
+			\end{align*}
+		\end{enumerate}
+	\end{ti}
+
+	\begin{ti}
+		设函数 $f(x,y,z)$ 在区域 $\varOmega = \bigl\{ (x,y,z) \bigl| x^{2} + y^{2} + z^{2} \leq 1 \bigr\}$ 上具有连续的二阶偏导数，且满足
+		\[
+			\frac{\partial^{2}f}{\partial x^{2}} + \frac{\partial^{2}f}{\partial y^{2}} + \frac{\partial^{2}f}{\partial z^{2}} = \sqrt{x^{2} + y^{2} + z^{2}},
+		\]
+		计算
+		\[
+			I = \iiint_{\varOmega} \Biggl( x \frac{\partial f}{\partial x} + y \frac{\partial f}{\partial y} + z \frac{\partial f}{\partial z} \Biggr) \dd{x} \dd{y} \dd{z}.
+		\]
+	\end{ti}
+
+	\begin{ti}
+		计算曲线积分 $I = \oint_{L} y^{2} \dd{x} + z^{2} \dd{y} + x^{2} \dd{z}$，其中曲线 $L$ 为 $\begin{cases}
+			x^{2} + y^{2} + z^{2} = 4,\\
+			x^{2} + y^{2} = 2x
+		\end{cases} (z \geq 0)$，从 $x$ 轴的正向往负向看去，取逆时针方向.
+	\end{ti}

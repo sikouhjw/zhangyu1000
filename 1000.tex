@@ -7,6 +7,7 @@
 \usepackage{siunitx}
 \usepackage{lastpage}
 \usepackage{graphicx}
+\numberwithin{figure}{section}
 \renewcommand\thefigure{\arabic{chapter}-\arabic{section}-\arabic{figure}}
 \usepackage{floatrow}
 \usepackage{subcaption}
@@ -60,8 +61,8 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LO]{\slshape \rightmark}
-\fancyhead[RE]{\slshape \leftmark}
+\fancyhead[LO]{\kaishu \rightmark}
+\fancyhead[RE]{\kaishu \leftmark}
 % \fancyhead[LE,RO]{
 % \@ifundefined{lastpage@lastpage}{%
 % 	\score{0}{10}%
@@ -69,7 +70,7 @@
 % 	\score{10 * \thepage / \lastpage@lastpage}{10}%
 % }%
 % }
-\fancyhead[C]{\slshape \href{https://github.com/sikouhjw/zhangyu1000}{仅供学习使用，严禁商业使用}}
+\fancyhead[C]{\kaishu \href{https://github.com/sikouhjw/zhangyu1000}{仅供学习使用，严禁商业使用}}
 \fancyfoot[C]{\thepage}
 \makeatother
 
@@ -125,6 +126,12 @@
 \def\ee{\mathrm{e}}
 \def\CC{\mathrm{C}}
 \edef\lim{\lim\limits}
+\edef\sum{\sum\limits}
+\let\div\relax
+\DeclareMathOperator{\div}{div}
+\let\grad\relax
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\rot}{rot}
 
 \def\theenumi{\arabic{enumi}}
 \def\labelenumi{(\theenumi)}
@@ -150,5 +157,5 @@
 	% \mainmatter
 	% \input{chapter/chap1.tex}
 	
-	\section{三重积分、曲线曲面积分}
+	
 \end{document}

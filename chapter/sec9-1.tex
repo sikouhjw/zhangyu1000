@@ -1,0 +1,103 @@
+\section{级数}
+	\subsection{正项级数}
+
+	\begin{ti}
+		设 $f(x) = \int_{0}^{\sin x} \sin \bigl( t^{2} \bigr) \dd{t}, g(x) = \sum_{n=1}^{\infty} \frac{x^{2n+1}}{n^{n} + 2}$，则 $x \to 0$ 时，$f(x)$ 是 $g(x)$ 的\kuo 无穷小.
+
+		\twoch{低阶}{同阶非等价}{等价}{高阶}
+	\end{ti}
+
+	\begin{ti}
+		设正项级数 $\sum_{n=1}^{\infty} a_{n}$ 收敛，正项级数 $\sum_{n=1}^{\infty} b_{n}$ 发散，则
+		
+		\noindent\circled{1}~$\sum_{n=1}^{\infty} a_{n} b_{n}$ 必收敛;\\
+		\circled{2}~$\sum_{n=1}^{\infty} a_{n} b_{n}$ 必发散;\\
+		\circled{3}~$\sum_{n=1}^{\infty} a_{n}^{2}$ 必收敛;\\
+		\circled{4}~$\sum_{n=1}^{\infty} b_{n}^{2}$ 必发散\\
+		中结论正确的有\kuo.
+
+		\fourch{$1$ 个}{$2$ 个}{$3$ 个}{$4$ 个}
+	\end{ti}
+
+	\begin{ti}
+		当级数 $\sum_{n=1}^{\infty} a_{n}^{2},\sum_{n=1}^{\infty} b_{n}^{2}$ 都收敛时，级数 $\sum_{n=1}^{\infty} a_{n} b_{n}$
+		
+		\noindent\kuo.
+
+		\onech{条件收敛}{绝对收敛}{发散}{可能收敛，也可能发散}
+	\end{ti}
+
+	\begin{ti}
+		判别下列正项级数的敛散性：
+		\begin{enumerate}
+			\item $\sum_{n=1}^{\infty} \bigl( \frac{n}{3n + 2} \bigr)^{n}$;
+			\item $\sum_{n=1}^{\infty} \int_{0}^{\frac{1}{n}} \frac{\sqrt{x}}{1 + x^{2}} \dd{x}$;
+			\item $\sum_{n=1}^{\infty} \bigl( \sqrt[3]{n + 1} - \sqrt[3]{n} \bigr)$.
+		\end{enumerate}
+	\end{ti}
+
+	\begin{ti}
+		判别级数 $\sum_{n=1}^{\infty} \int_{0}^{\frac{\uppi}{n}} \frac{\sin x}{1 + x} \dd{x}$ 的敛散性.
+	\end{ti}
+
+	\begin{ti}
+		设 $u_{n} = \int_{0}^{1} x (1 - x) \sin^{2n}x \dd{x}$，讨论级数 $\sum_{n=1}^{\infty} u_{n}$ 的敛散性.
+	\end{ti}
+
+	\begin{ti}
+		设 $0 \leq u_{n} \leq \frac{1}{n}$，则下列级数中一定收敛的是
+		
+		\noindent\kuo.
+
+		\twoch{$\sum_{n=1}^{\infty} u_{n}$}{$\sum_{n=1}^{\infty} (-1)^{n} u_{n}$}{$\sum_{n=1}^{\infty} \sqrt{u_{n}}$}{$\sum_{n=1}^{\infty} (-1)^{n} u_{n}^{2}$}
+	\end{ti}
+
+	\begin{ti}
+		求 $\lim_{n \to \infty} \frac{1}{4^{n}} \bigl( 1 + \frac{1}{n} \bigr)^{n^{2}}$.
+	\end{ti}
+
+	\begin{ti}
+		设 $\sum_{n=1}^{\infty} u_{n}$ 和 $\sum_{n=1}^{\infty} v_{n}$ 都是正项级数. 试证：
+		\begin{enumerate}
+			\item 若 $\sum_{n=1}^{\infty} u_{n}$ 收敛，则 $\sum_{n=1}^{\infty} \sqrt{u_{n} u_{n+1}}$ 收敛;
+			\item 若 $\sum_{n=1}^{\infty} \sqrt{u_{n} u_{n+1}}$ 收敛，$u_{n}$ 单调减少，则 $\sum_{n=1}^{\infty} u_{n}$ 收敛;
+			\item 若 $\sum_{n=1}^{\infty} v_{n}$ 和 $\sum_{n=1}^{\infty} u_{n}$ 都收敛，则 $\sum_{n=1}^{\infty} u_{n} v_{n}$ 收敛;
+			\item 若 $\sum_{n=1}^{\infty} u_{n}$ 收敛，则 $\sum_{n=1}^{\infty} \frac{u_{n}}{n}$ 收敛. 
+		\end{enumerate}
+	\end{ti}
+
+	\begin{ti}
+		求 $\lim_{n \to \infty} \frac{n! a^{n}}{n^{n}}$($a$ 为常数，$0 < |a| < \ee$).
+	\end{ti}
+
+	\begin{ti}
+		判别下列级数的敛散性($k > 1, a > 1$)：
+		\begin{enumerate}
+			\item $\sum_{n=1}^{\infty} \frac{n^{k}}{a^{n}}$;
+			\item $\sum_{n=1}^{\infty} \frac{a^{n}}{n!}$;
+			\item $\sum_{n=1}^{\infty} \frac{n!}{n^{n}}$.
+		\end{enumerate}
+	\end{ti}
+
+	\begin{ti}
+		常数项级数 $\frac{1}{2} + \frac{1}{10} + \frac{1}{2^{2}} + \frac{1}{10 \times 2} + \cdots + \frac{1}{2^{n}} + \frac{1}{10n} + \cdots$ 的敛散性为\htwo.
+	\end{ti}
+
+	\begin{ti}
+		\begin{enumerate}
+			\item 设 $\sum_{n=1}^{\infty} u_{n}$ 为正项级数，证明：$\sum_{n=1}^{\infty} u_{n}$ 收敛的充要条件是其部分和数列 $\{ s_{n} \}$ 有界;
+			\item 设 $\{ x_{n} \}$ 为单调递增的有界正数数列，证明：$\sum_{n=1}^{\infty} \Bigl( 1 - \frac{x_{n}}{x_{n+1}} \Bigr)$ 收敛.
+		\end{enumerate}
+	\end{ti}
+
+	\begin{ti}
+		设数列 $\{ a_{n} \}, \{ b_{n} \}$ 满足
+		\[
+			\ee^{b_{n}} = \ee^{a_{n}} - a_{n} (n = 1,2,3,\cdots),
+		\]
+		求证：
+		\begin{enumerate}
+			\item 若 $a_{n} > 0$，则 $b_{n} > 0$;
+			\item 若 $a_{n} > 0(n = 1,2,3,\cdots), \sum_{n=1}^{\infty} a_{n}$ 收敛，则 $\sum_{n=1}^{\infty} \frac{b_{n}}{a_{n}}$ 收敛.
+		\end{enumerate}
+	\end{ti}

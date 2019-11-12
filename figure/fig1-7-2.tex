@@ -1,0 +1,15 @@
+% !TeX program = xelatex
+% !TeX encoding = UTF-8
+\documentclass[UTF8]{standalone}
+\usepackage{amsmath,fourier,ctex,tikz}
+\begin{document}
+\begin{tikzpicture}
+	\draw[-latex] (0,0) node[below] {$O$} -- ++ (0,2.5) node[right] {$z$};
+	\draw[-latex] (0,0) -- ++ (2.5,0) node[below] {$y$};
+	\draw[-latex] (0,0) -- ++ (-135:2.5) node[right] {$x$};
+	\draw (0,1) circle (1);
+	\draw[dashed] (1,1) arc [start angle=0, end angle=180, x radius=1, y radius=0.4];
+	\draw (-1,1) arc [start angle=180, end angle=360, x radius=1, y radius=0.4];
+	\draw[dashed] (0,1) -- node[below] {$a$} ++ (1,0);
+\end{tikzpicture}
+\end{document}
