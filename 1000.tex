@@ -1,8 +1,20 @@
 \documentclass[openany,twocolumn]{ctexbook}
-\usepackage{amsmath,amssymb,upgreek}
+\usepackage{amsmath,amssymb,mathtools,upgreek}
 \usepackage{fourier}
 \usepackage{esint}
 \usepackage{bm}
+\makeatletter
+\def\vdots@i#1#2#3{\vbox{
+  #1\baselineskip#2\p@ \lineskiplimit\z@
+  \kern#3\p@\hbox{.}\hbox{.}\hbox{.}}}
+\DeclareRobustCommand\vdots{
+  \mathchoice
+    {\vdots@i{}{4}{6}}
+    {\vdots@i{}{4}{6}}
+    {\vdots@i{\scriptsize}{2}{1}}
+    {\vdots@i{\tiny}{2}{1}}
+}
+\makeatother
 \usepackage{physics}
 \usepackage{siunitx}
 \usepackage{lastpage}
@@ -11,6 +23,8 @@
 \renewcommand\thefigure{\arabic{chapter}-\arabic{section}-\arabic{figure}}
 \usepackage{floatrow}
 \usepackage{subcaption}
+% \renewcommand\thesubfigure{(\alph{subfigure})}
+% \captionsetup[sub]{labelformat=simple}
 \xeCJKDeclareCharClass{FullRight}{"2236}
 \newcommand\ratio[2]{#1^^^^2236#2}
 
@@ -70,8 +84,9 @@
 % 	\score{10 * \thepage / \lastpage@lastpage}{10}%
 % }%
 % }
-% \fancyhead[C]{\kaishu \href{https://github.com/sikouhjw/zhangyu1000}{仅供学习使用，严禁商业使用}}
-\fancyfoot[C]{\thepage}
+\fancyhead[C]{\kaishu \href{https://github.com/sikouhjw/zhangyu1000}{仅供学习使用，严禁商业使用}}
+\fancyfoot[C]{\zihao{-5} {\kaishu 不论一个人的数学水平有多高，只要对数学拥有一颗真诚的心，他就在自己的心灵上得到了升华。}---{\itshape SCIbird}}
+\fancyhead[LE,RO]{\itshape --\thepage/\pageref{LastPage}--}
 \makeatother
 
 \usepackage{caption}
@@ -112,6 +127,14 @@
 }
 \renewcommand{\theti}{\arabic{section}.\arabic{ti}}
 
+{
+	\theoremstyle{change}
+	\theoremheaderfont{\bfseries}
+	\theorembodyfont{\normalfont}
+	\newtheorem{titwo}{}
+}
+\renewcommand{\thetitwo}{\arabic{titwo}.}
+
 \usepackage{ulem}
 \newcommand{\hone}[1]{ \uline{\hspace{#1 pc}}}
 \def\htwo{ \uline{\hspace{\fill}}}
@@ -125,6 +148,7 @@
 \def\geq{\geqslant}
 \def\ee{\mathrm{e}}
 \def\CC{\mathrm{C}}
+\def\TT{\mathrm{T}}
 \edef\lim{\lim\limits}
 \edef\sum{\sum\limits}
 \let\div\relax
@@ -156,6 +180,11 @@
 	% \tableofcontents
 	% \mainmatter
 	% \input{chapter/chap1.tex}
+	% \input{chapter/chap2.tex}
 	
-	
+	\subsection{矩阵}
+
+	\begin{titwo}
+		设 $n$ 维行向量 $\bm \alpha = \bigl[ \frac{1}{2}, 0 , \cdots , 0 , \frac{1}{2} \bigr]$，矩阵 $\bm A = \bm E - \bm \alpha^{\TT} \bm \alpha, \bm B = \bm E + 2 \bm \alpha^{\TT} \bm \alpha$，则 $\bm A \bm B = $\kuo.
+	\end{titwo}
 \end{document}

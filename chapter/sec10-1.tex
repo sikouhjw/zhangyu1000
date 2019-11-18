@@ -1,0 +1,165 @@
+\chapter{线性代数}
+	线性代数是硕士研究生招生考试考查内容之一，主要考查考生对线性代数的基本概念基本理论、基本运算的理解和掌握以及考生的抽象思维能力、逻辑推理能力、空间想象能力、综合运用能力和解决实际问题的能力。在考研数学一试卷中分值为 $34$ 分，约占 $22\%$。
+\section{线性代数}
+	\subsection{行列式}
+
+	\begin{titwo}
+		设 $\begin{vsmallmatrix}
+			a_{11} & a_{12} & a_{13} & a_{14}\\
+			a_{21} & a_{22} & a_{23} & a_{24}\\
+			a_{31} & a_{32} & a_{33} & a_{34}\\
+			a_{41} & a_{42} & a_{43} & a_{44}
+		\end{vsmallmatrix} = m, c \ne 0$，则 
+		\[
+			\begin{vsmallmatrix}
+				a_{11} & a_{12}c & a_{13}c^{2} & a_{14}c^{3}\\
+				a_{21}c^{-1} & a_{22} & a_{23}c & a_{24}c^{2}\\
+				a_{31}c^{-2} & a_{32}c^{-1} & a_{33} & a_{34}c\\
+				a_{41}c^{-3} & a_{42}c^{-2} & a_{43}c^{-1} & a_{44}
+			\end{vsmallmatrix}
+		\]
+		等于\kuo.
+
+		\fourch{$c^{-2}m$}{$m$}{$cm$}{$c^{3}m$}
+	\end{titwo}
+
+	\begin{titwo}
+		$\begin{vsmallmatrix}
+			a & b & c & d \\
+			x & 0 & 0 & y \\
+			y & 0 & 0 & x \\
+			d & c & b & a
+		\end{vsmallmatrix} = $\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $a, b, a + b$ 均非零，则行列式 $\begin{vsmallmatrix}
+			a & b & a + b \\
+			b & a + b & a \\
+			a + b & a & b \\
+		\end{vsmallmatrix} = $
+		
+		\noindent\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $n$ 阶矩阵 $\bm A = \begin{bsmallmatrix}
+			0 & 1 & 1 & \cdots & 1 & 1 \\
+			1 & 0 & 1 & \cdots & 1 & 1 \\
+			1 & 1 & 0 & \cdots & 1 & 1 \\
+			\vdots & \vdots & \vdots &  & \vdots & \vdots \\
+			1 & 1 & 1 & \cdots & 0 & 1 \\
+			1 & 1 & 1 & \cdots & 1 & 0 
+		\end{bsmallmatrix}$，则 $|\bm A| = $\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		计算 $n$ 阶行列式 $\begin{bsmallmatrix}
+			a & b & 0 & \cdots & 0 & 0 \\
+			0 & a & b & \cdots & 0 & 0 \\
+			0 & 0 & a & \cdots & 0 & 0 \\
+			\vdots & \vdots & \vdots &  & \vdots & \vdots \\
+			0 & 0 & 0 & \cdots & a & b \\
+			b & 0 & 0 & \cdots & 0 & a 
+		\end{bsmallmatrix}$.
+	\end{titwo}
+
+	\begin{titwo}
+		计算行列式 $\begin{vsmallmatrix}
+			x + 1 & x & x & \cdots & x \\
+			x & x + \frac{1}{2} & x & \cdots & x \\
+			x & x & x + \frac{1}{3} & \cdots & x \\
+			\vdots & \vdots & \vdots &  & \vdots \\
+			x & x & x & \cdots & x + \frac{1}{n}
+		\end{vsmallmatrix}$.
+	\end{titwo}
+
+	\begin{titwo}
+		计算行列式 $\begin{vsmallmatrix}
+			1 - x & x & 0 & 0 & 0 \\
+			-1 & 1 - x & x & 0 & 0 \\
+			0 & -1 & 1 - x & x & 0 \\
+			0 & 0 & -1 & 1 - x & x \\
+			0 & 0 & 0 & -1 & 1 - x
+		\end{vsmallmatrix}$.
+	\end{titwo}
+
+	\begin{titwo}
+		计算行列式 $\begin{vsmallmatrix}
+			a & b & c & d \\
+			-b & a & -d & c \\
+			-c & d & a & -b \\
+			-d & -c & b & a \\
+		\end{vsmallmatrix}$.
+	\end{titwo}
+
+	\begin{titwo}
+		行列式 $D_{n+1} = \begin{vsmallmatrix}
+			a^{n} & (a + 1)^{n} & \cdots & (a + n)^{n} \\
+			a^{n - 1} & (a + 1)^{n - 1} & \cdots & (a + n)^{n - 1} \\
+			\vdots & \vdots &  & \vdots \\
+			a & a + 1 & \cdots & a + n \\
+			1 & 1 & \cdots & 1
+		\end{vsmallmatrix} = $\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $n$ 阶行列式
+		\[
+			D_{n} = \begin{vsmallmatrix}
+				2 & 1 & 0 & \cdots & 0 & 0 \\
+				1 & 2 & 1 & \cdots & 0 & 0 \\
+				0 & 1 & 2 & \cdots & 0 & 0 \\
+				\vdots & \vdots & \vdots &  & \vdots & \vdots \\
+				0 & 0 & 0 & \cdots & 2 & 1 \\
+				0 & 0 & 0 & \cdots & 1 & 2
+			\end{vsmallmatrix},
+		\]
+		则 $\sum_{i=1}^{n} D_{i} = $\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $D_{n} = \begin{vsmallmatrix}
+			a + 2 & 2a & 0 & \cdots & 0 & 0 \\
+			1 & a + 2 & 2a & \cdots & 0 & 0 \\
+			0 & 1 & a + 2 & \cdots & 0 & 0 \\
+			\vdots & \vdots & \vdots &  & \vdots & \vdots \\
+			0 & 0 & 0 & \cdots & a + 2 & 2a \\
+			0 & 0 & 0 & \cdots & 1 & a + 2 
+		\end{vsmallmatrix}$，其中 $n \geq 3$.
+
+		\noindent 则 $\frac{D_{n} - a D_{n - 1}}{D_{n - 1} - a D_{n - 2}} = $\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3},\bm \beta_{1},\bm \beta_{2}$ 都是 $4$ 维列向量，且 $4$ 阶行列式 $\bigl|\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3},\bm \beta_{1}\bigr| = m,\bigl|\bm \alpha_{1},\bm \alpha_{2},\bm \beta_{2},\bm \alpha_{3}\bigr| = n$，则 $4$ 阶行列式 $\bigl|\bm \alpha_{3},\bm \alpha_{2},\bm \alpha_{1},\bm \beta_{1} + \bm \beta_{2}\bigr|$ 等于\kuo.
+
+		\fourch{$m + n$}{$- (m + n)$}{$n - m$}{$m - n$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A = [\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3}]$ 是 $3$ 阶矩阵，且 $|\bm A| = 4$，若
+		\[
+			\bm B = [\bm \alpha_{1} - 3 \bm \alpha_{2} + 2 \bm \alpha_{3}, \bm \alpha_{2} - 2 \bm \alpha_{3}, 2 \bm \alpha_{2} + \bm \alpha_{3}],
+		\]
+		则 $|\bm B| = $\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是 $m$ 阶矩阵，$\bm B$ 是 $n$ 阶矩阵，且
+		\[
+			|\bm A| = a, |\bm B| = b, \bm C = \begin{bsmallmatrix}
+				\bm O & \bm A \\
+				\bm B & \bm O
+			\end{bsmallmatrix},
+		\]
+		则 $|\bm C| = $\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 为奇数阶矩阵，且 $\bm A \bm A^{\TT} = \bm A^{\TT} \bm A = \bm E, |\bm A| > 0$，则 $|\bm A - \bm E| = $\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是 $n$ 阶矩阵，满足 $\bm A \bm A^{\TT} = \bm E$($\bm E$ 是 $n$ 阶单位矩阵，$\bm A^{\TT}$ 是 $\bm A$ 的转置矩阵)，且 $|\bm A| < 0$，求 $|\bm A + \bm E|$.
+	\end{titwo}
