@@ -1,0 +1,588 @@
+\subsection{矩阵}
+
+	\begin{titwo}
+		设 $n$ 维行向量 $\bm \alpha = \bigl[ \frac{1}{2}, 0 , \cdots , 0 , \frac{1}{2} \bigr]$，矩阵 $\bm A = \bm E - \bm \alpha^{\TT} \bm \alpha, \bm B = \bm E + 2 \bm \alpha^{\TT} \bm \alpha$，则 $\bm A \bm B = $\kuo.
+
+		\fourch{$\bm O$}{$- \bm E$}{$\bm E$}{$\bm E + \bm \alpha^{\TT} \bm \alpha$}
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $\bm A, \bm B, \bm A + \bm B, \bm A^{-1} + \bm B^{-1}$ 均为 $n$ 阶可逆矩阵，则 $\bigl( \bm A^{-1} + \bm B^{-1} \bigr)^{-1}$ 等于\kuo.
+
+		\twoch{$\bm A + \bm B$}{$\bm A^{-1} + \bm B^{-1}$}{$\bm A(\bm A + \bm B)^{-1} \bm B$}{$(\bm A + \bm B)^{-1}$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是 $n$ 阶方阵，且 $\bm A^{3} = \bm O$，则\kuo.
+
+		\onech{$\bm A$ 不可逆，且 $\bm E - \bm A$ 不可逆}{$\bm A$ 可逆，但 $\bm E + \bm A$ 不可逆}{$\bm A^{2} - \bm A + \bm E$ 及 $\bm A^{2} + \bm A + \bm E$ 均可逆}{$\bm A$ 不可逆，且必有 $\bm A^{2} = \bm O$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 为 $n$ 阶可逆矩阵，则下列等式中，不一定成立的是\kuo.
+
+		\onech{$\bigl( \bm A + \bm A^{-1} \bigr)^{2} = \bm A^{2} + 2 \bm A \bm A^{-1} + \bigl( \bm A^{-1} \bigr)^{2}$}{$\bigl( \bm A + \bm A^{\TT} \bigr)^{2} = \bm A^{2} + 2 \bm A \bm A^{\TT} + \bigl( \bm A^{\TT} \bigr)^{2}$}{$\bigl( \bm A + \bm A^{\astt} \bigr)^{2} = \bm A^{2} + 2 \bm A \bm A^{\astt} + \bigl( \bm A^{\astt} \bigr)^{2}$}{$\bigl( \bm A + \bm E \bigr)^{2} = \bm A^{2} + 2 \bm A \bm E + \bm E^{2}$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A = \begin{bsmallmatrix}
+			0 & 1 & 1 & 1 \\
+			1 & 0 & 1 & 1 \\
+			1 & 1 & 0 & 1 \\
+			1 & 1 & 1 & 0
+		\end{bsmallmatrix}$，则 $\bm A^{-1}=$\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm B = \begin{bsmallmatrix}
+			0 & b_{1} & 0 & \cdots & 0 \\
+			0 & 0 & b_{2} & \cdots & 0 \\
+			\vdots & \vdots & \vdots &  & \vdots \\
+			0 & 0 & 0 & \cdots & b_{n-1} \\
+			b_{n} & 0 & 0 & \cdots & 0
+		\end{bsmallmatrix}$，则 $\bm B^{-1} = $\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm B = 2 \bm A - \bm E$，证明：$\bm B^{2} = \bm E$ 的充分必要条件是 $\bm A^{2} = \bm A$.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A = \begin{bsmallmatrix}
+			a & b \\
+			c & d
+		\end{bsmallmatrix}$.
+		\begin{enumerate}
+			\item 计算 $\bm A^{2}$，并将 $\bm A^{2}$ 用 $\bm A$ 和 $\bm E$ 线性表出;
+			\item 证明：当 $k > 2$ 时，$\bm A^{k} = \bm O$ 的充分必要条件为 $\bm A^{2} = \bm O$.
+		\end{enumerate}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm M = \begin{bsmallmatrix}
+			\bm A & \bm B \\
+			\bm O & \bm D
+		\end{bsmallmatrix}$ 可逆，其中 $\bm A, \bm D$ 皆为方阵，证明 $\bm A, \bm D$ 可逆，并求 $\bm M^{-1}$.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 为 $n$ 阶非奇异矩阵，$\bm \alpha$ 为 $n$ 维列向量，$b$ 为常数. 记分块矩阵
+		\[
+			\bm P = \begin{bsmallmatrix}
+				\bm E & \bm 0 \\
+				- \bm \alpha^{\TT} \bm A^{\astt} & |\bm A|
+			\end{bsmallmatrix},
+			\bm Q = \begin{bsmallmatrix}
+				\bm A & \bm \alpha \\
+				\bm \alpha^{\TT} & b
+			\end{bsmallmatrix},
+		\]
+		其中 $\bm A^{\astt}$ 是矩阵 $\bm A$ 的伴随矩阵，$\bm E$ 为 $n$ 阶单位矩阵.
+		\begin{enumerate}
+			\item 计算并化简 $\bm P \bm Q$;
+			\item 证明：矩阵 $\bm Q$ 可逆的充分必要条件是 $\bm \alpha^{\TT} \bm A^{-1} \bm \alpha \ne b$.
+		\end{enumerate}
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $\bm A$ 是 $n$ 阶方阵，$\bm E$ 是 $n$ 阶单位矩阵，且
+		\[
+			\bm A^{3} = \bm E,
+		\]
+		则 $\begin{bsmallmatrix}
+			\bm O & - \bm E \\
+			\bm A & \bm O
+		\end{bsmallmatrix}^{98} = $\kuo.
+
+		\fourch{$\begin{bsmallmatrix}
+			\bm A & \bm E \\
+			\bm O & \bm A
+		\end{bsmallmatrix}$}{$\begin{bsmallmatrix}
+			\bm A & \bm O \\
+			\bm E & \bm A
+		\end{bsmallmatrix}$}{$\begin{bsmallmatrix}
+			\bm A & \bm O \\
+			\bm O & \bm A
+		\end{bsmallmatrix}$}{$\begin{bsmallmatrix}
+			- \bm A & \bm O \\
+			\bm O & - \bm A
+		\end{bsmallmatrix}$}
+	\end{titwo}
+
+	\begin{titwo}
+		下列命题正确的是\kuo.
+
+		\onech{若 $\bm A \bm B = \bm E$，则 $\bm A$ 必可逆，且 $\bm A^{-1} = \bm B$}{若 $\bm A, \bm B$ 均为 $n$ 阶可逆矩阵，则 $\bm A + \bm B$ 必可逆}{若 $\bm A, \bm B$ 均为 $n$ 阶不可逆矩阵，则 $\bm A - \bm B$ 必不可逆}{若 $\bm A, \bm B$ 均为 $n$ 阶不可逆矩阵，则 $\bm A \bm B$ 必不可逆}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 为 $3$ 阶非零矩阵，且满足
+		\[
+			a_{ij} = A_{ij} (i,j = 1,2,3),
+		\]
+		其中 $A_{ij}$ 为 $a_{ij}$ 的代数余子式，则下列结论中：\circled{1} $\bm A$ 是可逆矩阵; \circled{2} $\bm A$ 是对称矩阵; \circled{3} $\bm A$ 是不可逆矩阵; \circled{4} $\bm A$ 是正交矩阵. 正确的个数为\kuo.
+
+		\fourch{$1$}{$2$}{$3$}{$4$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $n$ 阶矩阵 $\bm A, \bm B$ 等价，则下列说法中，不一定成立的是\kuo.
+
+		\onech{如果 $|\bm A| > 0$，则 $|\bm B| > 0$}{如果 $\bm A$ 可逆，则存在可逆矩阵 $\bm P$，使得 $\bm P \bm B = \bm E$}{如果 $\bm A, \bm E$ 等价，则 $|\bm B| \ne 0$}{存在可逆矩阵 $\bm P$ 与 $\bm Q$，使得 $\bm P \bm A \bm Q = \bm B$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A = \begin{bsmallmatrix}
+			1 & 0 & 0 & 0 \\
+			-2 & 3 & 0 & 0 \\
+			0 & -4 & 5 & 0 \\
+			0 & 0 & -6 & 7 \\
+		\end{bsmallmatrix}, \bm B = (\bm E + \bm A)^{-1} (\bm E - \bm A)$，则 $(\bm E + \bm B)^{-1} = $\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设
+		\[
+			\bm B = \begin{bsmallmatrix}
+				0 & 1 & 0 & 0 \\
+				0 & 0 & 1 & 0 \\
+				0 & 0 & 0 & 1 \\
+				0 & 0 & 0 & 0
+			\end{bsmallmatrix},
+		\]
+		证明 $\bm A = \bm E + \bm B$ 可逆，并求 $\bm A^{-1}$.
+	\end{titwo}
+
+	\begin{titwo}
+		证明：方阵 $\bm A$ 与所有同阶对角矩阵可交换的充分必要条件是 $\bm A$ 是对角矩阵.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm \alpha, \bm \beta$ 为 $n$ 维单位列向量，$\bm P$ 是 $n$ 阶可逆矩阵，则下列矩阵中可逆的是\kuo.
+
+		\twoch{$\bm A = \bm E - \bm \alpha \bm \alpha^{\TT}$}{$\bm B = \bm \alpha^{\TT} \bm P \bm \alpha \bm P^{-1} - \bm \alpha \bm \alpha^{\TT}$}{$\bm C = \bm \alpha^{\TT} \bm P^{-1} \bm \beta \bm P - \bm \beta \bm \alpha^{\TT}$}{$\bm D = \bm E + \bm \beta \bm \beta^{\TT}$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是 $m \times n$ 矩阵，$\bm B$ 是 $n \times m$ 矩阵，已知 $\bm E_{m} + \bm A \bm B$ 可逆.
+		\begin{enumerate}
+			\item 验证 $\bm E_{n} + \bm B \bm A$ 可逆，且
+			\[
+				(\bm E_{n} + \bm B \bm A)^{-1} = \bm E_{n} - \bm B (\bm E_{m} + \bm A \bm B)^{-1} \bm A;
+			\]
+			\item 设 $\bm W = \begin{bsmallmatrix}
+				1 + a_{1} b_{1} & a_{1} b_{2} & a_{1} b_{3} \\
+				a_{2} b_{1} & 1 + a_{2} b_{2} & a_{2} b_{3} \\
+				a_{3} b_{1} & a_{3} b_{2} & 1 + a_{3} b_{3}
+			\end{bsmallmatrix}$，其中 $a_{1} b_{1} + a_{2} b_{2} + a_{3} b_{3} = 0$. 证明：$\bm W$ 可逆，并求 $\bm W^{-1}$.
+		\end{enumerate}
+	\end{titwo}
+
+	\begin{titwo}
+		设
+		\[
+			\bm \alpha = [1,2,3], \bm \beta = \Biggl[ 1,\frac{1}{2},\frac{1}{3} \Biggr], \bm A = \bm \alpha^{\TT} \bm \beta,
+		\]
+		则 $\bm A^{n} = $\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A = \begin{bsmallmatrix}
+			1 & 2 & 3 \\
+			0 & 1 & 4 \\
+			0 & 0 & 1
+		\end{bsmallmatrix}$，求 $\bm A^{n} (n \geq 3)$.
+	\end{titwo}
+
+	\begin{titwo}
+		设
+		\[
+			\bm A = \begin{bsmallmatrix}
+				1 & 0 & 1 \\
+				0 & 2 & 0 \\
+				1 & 0 & 1
+			\end{bsmallmatrix},
+		\]
+		$n \geq 2$ 为正整数，则 $\bm A^{n} - 2 \bm A^{n-1} = $\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A = \begin{bsmallmatrix}
+			1 & 0 & 0 \\
+			1 & 0 & 1 \\
+			0 & 1 & 0
+		\end{bsmallmatrix}$.
+		\begin{enumerate}
+			\item 证明当 $n \geq 3$ 时，有 $\bm A^{n} = \bm A^{n-2} + \bm A^{2} - \bm E$;
+			\item 求 $\bm A^{100}$.
+		\end{enumerate}
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $\bm A = \begin{bsmallmatrix}
+			3 & 1 & 0 & 0 & 0 \\
+			0 & 3 & 1 & 0 & 0 \\
+			0 & 0 & 3 & 0 & 0 \\
+			0 & 0 & 0 & 3 & -1 \\
+			0 & 0 & 0 & -9 & 3
+		\end{bsmallmatrix}$，求 $\bm A^{n}(n \geq 2)$.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm \alpha = [a_{1},a_{2},\cdots,a_{n}]^{\TT} \ne \bm 0, \beta = [b_{1},b_{2},\cdots,b_{n}]^{\TT} \ne \bm 0$，且 $\bm \alpha^{\TT} \bm \beta = 0, \bm A = \bm E + \bm \alpha \bm \beta^{\TT}$，试计算：
+		\begin{enumerate}
+			\item $|\bm A|$;
+			\item $\bm A^{n}$;
+			\item $\bm A^{-1}$.
+		\end{enumerate}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是 $n(n \geq 2)$ 阶方阵，$\bm A^{\astt}$ 是 $\bm A$ 的伴随矩阵，则 $|\bm A^{\astt}| = $\kuo.
+
+		\fourch{$|\bm A|$}{$|\bm A^{-1}|$}{$|\bm A^{n-1}|$}{$|\bm A^{n}|$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是 $n(n \geq 2)$ 阶方阵，$|\bm A| = 3$，则 $|( A^{\astt} )^{\astt}| = $
+		
+		\noindent\kuo.
+
+		\fourch{$3^{(n-1)^{2}}$}{$3^{n^{2} - 1}$}{$3^{n^{2} - n}$}{$3^{n-1}$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是 $n(n \geq 2)$ 阶可逆方阵，$\bm A^{\astt}$ 是 $\bm A$ 的伴随矩阵，则 $(\bm A^{\astt})^{\astt} = $\kuo.
+
+		\fourch{$|\bm A|^{n-1} \bm A$}{$|\bm A|^{n+1} \bm A$}{$|\bm A|^{n-2} \bm A$}{$|\bm A|^{n+2} \bm A$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A_{n \times n}$ 是正交矩阵，则\kuo.
+
+		\twoch{$\bm A^{\astt} (\bm A^{\astt})^{\TT} = |\bm A| \bm E$}{$(\bm A^{\astt})^{\TT} \bm A^{\astt} = |\bm A^{\astt}| \bm E$}{$\bm A^{\astt} (\bm A^{\astt})^{\TT} = \bm E$}{$(\bm A^{\astt})^{\TT} \bm A^{\astt} = - \bm E$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A = \frac{1}{2} \begin{bsmallmatrix}
+			2 & 0 & 0 \\
+			0 & 0 & 1 \\
+			0 & 3 & 0
+		\end{bsmallmatrix}$，则 $(\bm A^{\astt})^{-1} = $\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		证明：若 $\bm A$ 为 $n$ 阶可逆方阵，$\bm A^{\astt}$ 为 $\bm A$ 的伴随矩阵，则 $(\bm A^{\astt})^{\TT} = \bigl( \bm A^{\TT} \bigr)^{\astt}$.
+	\end{titwo}
+
+	\begin{titwo}
+		证明：若 $\bm A$ 为 $n(n \geq 2)$ 阶方阵，则有
+		\[
+			|\bm A^{\astt}| = |(- \bm A)^{\astt}|.
+		\]
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是 $n$ 阶矩阵，则 $\left| -2 \begin{bsmallmatrix}
+			\bm A^{\astt} & \bm O \\
+			\bm A + \bm A^{\astt} & \bm A
+		\end{bsmallmatrix} \right| = $\kuo.
+
+		\twoch{$(-2)^{n} |\bm A|^{n}$}{$(4 |\bm A|)^{n}$}{$(-2)^{2n} |\bm A^{\astt}|^{n}$}{$|4 \bm A|^{n}$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是 $n$ 阶矩阵，$|\bm A| = 5$，则 $|( 2 \bm A )^{\astt}| = $\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		$|\bm A|$ 是 $n$ 阶行列式，其中有一行(列)元素全是 $1$，证明：这个行列式的全部代数余子式的和等于该行列式的值.
+	\end{titwo}
+
+	\begin{titwo}
+		$\bm A$ 为 $n(n \geq 3)$ 阶非零实矩阵，$A_{ij}$ 为 $|\bm A|$ 中元素 $a_{ij}$ 的代数余子式，试证明：
+		\begin{enumerate}
+			\item $a_{ij} = A_{ij} \Leftrightarrow \bm A^{\TT} \bm A = \bm E$，且 $|\bm A| = 1$;
+			\item $a_{ij} = -A_{ij} \Leftrightarrow \bm A^{\TT} \bm A = \bm E$，且 $|\bm A| = -1$.
+		\end{enumerate}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A = \begin{bsmallmatrix}
+			1 & 2 & 3 & 4 \\
+			0 & 1 & 2 & 3 \\
+			0 & 0 & 1 & 2 \\
+			0 & 0 & 0 & 1
+		\end{bsmallmatrix}$，求 $|\bm A|$ 的所有代数余子式之和.
+	\end{titwo}
+
+	\begin{titwo}
+		证明：$n > 3$ 的非零实方阵 $\bm A$，若它的每个元素等于自己的代数余子式，则 $\bm A$ 是正交矩阵.
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $\bm A, \bm B$ 均是 $3$ 阶矩阵，将 $\bm A$ 中第 $3$ 行的 $-2$ 倍加到第 $2$ 行得矩阵 $\bm A_{1}$，将 $\bm B$ 中第 $1$ 列和第 $2$ 列对换得到 $\bm B_{1}$，又 $\bm A_{1} \bm B_{1} = \begin{bsmallmatrix}
+			1 & 1 & 1 \\
+			1 & 0 & 2 \\
+			2 & 1 & 3
+		\end{bsmallmatrix}$，则 $\bm A \bm B = $\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $\bm A = \begin{bsmallmatrix}
+			0 & 1 & 0 \\
+			1 & 0 & 0 \\
+			0 & 0 & 1
+		\end{bsmallmatrix}^{5} \begin{bsmallmatrix}
+			1 & 0 & 0 \\
+			0 & 5 & 0 \\
+			0 & 0 & 3
+		\end{bsmallmatrix} \begin{bsmallmatrix}
+			1 & 0 & 0 \\
+			0 & 1 & 1 \\
+			0 & 0 & 1
+		\end{bsmallmatrix}^{4}$，则 $\bm A^{-1} = $\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是 $n$ 阶可逆矩阵，将 $\bm A$ 的第 $i$ 行和第 $j$ 行对换得到的矩阵记为 $\bm B$. 证明 $\bm B$ 可逆，并推导 $\bm A^{-1}$ 和 $\bm B^{-1}$ 的关系.
+	\end{titwo}
+
+	\begin{titwo}
+		设
+		\begin{gather*}
+			\bm A = \begin{bsmallmatrix}
+				a_{11} & a_{12} & a_{13} \\
+				a_{21} & a_{22} & a_{23} \\
+				a_{31} & a_{32} & a_{33}
+			\end{bsmallmatrix},
+			\bm B = \begin{bsmallmatrix}
+				a_{21} & a_{22} & a_{23} \\
+				a_{11} & a_{12} & a_{13} \\
+				a_{31} + a_{11} & a_{32} + a_{12} & a_{33} + a_{13}
+			\end{bsmallmatrix}, \\
+			\bm P_{1} = \begin{bsmallmatrix}
+				0 & 1 & 0 \\
+				1 & 0 & 0 \\
+				0 & 0 & 1
+			\end{bsmallmatrix},
+			\bm P_{2} = \begin{bsmallmatrix}
+				1 & 0 & 0 \\
+				0 & 1 & 0 \\
+				1 & 0 & 1
+			\end{bsmallmatrix},
+		\end{gather*}
+		则必有\kuo.
+		
+		\twoch{$\bm A \bm P_{1} \bm P_{2} = \bm B$}{$\bm A \bm P_{2} \bm P_{1} = \bm B$}{$\bm P_{1} \bm P_{2} \bm A = \bm B$}{$\bm P_{2} \bm P_{1} \bm A = \bm B$}
+	\end{titwo}
+
+	\begin{titwo}
+		设
+		\begin{gather*}
+			\bm A = \begin{bsmallmatrix}
+				a_{11} & a_{12} & a_{13} & a_{14} \\
+				a_{21} & a_{22} & a_{23} & a_{24} \\
+				a_{31} & a_{32} & a_{33} & a_{34} \\
+				a_{41} & a_{42} & a_{43} & a_{44}
+			\end{bsmallmatrix},
+			\bm B = \begin{bsmallmatrix}
+				a_{14} & a_{13} & a_{12} & a_{11} \\
+				a_{24} & a_{23} & a_{22} & a_{21} \\
+				a_{34} & a_{33} & a_{32} & a_{31} \\
+				a_{44} & a_{43} & a_{42} & a_{41}
+			\end{bsmallmatrix}, \\
+			\bm P_{1} = \begin{bsmallmatrix}
+				0 & 0 & 0 & 1 \\
+				0 & 1 & 0 & 0 \\
+				0 & 0 & 1 & 0 \\
+				1 & 0 & 0 & 0
+			\end{bsmallmatrix},
+			\bm P_{2} = \begin{bsmallmatrix}
+				1 & 0 & 0 & 0 \\
+				0 & 0 & 1 & 0 \\
+				0 & 1 & 0 & 0 \\
+				0 & 0 & 0 & 1
+			\end{bsmallmatrix}.
+		\end{gather*}
+		其中 $\bm A$ 可逆，则 $\bm B^{-1}$ 等于\kuo.
+
+		\twoch{$\bm A^{-1} \bm P_{1} \bm P_{2}$}{$\bm P_{1} \bm A^{-1} \bm P_{2}$}{$\bm P_{1} \bm P_{2} \bm A^{-1}$}{$\bm P_{2} \bm A^{-1} \bm P_{1}$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A, \bm B$ 是 $n$ 阶方阵，则下列结论正确的是
+		
+		\noindent\kuo.
+
+		\onech{$\bm A \bm B = \bm O \Leftrightarrow \bm A = \bm O $ 或 $\bm B = \bm O$}{$|\bm A| = 0 \Leftrightarrow \bm A = \bm O$}{$|\bm A \bm B| = 0 \Leftrightarrow |\bm A| = 0$ 或 $|\bm B| = 0$}{$\bm A = \bm E \Leftrightarrow |\bm A| = 1$}
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $n$ 阶方阵 $\bm A$ 满足矩阵方程 $\bm A^{2} - 3 \bm A - 2 \bm E = \bm O$. 证明 $\bm A$ 可逆，并求出其逆矩阵 $\bm A^{-1}$.
+	\end{titwo}
+
+	\begin{titwo}
+		已知对于 $n$ 阶方阵 $\bm A$，存在自然数 $k$，使得 $\bm A^{k} = \bm O$. 证明矩阵 $\bm E - \bm A$ 可逆，并写出其逆矩阵的表达式($\bm E$ 为 $n$ 阶单位矩阵).
+	\end{titwo}
+
+	\begin{titwo}
+		设矩阵 $\bm A = \begin{bsmallmatrix}
+			1 & 0 & 1 \\
+			0 & 2 & 0 \\
+			1 & 0 & 1
+		\end{bsmallmatrix}$，矩阵 $\bm X$ 满足 $\bm A \bm X + \bm E = \bm A^{2} + \bm X$，其中 $\bm E$ 为 $3$ 阶单位矩阵. 求矩阵 $\bm X$.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A, \bm B$ 均是 $n$ 阶矩阵，且 $\bm A \bm B = \bm A + \bm B$. 证明 $\bm A - \bm E$ 可逆，并求 $(\bm A - \bm E)^{-1}$.
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $\bm A, \bm B$ 是 $3$ 阶方阵，$\bm A \ne \bm O, \bm A \bm B = \bm O$，证明：$\bm B$ 不可逆.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A, \bm B$ 均为 $n$ 阶矩阵，且 $\bm A \bm B = \bm A + \bm B$，则下列命题中：
+
+		{\raggedright
+		\begin{tabular}{l}
+			\circled{1} 若 $\bm A$ 可逆，则 $\bm B$ 可逆;\\
+			\circled{2} 若 $\bm A + \bm B$ 可逆，则 $\bm B$ 可逆;\\
+			\circled{3} 若 $\bm B$ 可逆，则 $\bm A + \bm B$ 可逆;\\
+			\circled{4} $\bm A - \bm E$ 恒可逆.
+		\end{tabular}}
+
+		\noindent 正确的个数为\kuo.
+
+		\fourch{$1$}{$2$}{$3$}{$4$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $3$ 阶方阵 $\bm A, \bm B$ 满足关系式 $\bm A^{-1} \bm B \bm A = 6 \bm A + \bm B \bm A$，且 $\bm A = \begin{bsmallmatrix}
+			\frac{1}{3} & 0 & 0 \\
+			0 & \frac{1}{4} & 0 \\
+			0 & 0 & \frac{1}{7}
+		\end{bsmallmatrix}$，则 $\bm B = $\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $\bm A^{2} - 2 \bm A + \bm E = \bm O$，则 $(\bm A + \bm E)^{-1} = $\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bigl( 2 \bm E - \bm C^{-1} \bm B \bigr) \bm A^{\TT} = \bm C^{-1}$，其中 $\bm E$ 是 $4$ 阶单位矩阵，$\bm A^{\TT}$ 是 $4$ 阶矩阵 $\bm A$ 的转置矩阵，且
+		\[
+			\bm B = \begin{bsmallmatrix}
+				1 & 2 & -3 & -2 \\
+				0 & 1 & 2 & -3 \\
+				0 & 0 & 1 & 2 \\
+				0 & 0 & 0 & 1
+			\end{bsmallmatrix},
+			\bm C = \begin{bsmallmatrix}
+				1 & 2 & 0 & 1 \\
+				0 & 1 & 2 & 0 \\
+				0 & 0 & 1 & 2 \\
+				0 & 0 & 0 & 1
+			\end{bsmallmatrix},
+		\]
+		求 $\bm A$.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是主对角元素为 $0$ 的 $4$ 阶实对称矩阵，$\bm E$ 是 $4$ 阶单位矩阵，$\bm B = \begin{bsmallmatrix}
+			0 &  &  &  \\
+			 & 0 &  &  \\
+			 &  & 2 &  \\
+			 &  &  & 2 
+		\end{bsmallmatrix}$，且 $\bm E + \bm A \bm B$ 是不可逆的对称矩阵，求 $\bm A$.
+	\end{titwo}
+
+	\begin{titwo}
+		设矩阵 $\bm A$ 的伴随矩阵 $\bm A^{\astt} = \begin{bsmallmatrix}
+			1 & 0 & 0 & 0 \\
+			0 & 1 & 0 & 0 \\
+			1 & 0 & 1 & 0 \\
+			0 & -3 & 0 & 8
+		\end{bsmallmatrix}$，且
+		\[
+			\bm A \bm B \bm A^{-1} = \bm B \bm A^{-1} + 3 \bm E,
+		\]
+		求 $\bm B$.
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $\bm Q = \begin{bsmallmatrix}
+			1 & 2 & 3 \\
+			2 & 4 & t \\
+			3 & 6 & 9
+		\end{bsmallmatrix}, \bm P$ 为 $3$ 阶非零矩阵，且满足 $\bm P \bm Q = \bm O$，则\kuo.
+
+		\onech{当 $t = 6$ 时，$\bm P$ 的秩必为 $1$}{当 $t = 6$ 时，$\bm P$ 的秩必为 $2$}{当 $t \ne 6$ 时，$\bm P$ 的秩必为 $1$}{当 $t \ne 6$ 时，$\bm P$ 的秩必为 $2$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A = \begin{bsmallmatrix}
+			1 & 1 & 1 & 1 \\
+			0 & 1 & -1 & a \\
+			2 & 3 & a & 4 \\
+			3 & 5 & 1 & 9
+		\end{bsmallmatrix}$，若 $r(\bm A^{\astt}) = 1$，则 $a = $\kuo.
+
+		\twoch{$1$}{$3$}{$1$ 或 $3$}{无法确定}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $n(n \geq 3)$ 阶矩阵 $\bm A = \begin{bsmallmatrix}
+			1 & a & \cdots & a \\
+			a & 1 & \cdots & a \\
+			\vdots & \vdots &  & \vdots \\
+			a & a & \cdots & 1
+		\end{bsmallmatrix}$，若矩阵 $\bm A$ 的秩为 $n - 1$，则 $a$ 必为\kuo.
+
+		\fourch{$1$}{$\frac{1}{1 - n}$}{$-1$}{$\frac{1}{n - 1}$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是 $5$ 阶方阵，且 $\bm A^{2} = \bm O$，则 $r(\bm A^{\astt}) = $\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设有两个非零矩阵
+		\[
+			\bm A = [a_{1},a_{2},\cdots,a_{n}]^{\TT}, \bm B = [b_{1},b_{2},\cdots,b_{n}]^{\TT}.
+		\]
+		\begin{enumerate}
+			\item 计算 $\bm A \bm B^{\TT}$ 与 $\bm A^{\TT} \bm B$;
+			\item 求矩阵 $\bm A \bm B^{\TT}$ 的秩 $r(\bm A \bm B^{\TT})$;
+			\item 设 $\bm C = \bm E - \bm A \bm B^{\TT}$，其中 $\bm E$ 为 $n$ 阶单位矩阵. 证明：
+			\[
+				\bm C^{\TT} \bm C = \bm E - \bm B \bm A^{\TT} - \bm A \bm B^{\TT} + \bm B \bm B^{\TT}
+			\]
+			的充要条件是 $\bm A^{\TT} \bm A = 1$.
+		\end{enumerate}
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $\bm A$ 是 $m \times n$ 矩阵，$r(\bm A) = r < \min\{ m,n \}$，则 $\bm A$ 中\kuo.
+
+		\onech{没有等于零的 $r - 1$ 阶子式，至少有一个不为零的 $r$ 阶子式}{有不等于零的 $r$ 阶子式，所有 $r + 1$ 阶子式全为零}{有等于零的 $r$ 阶子式，没有不等于零的 $r + 1$ 阶子式}{所有 $r$ 阶子式不等于零，所有 $r + 1$ 阶子式全为零}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是 $n$ 阶实矩阵，证明：$\tr(\bm A \bm A^{\TT}) = 0$ 的充分必要条件是 $\bm A = \bm O$.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A = (a_{ij})_{n \times n}$，且 $\sum_{j=1}^{n} a_{ij} = 0, i = 1,2,\cdots,n$，求 $r(\bm A^{\astt})$ 及 $\bm A^{\astt}$ 的表示形式.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A, \bm B$ 均是 $3$ 阶非零矩阵，满足 $\bm A \bm B = \bm O$，其中 $\bm B = \begin{bsmallmatrix}
+			1 & -1 & 1 \\
+			2a & 1 - a & 2a \\
+			a & - a & a^{2} - 2
+		\end{bsmallmatrix}$，则\kuo.
+
+		\onech{$a = -1$ 时，必有 $r(\bm A) = 1$}{$a \ne -1$ 时，必有 $r(\bm A) = 2$}{$a = 2$ 时，必有 $r(\bm A) = 1$}{$a \ne 2$ 时，必有 $r(\bm A) = 2$}
+	\end{titwo}

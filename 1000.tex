@@ -68,7 +68,9 @@
 	 }}
   }
 }
-\CenterWallPaper{1}{figure/ctanlion.pdf}
+% \CenterWallPaper{1}{figure/ctanlion.pdf}
+
+\usepackage{tabularx}
 
 \setlength{\headheight}{13pt}
 \makeatletter
@@ -149,6 +151,7 @@
 \def\ee{\mathrm{e}}
 \def\CC{\mathrm{C}}
 \def\TT{\mathrm{T}}
+\def\astt{*}
 \edef\lim{\lim\limits}
 \edef\sum{\sum\limits}
 \let\div\relax
@@ -179,12 +182,8 @@
 	% \input{chapter/chap0.tex}
 	% \tableofcontents
 	% \mainmatter
-	% \input{chapter/chap1.tex}
-	% \input{chapter/chap2.tex}
+	\input{chapter/chap1.tex}
+	\input{chapter/chap2.tex}
 	
-	\subsection{矩阵}
-
-	\begin{titwo}
-		设 $n$ 维行向量 $\bm \alpha = \bigl[ \frac{1}{2}, 0 , \cdots , 0 , \frac{1}{2} \bigr]$，矩阵 $\bm A = \bm E - \bm \alpha^{\TT} \bm \alpha, \bm B = \bm E + 2 \bm \alpha^{\TT} \bm \alpha$，则 $\bm A \bm B = $\kuo.
-	\end{titwo}
+	
 \end{document}
