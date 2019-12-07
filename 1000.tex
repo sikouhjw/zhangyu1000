@@ -1,5 +1,9 @@
 \documentclass[openany,twocolumn]{ctexbook}
 \usepackage{amsmath,amssymb,mathtools,upgreek}
+\let\lvert\relax
+\let\rvert\relax
+\let\lVert\relax
+\let\rVert\relax
 \usepackage{fourier}
 \usepackage{esint}
 \usepackage{bm}
@@ -36,6 +40,11 @@
 \newcommand*{\circled}[1]{\lower.7ex\hbox{\tikz\draw (0pt, 0pt)%
 	circle (.5em) node {\makebox[1em][c]{\small #1}};}}
 \let\libcirc\circled
+
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
 
 \newcommand\score[2]{
 \pgfmathsetmacro\pgfxa{#1+1}
@@ -182,8 +191,8 @@
 	% \input{chapter/chap0.tex}
 	% \tableofcontents
 	% \mainmatter
-	\input{chapter/chap1.tex}
-	\input{chapter/chap2.tex}
+	% \input{chapter/chap1.tex}
+	% \input{chapter/chap2.tex}
 	
 	
 \end{document}

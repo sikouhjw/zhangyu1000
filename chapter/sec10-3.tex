@@ -1,0 +1,103 @@
+\subsection{向量组的线性相关和线性无关}
+
+	\begin{titwo}
+		$n$ 维向量组 $\bm \alpha_{1}, \bm \alpha_{2}, \cdots, \bm \alpha_{s} (3 \leq s \leq n)$ 线性无关的充要条件是\kuo.
+
+		\onech{存在一组全为零的数 $k_{1},k_{2},\cdots,k_{s}$，使 $k_{1} \bm \alpha_{1} + k_{2} \bm \alpha_{2} + \cdots + k_{s} \bm \alpha_{s} = \bm 0$}{$\bm \alpha_{1}, \bm \alpha_{2}, \cdots, \bm \alpha_{s}$ 中任意两个向量都线性无关}{$\bm \alpha_{1}, \bm \alpha_{2}, \cdots, \bm \alpha_{s}$ 中任意一个向量都不能由其余向量线性表出}{存在一组不全为零的数 $k_{1},k_{2},\cdots,k_{s}$，使 $k_{1} \bm \alpha_{1} + k_{2} \bm \alpha_{2} + \cdots + k_{s} \bm \alpha_{s} \ne \bm 0$}
+	\end{titwo}
+
+	\begin{titwo}
+		已知向量组 $\bm \alpha_{1} , \bm \alpha_{2} , \bm \alpha_{3} , \bm \alpha_{4}$ 线性无关，则向量组 $2 \bm \alpha_{1} + \bm \alpha_{3} + \bm \alpha_{4}, \bm \alpha_{2} - \bm \alpha_{4}, \bm \alpha_{3} + \bm \alpha_{4}, \bm \alpha_{2} + \bm \alpha_{3}, 2 \bm \alpha_{1} + \bm \alpha_{2} + \bm \alpha_{3}$ 的秩是\kuo.
+
+		\fourch{$1$}{$2$}{$3$}{$4$}
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $3$ 维向量组 $\bm \alpha_{1} , \bm \alpha_{2} , \bm \alpha_{3}$ 线性无关，则向量组 $\bm \alpha_{1} - \bm \alpha_{2}, \bm \alpha_{2} - k \bm \alpha_{3}, \bm \alpha_{3} - \bm \alpha_{1}$ 也线性无关的充要条件是\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设有两个 $n$ 维向量组
+		\begin{align*}
+			(\text{\Rmnum{1}})&\bm \alpha_{1}, \bm \alpha_{2}, \cdots, \bm \alpha_{s},\\
+			(\text{\Rmnum{2}})&\bm \beta_{1}, \bm \beta_{2}, \cdots, \bm \beta_{s},
+		\end{align*}
+		若存在两组不全为零的数 $k_{1},k_{2},\cdots,k_{s},\lambda_{1},\lambda_{2},\cdots,\lambda_{s}$，使 $(k_{1} + \lambda_{1}) \bm \alpha_{1} + (k_{2} + \lambda_{2}) \bm \alpha_{2} + \cdots + (k_{s} + \lambda_{s}) \bm \alpha_{s} + (k_{1} - \lambda_{1}) \bm \beta_{1} + \cdots + (k_{s} - \lambda_{s}) \bm \beta_{s} = \bm 0$，则\kuo.
+
+		\onech{$\bm \alpha_{1} + \bm \beta_{1}, \cdots, \bm \alpha_{s} + \bm \beta_{s}, \bm \alpha_{1} - \bm \beta_{1}, \cdots, \bm \alpha_{s} - \bm \beta_{s}$ 线性相关}{$\bm \alpha_{1} + \bm \beta_{1}, \cdots, \bm \alpha_{s} + \bm \beta_{s}, \bm \alpha_{1} - \bm \beta_{1}, \cdots, \bm \alpha_{s} - \bm \beta_{s}$ 线性无关}{$\bm \alpha_{1}, \cdots, \bm \alpha_{s}$ 及 $\bm \beta_{1}, \cdots, \bm \beta_{s}$ 均线性相关}{$\bm \alpha_{1}, \cdots, \bm \alpha_{s}$ 及 $\bm \beta_{1}, \cdots, \bm \beta_{s}$ 均线性无关}
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $n$ 维向量组 $\bm \alpha_{1}, \bm \alpha_{2}, \cdots, \bm \alpha_{s}$ 线性无关，则向量组 $\bm \alpha_{1}', \bm \alpha_{2}', \cdots, \bm \alpha_{s}'$ 可能线性相关的是\kuo.
+
+		\onech{$\bm \alpha_{i}'(i = 1,2,\cdots,s)$ 是 $\bm \alpha_{i}(i = 1,2,\cdots,s)$ 中第一个分量加到第 $2$ 个分量得到的向量}{$\bm \alpha_{i}'(i = 1,2,\cdots,s)$ 是 $\bm \alpha_{i}(i = 1,2,\cdots,s)$ 中第一个分量改变成其相反数的向量}{$\bm \alpha_{i}'(i = 1,2,\cdots,s)$ 是 $\bm \alpha_{i}(i = 1,2,\cdots,s)$ 中第一个分量改为 $0$ 的向量}{$\bm \alpha_{i}'(i = 1,2,\cdots,s)$ 是 $\bm \alpha_{i}(i = 1,2,\cdots,s)$ 中第 $n$ 个分量后再增添一个分量的向量}
+	\end{titwo}
+
+	\begin{titwo}
+		设向量组 $\bm \alpha_{1}, \bm \alpha_{2}, \cdots, \bm \alpha_{s}(s \geq 2)$ 线性无关，且
+		\begin{gather*}
+			\bm \beta_{1} = \bm \alpha_{1} + \bm \alpha_{2},
+			\bm \beta_{2} = \bm \alpha_{2} + \bm \alpha_{3},\\
+			\cdots,\\
+			\bm \beta_{s - 1} = \bm \alpha_{s - 1} + \bm \alpha_{s},
+			\bm \beta_{s} = \bm \alpha_{s} + \bm \alpha_{1}.
+		\end{gather*}
+		讨论向量组 $\bm \beta_{1}, \bm \beta_{2}, \cdots, \bm \beta_{s}$ 的线性相关性.
+	\end{titwo}
+
+	\begin{titwo}
+        已知向量组 $\bm \alpha_{1}, \bm \alpha_{2}, \cdots, \bm \alpha_{s + 1}(s > 1)$ 线性无关，
+        \[
+            \bm \beta_{i} = \bm \alpha_{i} + t \bm \alpha_{i+1}, i = 1,2,\cdots,s.
+        \]
+        证明：向量组 $\bm \beta_{1},\bm \beta_{2},\cdots,\bm \beta_{s}$ 线性无关.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是 $3 \times 3$ 矩阵，$\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3}$ 是 $3$ 维列向量，且线性无关，已知
+		\[
+			\bm A \bm \alpha_{1} = \bm \alpha_{2} + \bm \alpha_{3},
+			\bm A \bm \alpha_{2} = \bm \alpha_{1} + \bm \alpha_{3},
+			\bm A \bm \alpha_{3} = \bm \alpha_{1} + \bm \alpha_{2}.
+		\]
+		\begin{enumerate}
+			\item 证明 $\bm A \bm \alpha_{1},\bm A \bm \alpha_{2},\bm A \bm \alpha_{3}$ 线性无关;
+			\item 求 $|\bm A|$.
+		\end{enumerate}
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $\bm A$ 是 $n$ 阶矩阵，$\bm \alpha_{1}, \bm \alpha_{2}, \cdots, \bm \alpha_{s}$ 是 $n$ 维线性无关向量组，若 $\bm A \bm \alpha_{1}, \bm A \bm \alpha_{2}, \cdots, \bm A \bm \alpha_{s}$ 线性相关. 证明：$\bm A$ 不可逆.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是 $n \times m$ 矩阵，$\bm B$ 是 $m \times n$ 矩阵，$\bm E$ 是 $n$ 阶单位矩阵. 若 $\bm A \bm B = \bm E$，证明：$\bm B$ 的列向量组线性无关.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 为 $n$ 阶正定矩阵，$\bm \alpha_{1}, \bm \alpha_{2}, \cdots, \bm \alpha_{n}$ 为 $n$ 维非零列向量，且满足
+		\[
+			\bm \alpha_{i}^{\TT} \bm A^{-1} \bm \alpha_{j} = 0(i \ne j; i,j = 1,2,\cdots,n).
+		\]
+		试证：向量组 $\bm \alpha_{1}, \bm \alpha_{2}, \cdots, \bm \alpha_{n}$ 线性无关.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A, \bm B, \bm C$ 均是 $3$ 阶矩阵，满足 $\bm A \bm B = - 2 \bm B, \bm C \bm A^{\TT} = 2 \bm C$. 其中
+		\[
+			\bm B = \begin{bsmallmatrix}
+				1 & 2 & 3 \\
+				-1 & 1 & 0 \\
+				2 & -1 & 1
+			\end{bsmallmatrix},
+			\bm C = \begin{bsmallmatrix}
+				1 & -2 & 1 \\
+				-2 & 4 & -2 \\
+				-1 & 2 & -1
+			\end{bsmallmatrix}.
+		\]
+		\begin{enumerate}
+			\item 求 $\bm A$;
+			\item 证明：对任何 $3$ 维向量 $\bm \xi$，$\bm A^{100} \bm \xi$ 与 $\bm \xi$ 必线性相关.
+		\end{enumerate}
+	\end{titwo}

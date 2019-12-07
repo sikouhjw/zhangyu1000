@@ -1,0 +1,130 @@
+\subsection{向量组的线性表示}
+
+	\begin{titwo}
+		设向量组
+		\[
+			(\text{\Rmnum{1}})\bm \alpha_{1}, \bm \alpha_{2}, \cdots, \bm \alpha_{s}
+		\]
+		线性无关，(\Rmnum{2})$\bm \beta_{1}, \bm \beta_{2}, \cdots, \bm \beta_{t}$ 线性无关，且 $\bm \alpha_{i}(i = 1,2,\cdots,s)$ 不能由(\Rmnum{2})$\bm \beta_{1}, \bm \beta_{2}, \cdots, \bm \beta_{t}$ 线性表出，$\bm \beta_{j}(j = 1,2,\cdots,t)$ 不能由(\Rmnum{1})$\bm \alpha_{1}, \bm \alpha_{2}, \cdots, \bm \alpha_{s}$ 线性表出，则向量组 $\bm \alpha_{1}, \bm \alpha_{2}, \cdots, \bm \alpha_{s}, \bm \beta_{1}, \bm \beta_{2}, \cdots, \bm \beta_{t}$\kuo.
+
+		\onech{必线性相关}{必线性无关}{可能线性相关，也可能线性无关}{以上都不正确}
+	\end{titwo}
+
+	\begin{titwo}
+		设
+		\begin{gather*}
+			\bm \alpha_{1} = [1,0,-1,2]^{\TT}, \bm \alpha_{2} = [2,-1,-2,6]^{\TT},\\
+			\bm \alpha_{3} = [3,1,t,4]^{\TT}, \bm \beta = [4,-1,-5,10]^{\TT},
+		\end{gather*}
+		已知 $\bm \beta$ 不能由 $\bm \alpha_{1}, \bm \alpha_{2}, \bm \alpha_{3}$ 线性表出，则 $t = $\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		已知
+		\begin{gather*}
+			\bm \alpha_{1} = [1,-1,1]^{\TT},\bm \alpha_{2} = [1,t,-1]^{\TT},\\
+			\bm \alpha_{3} = [t,1,2]^{\TT},\bm \beta = \bigl[4,t^{2},-4\bigr]^{\TT},
+		\end{gather*}
+		若 $\bm \beta$ 可由 $\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3}$ 线性表示，且表示法不唯一，求 $t$ 及 $\bm \beta$ 的表达式.
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3},\bm \alpha_{4}$ 为 $3$ 维非零列向量，则下列结论：\\
+		\circled{1}如果 $\bm \alpha_{4}$ 不能由 $\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3}$ 线性表出，则 $\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3}$ 线性相关;\\
+		\circled{2}如果 $\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3}$ 线性相关，$\bm \alpha_{2},\bm \alpha_{3},\bm \alpha_{4}$ 线性相关，则 $\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{4}$ 也线性相关;\\
+		\circled{3}如果 $r(\bm \alpha_{1}, \bm \alpha_{1} + \bm \alpha_{2}, \bm \alpha_{2} + \bm \alpha_{3}) = r(\bm \alpha_{4}, \bm \alpha_{1} + \bm \alpha_{4}, \bm \alpha_{2} + \bm \alpha_{4}, \bm \alpha_{3} + \bm \alpha_{4})$，则 $\bm \alpha_{4}$ 可以由 $\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3}$ 线性表出.\\
+		其中正确的个数为\kuo.
+
+		\fourch{$0$}{$1$}{$2$}{$3$}
+	\end{titwo}
+
+	\begin{titwo}
+		向量组(\Rmnum{1}) $\bm \alpha_{1}, \bm \alpha_{2}, \cdots, \bm \alpha_{s}$，其秩为 $r_{1}$，向量组(\Rmnum{2}) $\bm \beta_{1}, \bm \beta_{2}, \cdots, \bm \beta_{s}$，其秩为 $r_{2}$，且 $\bm \beta_{i} (i = 1,2,\cdots,s)$ 均可由向量组(\Rmnum{1})$\bm \alpha_{1}, \bm \alpha_{2}, \cdots, \bm \alpha_{s}$ 线性表出，则必有\kuo.
+
+		\onech{$\bm \alpha_{1} + \bm \beta_{1}, \bm \alpha_{2} + \bm \beta_{2}, \cdots, \bm \alpha_{s} + \bm \beta_{s}$ 的秩为 $r_{1} + r_{2}$}{$\bm \alpha_{1} - \bm \beta_{1}, \bm \alpha_{2} - \bm \beta_{2}, \cdots, \bm \alpha_{s} - \bm \beta_{s}$ 的秩为 $r_{1} - r_{2}$}{$\bm \alpha_{1}, \bm \alpha_{2}, \cdots, \bm \alpha_{s}, \bm \beta_{1}, \bm \beta_{2}, \cdots, \bm \beta_{s}$ 的秩为 $r_{1} + r_{2}$}{$\bm \alpha_{1}, \bm \alpha_{2}, \cdots, \bm \alpha_{s}, \bm \beta_{1}, \bm \beta_{2}, \cdots, \bm \beta_{s}$ 的秩为 $r_{1}$}
+	\end{titwo}
+
+	\begin{titwo}
+		已知向量组
+		\[
+			\bm \alpha_{1} = \begin{bsmallmatrix}
+				1 \\
+				-1 \\
+				2
+			\end{bsmallmatrix},
+			\bm \alpha_{2} = \begin{bsmallmatrix}
+				0 \\
+				3 \\
+				1
+			\end{bsmallmatrix},
+			\bm \alpha_{3} = \begin{bsmallmatrix}
+				3 \\
+				0 \\
+				7
+			\end{bsmallmatrix}
+		\]
+		与向量组
+		\[
+			\bm \beta_{1} = \begin{bsmallmatrix}
+				1 \\
+				-2 \\
+				2
+			\end{bsmallmatrix},
+			\bm \beta_{2} = \begin{bsmallmatrix}
+				2 \\
+				1 \\
+				5
+			\end{bsmallmatrix},
+			\bm \beta_{3} = \begin{bsmallmatrix}
+				x \\
+				3 \\
+				3
+			\end{bsmallmatrix}
+		\]
+		等秩，则 $x = $\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $\bm \alpha_{1} = [1,2,-3,1]^{\TT}, \bm \alpha_{2} = [5,-5,a,11]^{\TT}, \bm \alpha_{3} = [1,-3,6,3]^{\TT}, \bm \alpha_{4} = [2,-1,3,a]^{\TT}$. 问：
+		\begin{enumerate}
+			\item 当 $a$ 为何值时，向量组 $\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3},\bm \alpha_{4}$ 线性相关;
+			\item 当 $a$ 为何值时，向量组 $\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3},\bm \alpha_{4}$ 线性无关;
+			\item 当 $a$ 为何值时，$\bm \alpha_{4}$ 能由 $\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3}$ 线性表出，并写出它的表出式.
+		\end{enumerate}
+	\end{titwo}
+
+	\begin{titwo}
+		已知
+		\[
+			\bm \alpha_{1} = \begin{bsmallmatrix}
+				1 + \lambda \\
+				1 \\
+				1
+			\end{bsmallmatrix},
+			\bm \alpha_{2} = \begin{bsmallmatrix}
+				1 \\
+				1 + \lambda \\
+				1
+			\end{bsmallmatrix},
+			\bm \alpha_{3} = \begin{bsmallmatrix}
+				1 \\
+				1 \\
+				1 + \lambda
+			\end{bsmallmatrix},
+			\bm \beta = \begin{bsmallmatrix}
+				0 \\
+				\lambda \\
+				\lambda^{2}
+			\end{bsmallmatrix}.
+		\]
+		问 $\lambda$ 取何值时，有：
+		\begin{enumerate}
+			\item $\beta$ 可由 $\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3}$ 线性表出，且表达式唯一;
+			\item $\beta$ 可由 $\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3}$ 线性表出，但表达式不唯一;
+			\item $\beta$ 不能由 $\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3}$ 线性表出.
+		\end{enumerate}
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $\bm \alpha_{1}, \bm \alpha_{2}, \cdots, \bm \alpha_{s}$ 线性无关，$\beta$ 可由 $\bm \alpha_{1}, \bm \alpha_{2},$ $\cdots, \bm \alpha_{s}$ 线性表出，且表达式的系数全不为零. 证明：$\bm \alpha_{1}, \bm \alpha_{2}, \cdots, \bm \alpha_{s},\beta$ 中任意 $s$ 个向量均线性无关.
+	\end{titwo}
