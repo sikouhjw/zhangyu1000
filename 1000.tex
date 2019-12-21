@@ -149,11 +149,11 @@
 \usepackage{ulem}
 \newcommand{\hone}[1]{ \uline{\hspace{#1 pc}}}
 \def\htwo{ \uline{\hspace{\fill}}}
-\def\kuo{ (\hspace{1pc})}
+\def\kuo{ \mbox{(\hspace{1pc})}}
 
-\newcommand{\fourch}[4]{\noindent\begin{tabular}{*{4}{@{}p{1.97cm}}}(A)~#1 & (B)~#2 & (C)~#3 & (D)~#4\end{tabular}} % 一行
-\newcommand{\twoch}[4]{\noindent\begin{tabular}{*{2}{@{}p{3.94cm}}}(A)~#1 & (B)~#2\end{tabular}\\\begin{tabular}{*{2}{@{}p{3.94cm}}}(C)~#3 & (D)~#4\end{tabular}}  %两行
-\newcommand{\onech}[4]{\noindent(A)~#1 \\ (B)~#2 \\ (C)~#3 \\ (D)~#4}  % 四行
+\newcommand{\fourch}[4]{\noindent\begin{tabular}{*{4}{@{}p{1.97cm}}}(\texttt{A})~#1 & (\texttt{B})~#2 & (\texttt{C})~#3 & (\texttt{D})~#4\end{tabular}} % 一行
+\newcommand{\twoch}[4]{\noindent\begin{tabular}{*{2}{@{}p{3.94cm}}}(\texttt{A})~#1 & (\texttt{B})~#2\end{tabular}\\\begin{tabular}{*{2}{@{}p{3.94cm}}}(\texttt{C})~#3 & (\texttt{D})~#4\end{tabular}}  %两行
+\newcommand{\onech}[4]{\noindent(\texttt{A})~#1 \\ (\texttt{B})~#2 \\ (\texttt{C})~#3 \\ (\texttt{D})~#4}  % 四行
 
 \def\leq{\leqslant}
 \def\geq{\geqslant}
@@ -194,5 +194,178 @@
 	% \input{chapter/chap1.tex}
 	% \input{chapter/chap2.tex}
 	
-	
+	\subsection{方程组}
+
+	\begin{titwo}
+		设 $\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3}$ 均为线性方程组 $\bm A \bm x = \bm b$ 的解，则下列向量
+		\[
+			\bm \alpha_{1} - \bm \alpha_{2},
+			\bm \alpha_{1} - 2\bm \alpha_{2} + \bm \alpha_{3},
+			\frac{1}{4}( \bm \alpha_{1} - \bm \alpha_{3} ),
+			\bm \alpha_{1} + 3 \bm \alpha_{2} - 4 \bm \alpha_{3},
+		\]
+		其中是相应的齐次方程组 $\bm A \bm x = \bm 0$ 的解向量的个数为\kuo.
+
+		\fourch{$4$}{$3$}{$2$}{$1$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是秩为 $n - 1$ 的 $n$ 阶矩阵，$\bm \alpha_{1},\bm \alpha_{2}$ 是方程组 $\bm A \bm x = \bm 0$ 的两个不同的解向量，$k$ 是任意常数，则 $\bm A \bm x = \bm 0$ 的通解必定是\kuo.
+
+		\twoch{$\bm \alpha_{1} + \bm \alpha_{2}$}{$k \bm \alpha_{1}$}{$k ( \bm \alpha_{1} + \bm \alpha_{2} )$}{$k ( \bm \alpha_{1} - \bm \alpha_{2} )$}
+	\end{titwo}
+
+	\begin{titwo}
+		齐次线性方程组的系数矩阵 $\bm A_{4 \times 5} = \bigl[ \bm \beta_{1}, \bm \beta_{2},$ $\bm \beta_{3}, \bm \beta_{4}, \bm \beta_{5} \bigr]$ 经过初等行变换化成阶梯形矩阵为
+		\[
+			\bm A = \bigl[ \bm \beta_{1}, \bm \beta_{2}, \bm \beta_{3}, \bm \beta_{4}, \bm \beta_{5} \bigr] \xrightarrow{\text{初等行变换}} \begin{bsmallmatrix}
+				1 & 2 & -1 & 5 & 2 \\
+				0 & 1 & 2 & 6 & 0 \\
+				0 & 0 & 0 & 4 & 0 \\
+				0 & 0 & 0 & 0 & 0
+			\end{bsmallmatrix},
+		\]
+		则\kuo.
+
+		\onech{$\bm \beta_{1}$ 不能由 $\bm \beta_{3},\bm \beta_{4},\bm \beta_{5}$ 线性表出}{$\bm \beta_{2}$ 不能由 $\bm \beta_{1},\bm \beta_{3},\bm \beta_{5}$ 线性表出}{$\bm \beta_{3}$ 不能由 $\bm \beta_{1},\bm \beta_{2},\bm \beta_{5}$ 线性表出}{$\bm \beta_{4}$ 不能由 $\bm \beta_{1},\bm \beta_{2},\bm \beta_{3}$ 线性表出}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 为 $m \times n$ 矩阵，则齐次线性方程组 $\bm A \bm X = \bm 0$ 仅有零解的充分条件是\kuo.
+
+		\twoch{$\bm A$ 的列向量线性无关}{$\bm A$ 的列向量线性相关}{$\bm A$ 的行向量线性无关}{$\bm A$ 的行向量线性相关}
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $\bm \beta_{1},\bm \beta_{2}$ 是 $\bm A \bm X = \bm b$ 的两个不同的解，$\bm \alpha_{1},\bm \alpha_{2}$ 是相应的齐次方程组 $\bm A \bm X = \bm 0$ 的基础解系，$k_{1},k_{2}$ 是任意常数，则 $\bm A \bm X = \bm b$ 的通解是\kuo.
+
+		\onech%
+		{$k_{1} \bm \alpha_{1} + k_{2} ( \bm \alpha_{1} + \bm \alpha_{2} ) + \frac{\bm \beta_{1} - \bm \beta_{2}}{2}$}%
+		{$k_{1} \bm \alpha_{1} + k_{2} ( \bm \alpha_{1} - \bm \alpha_{2} ) + \frac{\bm \beta_{1} + \bm \beta_{2}}{2}$}%
+		{$k_{1} \bm \alpha_{1} + k_{2} ( \bm \beta_{1} - \bm \beta_{2} ) + \frac{\bm \beta_{1} - \bm \beta_{2}}{2}$}%
+		{$k_{1} \bm \alpha_{1} + k_{2} ( \bm \beta_{1} - \bm \beta_{2} ) + \frac{\bm \beta_{1} + \bm \beta_{2}}{2}$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3}$ 是四元非齐次线性方程组 $\bm A \bm X = \bm b$ 的三个解向量，且 $r(\bm A) = 3,\bm \alpha_{1}  = [1,2,3,4]^{\TT},\bm \alpha_{2} + \bm \alpha_{3} = [0,1,2,3]^{\TT},k$ 是任意常数，则方程组 $\bm A \bm X = \bm b$ 的通解是\kuo.
+
+		\twoch%
+		{$\begin{bsmallmatrix}
+			1 \\
+			2 \\
+			3 \\
+			4
+		\end{bsmallmatrix} + k \begin{bsmallmatrix}
+			1 \\
+			1 \\
+			1 \\
+			1
+		\end{bsmallmatrix}$}
+		{$\begin{bsmallmatrix}
+			1 \\
+			2 \\
+			3 \\
+			4
+		\end{bsmallmatrix} + k \begin{bsmallmatrix}
+			0 \\
+			1 \\
+			2 \\
+			3
+		\end{bsmallmatrix}$}%
+		{$\begin{bsmallmatrix}
+			1 \\
+			2 \\
+			3 \\
+			4
+		\end{bsmallmatrix} + k \begin{bsmallmatrix}
+			2 \\
+			3 \\
+			4 \\
+			5
+		\end{bsmallmatrix}$}%
+		{$\begin{bsmallmatrix}
+			1 \\
+			2 \\
+			3 \\
+			4
+		\end{bsmallmatrix} + k \begin{bsmallmatrix}
+			3 \\
+			4 \\
+			5 \\
+			6
+		\end{bsmallmatrix}$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A = \begin{bsmallmatrix}
+			1 & 1 & a \\
+			1 & a & 1 \\
+			a & 1 & 1 \\
+			2 & a + 1 & a + 3
+		\end{bsmallmatrix},\bm B$ 是 $3$ 阶非零矩阵，且 $\bm A \bm B = \bm O$，则 $\bm A \bm x = \bm 0$ 的通解是\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		求齐次线性方程组 $\begin{cases}
+			x_{1} + x_{2} + x_{5} = 0,\\
+			x_{1} + x_{2} - x_{3} = 0,\\
+			x_{3} + x_{4} + x_{5} = 0
+		\end{cases}$ 的基础解系.
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $r(\bm A) = r_{1}$，且方程组 $\bm A \bm X = \bm \alpha$ 有解，$r(\bm B) = r_{2}$，且 $\bm B \bm Y = \bm \beta$ 无解，设
+		\[
+			\bm A = [\bm \alpha_{1},\bm \alpha_{2},\cdots,\bm \alpha_{n}], \bm B = \bigl[\bm \beta_{1},\bm \beta_{2},\cdots,\bm \beta_{n}\bigr],
+		\]
+		且 $r\bigl(\bm \alpha_{1},\bm \alpha_{2},\cdots,\bm \alpha_{n},\bm \alpha,\bm \beta_{1},\bm \beta_{2},\cdots,\bm \beta_{n},\bm \beta\bigr) = r$，则\kuo.
+
+		\twoch{$r = r_{1} + r_{2}$}{$r > r_{1} + r_{2}$}{$r = r_{1} + r_{2} + 1$}{$r \leq r_{1} + r_{2} + 1$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是 $m \times n$ 矩阵，则方程组 $\bm A \bm X = \bm b$ 有唯一解的充分必要条件是\kuo.
+
+		\onech{$m = n$ 且 $|\bm A| \ne 0$}{$\bm A \bm X = \bm 0$ 有唯一零解}{$\bm A$ 的列向量组 $\bm \alpha_{1},\bm \alpha_{2},\cdots,\bm \alpha_{n}$ 和 $\bm \alpha_{1},\bm \alpha_{2},\cdots,\bm \alpha_{n},\bm b$ 是等价向量组}{$r(\bm A) = n$，$\bm b$ 可由 $\bm A$ 的列向量线性表出}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是 $4 \times 5$ 矩阵，且 $\bm A$ 的行向量组线性无关，则下列说法不正确的是\kuo.
+		
+		\onech{$\bm A^{\TT} \bm X = \bm 0$ 只有零解}{$\bm A^{\TT} \bm A \bm X = \bm 0$ 必有无穷多解}{对任意的 $\bm b$，$\bm A^{\TT} \bm X = \bm b$ 有唯一解}{对任意的 $\bm b$，$\bm A \bm X = \bm b$ 有无穷多解}
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $n$ 阶矩阵 $\bm A$ 的各行元素之和均为零，且 $r(\bm A) = n - 1$，则线性方程组 $\bm A \bm X = \bm 0$ 的通解是\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		已知非齐次线性方程组
+		\begin{equation}\label{eq:120}
+			\bm A_{3 \times 4} \bm X = \bm b
+		\end{equation}
+		有通解
+		\[
+			k_{1} [1,2,0,-2]^{\TT} + k_{2} [4,-1,-1,-1]^{\TT} + [1,0,-1,1]^{\TT},
+		\]
+		则满足方程组~\eqref{eq:120} 且满足条件 $x_{1} = x_{2},x_{3} = x_{4}$ 的解是\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $4$ 阶方阵 $\bm A = [\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3},\bm \alpha_{4}],\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3},\bm \alpha_{4}$ 均为 $4$ 维列向量，其中 $\bm \alpha_{1},\bm \alpha_{2}$ 线性无关，若
+		\begin{align*}
+			\bm \beta &= \bm \alpha_{1} + 2 \bm \alpha_{2} - \bm \alpha_{3} \\
+			&= \bm \alpha_{1} + \bm \alpha_{2} + \bm \alpha_{3} + \bm \alpha_{4} \\
+			&= \bm \alpha_{1} + 3 \bm \alpha_{2} + \bm \alpha_{3} + 2 \bm \alpha_{4},
+		\end{align*}
+		则 $\bm A \bm x = \bm \beta$ 的通解为\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		与 $\bm \alpha_{1} = [1,2,3,-1]^{\TT}, \bm \alpha_{2} = [0,1,1,2]^{\TT}, \bm \alpha_{3} = [2,1,3,$ $0]^{\TT}$ 都正交的单位向量是\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设向量组 $\bm \alpha_{1},\bm \alpha_{2},\cdots,\bm \alpha_{t}$ 是齐次线性方程组 $\bm A \bm x = \bm 0$ 的一个基础解系，向量 $\bm \beta$ 不是方程组 $\bm A \bm x = \bm 0$ 的解，即 $\bm A \bm \beta \ne \bm 0$. 证明：向量组 $\bm \beta,\bm \beta + \bm \alpha_{1},\bm \beta + \bm \alpha_{2},\cdots,\bm \beta + \bm \alpha_{t}$ 线性无关. 
+	\end{titwo}
 \end{document}
