@@ -1,0 +1,587 @@
+\subsection{方程组}
+
+	\begin{titwo}
+		设 $\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3}$ 均为线性方程组 $\bm A \bm x = \bm b$ 的解，则下列向量
+		\[
+			\bm \alpha_{1} - \bm \alpha_{2},
+			\bm \alpha_{1} - 2\bm \alpha_{2} + \bm \alpha_{3},
+			\frac{1}{4}( \bm \alpha_{1} - \bm \alpha_{3} ),
+			\bm \alpha_{1} + 3 \bm \alpha_{2} - 4 \bm \alpha_{3},
+		\]
+		其中是相应的齐次方程组 $\bm A \bm x = \bm 0$ 的解向量的个数为\kuo.
+
+		\fourch{$4$}{$3$}{$2$}{$1$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是秩为 $n - 1$ 的 $n$ 阶矩阵，$\bm \alpha_{1},\bm \alpha_{2}$ 是方程组 $\bm A \bm x = \bm 0$ 的两个不同的解向量，$k$ 是任意常数，则 $\bm A \bm x = \bm 0$ 的通解必定是\kuo.
+
+		\twoch{$\bm \alpha_{1} + \bm \alpha_{2}$}{$k \bm \alpha_{1}$}{$k ( \bm \alpha_{1} + \bm \alpha_{2} )$}{$k ( \bm \alpha_{1} - \bm \alpha_{2} )$}
+	\end{titwo}
+
+	\begin{titwo}
+		齐次线性方程组的系数矩阵 $\bm A_{4 \times 5} = \bigl[ \bm \beta_{1}, \bm \beta_{2},$ $\bm \beta_{3}, \bm \beta_{4}, \bm \beta_{5} \bigr]$ 经过初等行变换化成阶梯形矩阵为
+		\[
+			\bm A = \bigl[ \bm \beta_{1}, \bm \beta_{2}, \bm \beta_{3}, \bm \beta_{4}, \bm \beta_{5} \bigr] \xrightarrow{\text{初等行变换}} \begin{bsmallmatrix}
+				1 & 2 & -1 & 5 & 2 \\
+				0 & 1 & 2 & 6 & 0 \\
+				0 & 0 & 0 & 4 & 0 \\
+				0 & 0 & 0 & 0 & 0
+			\end{bsmallmatrix},
+		\]
+		则\kuo.
+
+		\onech{$\bm \beta_{1}$ 不能由 $\bm \beta_{3},\bm \beta_{4},\bm \beta_{5}$ 线性表出}{$\bm \beta_{2}$ 不能由 $\bm \beta_{1},\bm \beta_{3},\bm \beta_{5}$ 线性表出}{$\bm \beta_{3}$ 不能由 $\bm \beta_{1},\bm \beta_{2},\bm \beta_{5}$ 线性表出}{$\bm \beta_{4}$ 不能由 $\bm \beta_{1},\bm \beta_{2},\bm \beta_{3}$ 线性表出}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 为 $m \times n$ 矩阵，则齐次线性方程组 $\bm A \bm X = \bm 0$ 仅有零解的充分条件是\kuo.
+
+		\twoch{$\bm A$ 的列向量线性无关}{$\bm A$ 的列向量线性相关}{$\bm A$ 的行向量线性无关}{$\bm A$ 的行向量线性相关}
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $\bm \beta_{1},\bm \beta_{2}$ 是 $\bm A \bm X = \bm b$ 的两个不同的解，$\bm \alpha_{1},\bm \alpha_{2}$ 是相应的齐次方程组 $\bm A \bm X = \bm 0$ 的基础解系，$k_{1},k_{2}$ 是任意常数，则 $\bm A \bm X = \bm b$ 的通解是\kuo.
+
+		\onech%
+		{$k_{1} \bm \alpha_{1} + k_{2} ( \bm \alpha_{1} + \bm \alpha_{2} ) + \frac{\bm \beta_{1} - \bm \beta_{2}}{2}$}%
+		{$k_{1} \bm \alpha_{1} + k_{2} ( \bm \alpha_{1} - \bm \alpha_{2} ) + \frac{\bm \beta_{1} + \bm \beta_{2}}{2}$}%
+		{$k_{1} \bm \alpha_{1} + k_{2} ( \bm \beta_{1} - \bm \beta_{2} ) + \frac{\bm \beta_{1} - \bm \beta_{2}}{2}$}%
+		{$k_{1} \bm \alpha_{1} + k_{2} ( \bm \beta_{1} - \bm \beta_{2} ) + \frac{\bm \beta_{1} + \bm \beta_{2}}{2}$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3}$ 是四元非齐次线性方程组 $\bm A \bm X = \bm b$ 的三个解向量，且 $r(\bm A) = 3,\bm \alpha_{1}  = [1,2,3,4]^{\TT},\bm \alpha_{2} + \bm \alpha_{3} = [0,1,2,3]^{\TT},k$ 是任意常数，则方程组 $\bm A \bm X = \bm b$ 的通解是\kuo.
+
+		\twoch%
+		{$\begin{bsmallmatrix}
+			1 \\
+			2 \\
+			3 \\
+			4
+		\end{bsmallmatrix} + k \begin{bsmallmatrix}
+			1 \\
+			1 \\
+			1 \\
+			1
+		\end{bsmallmatrix}$}
+		{$\begin{bsmallmatrix}
+			1 \\
+			2 \\
+			3 \\
+			4
+		\end{bsmallmatrix} + k \begin{bsmallmatrix}
+			0 \\
+			1 \\
+			2 \\
+			3
+		\end{bsmallmatrix}$}%
+		{$\begin{bsmallmatrix}
+			1 \\
+			2 \\
+			3 \\
+			4
+		\end{bsmallmatrix} + k \begin{bsmallmatrix}
+			2 \\
+			3 \\
+			4 \\
+			5
+		\end{bsmallmatrix}$}%
+		{$\begin{bsmallmatrix}
+			1 \\
+			2 \\
+			3 \\
+			4
+		\end{bsmallmatrix} + k \begin{bsmallmatrix}
+			3 \\
+			4 \\
+			5 \\
+			6
+		\end{bsmallmatrix}$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A = \begin{bsmallmatrix}
+			1 & 1 & a \\
+			1 & a & 1 \\
+			a & 1 & 1 \\
+			2 & a + 1 & a + 3
+		\end{bsmallmatrix},\bm B$ 是 $3$ 阶非零矩阵，且 $\bm A \bm B = \bm O$，则 $\bm A \bm x = \bm 0$ 的通解是\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		求齐次线性方程组 $\begin{cases}
+			x_{1} + x_{2} + x_{5} = 0,\\
+			x_{1} + x_{2} - x_{3} = 0,\\
+			x_{3} + x_{4} + x_{5} = 0
+		\end{cases}$ 的基础解系.
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $r(\bm A) = r_{1}$，且方程组 $\bm A \bm X = \bm \alpha$ 有解，$r(\bm B) = r_{2}$，且 $\bm B \bm Y = \bm \beta$ 无解，设
+		\[
+			\bm A = [\bm \alpha_{1},\bm \alpha_{2},\cdots,\bm \alpha_{n}], \bm B = \bigl[\bm \beta_{1},\bm \beta_{2},\cdots,\bm \beta_{n}\bigr],
+		\]
+		且 $r\bigl(\bm \alpha_{1},\bm \alpha_{2},\cdots,\bm \alpha_{n},\bm \alpha,\bm \beta_{1},\bm \beta_{2},\cdots,\bm \beta_{n},\bm \beta\bigr) = r$，则\kuo.
+
+		\twoch{$r = r_{1} + r_{2}$}{$r > r_{1} + r_{2}$}{$r = r_{1} + r_{2} + 1$}{$r \leq r_{1} + r_{2} + 1$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是 $m \times n$ 矩阵，则方程组 $\bm A \bm X = \bm b$ 有唯一解的充分必要条件是\kuo.
+
+		\onech{$m = n$ 且 $|\bm A| \ne 0$}{$\bm A \bm X = \bm 0$ 有唯一零解}{$\bm A$ 的列向量组 $\bm \alpha_{1},\bm \alpha_{2},\cdots,\bm \alpha_{n}$ 和 $\bm \alpha_{1},\bm \alpha_{2},\cdots,\bm \alpha_{n},\bm b$ 是等价向量组}{$r(\bm A) = n$，$\bm b$ 可由 $\bm A$ 的列向量线性表出}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是 $4 \times 5$ 矩阵，且 $\bm A$ 的行向量组线性无关，则下列说法不正确的是\kuo.
+		
+		\onech{$\bm A^{\TT} \bm X = \bm 0$ 只有零解}{$\bm A^{\TT} \bm A \bm X = \bm 0$ 必有无穷多解}{对任意的 $\bm b$，$\bm A^{\TT} \bm X = \bm b$ 有唯一解}{对任意的 $\bm b$，$\bm A \bm X = \bm b$ 有无穷多解}
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $n$ 阶矩阵 $\bm A$ 的各行元素之和均为零，且 $r(\bm A) = n - 1$，则线性方程组 $\bm A \bm X = \bm 0$ 的通解是\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		已知非齐次线性方程组
+		\begin{equation}\label{eq:120}
+			\bm A_{3 \times 4} \bm X = \bm b
+		\end{equation}
+		有通解
+		\[
+			k_{1} [1,2,0,-2]^{\TT} + k_{2} [4,-1,-1,-1]^{\TT} + [1,0,-1,1]^{\TT},
+		\]
+		则满足方程组~\eqref{eq:120} 且满足条件 $x_{1} = x_{2},x_{3} = x_{4}$ 的解是\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $4$ 阶方阵 $\bm A = [\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3},\bm \alpha_{4}],$ $\bm \alpha_{1},$ $\bm \alpha_{2},$ $\bm \alpha_{3},$ $\bm \alpha_{4}$ 均为 $4$ 维列向量，其中 $\bm \alpha_{1},\bm \alpha_{2}$ 线性无关，若
+		\begin{align*}
+			\bm \beta &= \bm \alpha_{1} + 2 \bm \alpha_{2} - \bm \alpha_{3} \\
+			&= \bm \alpha_{1} + \bm \alpha_{2} + \bm \alpha_{3} + \bm \alpha_{4} \\
+			&= \bm \alpha_{1} + 3 \bm \alpha_{2} + \bm \alpha_{3} + 2 \bm \alpha_{4},
+		\end{align*}
+		则 $\bm A \bm x = \bm \beta$ 的通解为\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		与 $\bm \alpha_{1} = [1,2,3,-1]^{\TT}, \bm \alpha_{2} = [0,1,1,2]^{\TT}, \bm \alpha_{3} = [2,1,$ $3,0]^{\TT}$ 都正交的单位向量是\htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设向量组 $\bm \alpha_{1},\bm \alpha_{2},\cdots,\bm \alpha_{t}$ 是齐次线性方程组 $\bm A \bm x = \bm 0$ 的一个基础解系，向量 $\bm \beta$ 不是方程组 $\bm A \bm x = \bm 0$ 的解，即 $\bm A \bm \beta \ne \bm 0$. 证明：向量组 $\bm \beta,\bm \beta + \bm \alpha_{1},\bm \beta + \bm \alpha_{2},\cdots,\bm \beta + \bm \alpha_{t}$ 线性无关. 
+	\end{titwo}
+
+	\begin{titwo}
+		设向量组
+		\begin{gather*}
+			\bm \alpha_{1} = [a_{11},a_{21},\cdots,a_{n1}]^{\TT},\\
+			\bm \alpha_{2} = [a_{12},a_{22},\cdots,a_{n2}]^{\TT},\\
+			\cdots,\\
+			\bm \alpha_{s} = [a_{1s},a_{2s},\cdots,a_{ns}]^{\TT}.
+		\end{gather*}
+		证明：向量组 $\bm \alpha_{1},\bm \alpha_{2},\cdots,\bm \alpha_{s}$ 线性相关(线性无关)的充要条件是齐次线性方程组
+		\[
+			\begin{cases}
+				a_{11}x_{1} + a_{12}x_{2} + \cdots + a_{1s}x_{s} = 0,\\
+				a_{21}x_{1} + a_{22}x_{2} + \cdots + a_{2s}x_{s} = 0,\\
+				\cdots\cdots\\
+				a_{n1}x_{1} + a_{n2}x_{2} + \cdots + a_{ns}x_{s} = 0
+			\end{cases}
+		\]
+		有非零解(唯一零解).
+	\end{titwo}
+
+	\begin{titwo}
+		求下述线性方程组的解空间的维数：
+		\[
+			\begin{cases}
+				x_{1} + 2x_{2} - 2x_{3} + 2x_{4} - x_{5} = 0,\\
+				x_{1} + 2x_{2} - x_{3} + 3x_{4} - 2x_{5} = 0,\\
+				2x_{1} + 4x_{2} - 7x_{3} + x_{4} + x_{5} = 0.
+			\end{cases}
+		\]
+		并判断 $\bm \xi_{1} = [9,-1,2,-1,1]^{\TT}$ 是否属于该解空间.
+	\end{titwo}
+
+	\begin{titwo}
+		已知线性方程组
+		\[
+			\begin{cases}
+				a_{11}x_{1} + a_{12}x_{2} + a_{13}x_{3} + a_{14}x_{4} = a_{15},\\
+				a_{21}x_{1} + a_{22}x_{2} + a_{23}x_{3} + a_{24}x_{4} = a_{25},\\
+				a_{31}x_{1} + a_{32}x_{2} + a_{33}x_{3} + a_{34}x_{4} = a_{35},\\
+				a_{41}x_{1} + a_{42}x_{2} + a_{43}x_{3} + a_{44}x_{4} = a_{45}
+			\end{cases}
+		\]
+		的通解为 $[2,1,0,1]^{\TT} + k [1,-1,2,0]^{\TT}$. 记
+		\[
+			\bm \alpha_{j} = [a_{1j},a_{2j},a_{3j},a_{4j}]^{\TT}, j = 1,2,\cdots,5.
+		\]
+		问：
+		\begin{enumerate}
+			\item $\bm \alpha_{4}$ 能否由 $\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3},\bm \alpha_{5}$ 线性表出，说明理由;
+			\item $\bm \alpha_{4}$ 能否由 $\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3}$ 线性表出，说明理由.
+		\end{enumerate}
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $4$ 阶方阵 $\bm A = [\bm \alpha_{1},\bm \alpha_{2},\bm \alpha_{3},\bm \alpha_{4}],\bm \alpha_{1},\bm \alpha_{2},$ $\bm \alpha_{3},$ $\bm \alpha_{4}$ 均为 $4$ 维列向量，其中 $\bm \alpha_{2},\bm \alpha_{3},\bm \alpha_{4}$ 线性无关，$\bm \alpha_{1} = 2\bm \alpha_{2} - \bm \alpha_{3}$，如果 $\bm \beta = \bm \alpha_{1} + \bm \alpha_{2} + \bm \alpha_{3} + \bm \alpha_{4}$，求线性方程组 $\bm A \bm X = \bm \beta$ 的通解.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A_{m \times n}, r(\bm A) = m, \bm B_{n \times (n - m)}, r(\bm B) = n - m$，且满足关系式 $\bm A \bm B = \bm O$. 证明：若 $\bm \eta$ 是齐次线性方程组 $\bm A \bm X = \bm 0$ 的解，则必存在唯一的 $\bm \xi$，使得 $\bm B \bm \xi = \bm \eta$.
+	\end{titwo}
+
+	\begin{titwo}
+		设三元非齐次线性方程组的系数矩阵 $\bm A$ 的秩为 $1$，已知 $\bm \eta_{1},\bm \eta_{2},\bm \eta_{3}$ 是它的三个解向量，且 $\bm \eta_{1} + \bm \eta_{2} = [1,2,3]^{\TT},\bm \eta_{2} + \bm \eta_{3} = [2,-1,1]^{\TT},\bm \eta_{3} + \bm \eta_{1} = [0,2,0]^{\TT}$，求该非齐次方程的通解.
+	\end{titwo}
+
+	\begin{titwo}
+		设三元线性方程有通解
+		\[
+			k_{1} \begin{bsmallmatrix}
+				-1\\
+				3\\
+				2
+			\end{bsmallmatrix} + k_{2} \begin{bsmallmatrix}
+				2\\
+				-3\\
+				1
+			\end{bsmallmatrix} + \begin{bsmallmatrix}
+				1\\
+				-1\\
+				3
+			\end{bsmallmatrix},
+		\]
+		求原方程.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm B$ 是秩为 $2$ 的 $5 \times 4$ 矩阵，$\bm \alpha_{1} = [1,$ $1,$ $2,$ $3]^{\TT}, \bm \alpha_{2} = [-1,1,4,-1]^{\TT}, \bm \alpha_{3} = [5,-1,-8,9]^{\TT}$ 是齐次线性方程组 $\bm B \bm x = \bm 0$ 的解向量，求 $\bm B \bm x = \bm 0$ 的解空间的一个标准正交基.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是 $3 \times 3$ 矩阵，$\bm \beta_{1},\bm \beta_{2},\bm \beta_{3}$ 是互不相同的 $3$ 维列向量，且都不是方程组 $\bm A \bm x = \bm 0$ 的解，记 $\bm B = \bigl[\bm \beta_{1},\bm \beta_{2},\bm \beta_{3}\bigr]$，且满足 $r(\bm A \bm B) < r(\bm A),r(\bm A \bm B) < r(\bm B)$. 则 $r(\bm A \bm B)$ 等于\kuo.
+		
+		\fourch{0}{1}{2}{3}
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $\bm \xi_{1},\bm \xi_{2},\cdots,\bm \xi_{r}(r \geq 3)$ 是 $\bm A \bm x = \bm 0$ 的基础解系，则下列向量组也是 $\bm A \bm x = \bm 0$ 的基础解系的是\kuo.
+		\onech{$\bm \alpha_{1} = - \bm \xi_{2} - \bm \xi_{3} - \cdots - \bm \xi_{r},\bm \alpha_{2} = \bm \xi_{1} - \bm \xi_{3} - \bm \xi_{4} - \cdots - \bm \xi_{r},\bm \alpha_{3} = \bm \xi_{1} + \bm \xi_{2} - \bm \xi_{4} - \cdots - \bm \xi_{r},\cdots,\bm \alpha_{r} = \bm \xi_{1} + \bm \xi_{2} + \cdots + \bm \xi_{r-1}$}
+		{$\bm \beta_{1} = \bm \xi_{2} + \bm \xi_{3} + \cdots + \bm \xi_{r},\bm \beta_{2} = \bm \xi_{1} + \bm \xi_{3} + \bm \xi_{4} + \cdots + \bm \xi_{r},\bm \beta_{3} = \bm \xi_{1} + \bm \xi_{2} + \bm \xi_{4} + \cdots + \bm \xi_{r},\cdots,\bm \beta_{r} = \bm \xi_{1} + \bm \xi_{2} + \cdots + \bm \xi_{r-1}$}%
+		{$\bm \xi_{1},\bm \xi_{2},\cdots,\bm \xi_{r}$ 的一个等价向量组}%
+		{$\bm \xi_{1},\bm \xi_{2},\cdots,\bm \xi_{r}$ 的一个等秩向量组}
+	\end{titwo}
+
+	\begin{titwo}
+		设齐次线性方程组
+		\[
+			\begin{cases}
+				a_{11} x_{1} + a_{12} x_{2} + a_{13} x_{3} + a_{14} x_{4} = 0, \\
+				a_{21} x_{1} + a_{22} x_{2} + a_{23} x_{3} + a_{24} x_{4} = 0
+			\end{cases}
+		\]
+		有基础解系 $\bm \beta_{1} = [b_{11},b_{12},b_{13},b_{14}]^{\TT},\bm \beta_{2} = [b_{21},b_{22},b_{23},$ $b_{24}]^{\TT}$，记 $\bm \alpha_{1} = [a_{11},a_{12},a_{13},a_{14}]^{\TT},\bm \alpha_{2} = [a_{21},a_{22},a_{23},$ $a_{24}]^{\TT}$.
+
+		证明：向量组 $\bm \alpha_{1},\bm \alpha_{2},\bm \beta_{1},\bm \beta_{2}$ 线性无关.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是 $3$ 阶矩阵，$\bm b = [9,18,-18]^{\TT}$，方程 $\bm A \bm x = \bm b$ 有通解 $k_{1} [-2,1,0]^{\TT} + k_{2} [2,0,1]^{\TT} + [1,2,-2]^{\TT}$，其中 $k_{1},k_{2}$ 是任意常数，求 $\bm A$ 及 $\bm A^{100}$.
+	\end{titwo}
+
+	\begin{titwo}
+		已知线性方程组
+		\[
+			\begin{cases}
+				b x_{1} - a x_{2} = -2 ab, \\
+				-2 cx_{2} + 3 bx_{3} = bc, \\
+				cx_{1} + ax_{3} = 0,
+			\end{cases}
+		\]
+		则\kuo.
+		
+		\onech{当 $a,b,c$ 为任意实数时，方程组均有解}{当 $a = 0$ 时，方程组无解}{当 $b = 0$ 时，方程组无解}{当 $c = 0$ 时，方程组无解}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $a_{1},a_{2},\cdots,a_{n}$ 是互不相同的实数，且
+		\[
+			\bm A = \begin{bsmallmatrix}
+				1 & a_{1} & a_{1}^{2} & \cdots & a_{1}^{n-1} \\
+				1 & a_{2} & a_{2}^{2} & \cdots & a_{2}^{n-1} \\
+				\vdots & \vdots & \vdots & & \vdots \\
+				1 & a_{n} & a_{n}^{2} & \cdots & a_{n}^{n-1} \\
+			\end{bsmallmatrix},
+			\bm X = \begin{bsmallmatrix}
+				x_{1} \\
+				x_{2} \\
+				\vdots \\
+				x_{n}
+			\end{bsmallmatrix},
+			\bm b = \begin{bsmallmatrix}
+				1 \\
+				1 \\
+				\vdots \\
+				1
+			\end{bsmallmatrix},
+		\]
+		求线性方程组 $\bm A \bm X = \bm b$ 的解.
+	\end{titwo}
+
+	\begin{titwo}
+		问 $\lambda$ 为何值时，线性方程组
+		\[
+			\begin{cases}
+				x_{1} + x_{3} = \lambda, \\
+				4x_{1} + x_{2} + 2x_{3} = \lambda + 2, \\
+				6x_{1} + x_{2} + 4x_{3} = 2 \lambda + 3
+			\end{cases}
+		\]
+		有解，并求出解的一般形式.
+	\end{titwo}
+
+	\begin{titwo}
+		问 $\lambda$ 为何值时，方程组
+		\[
+			\begin{cases}
+				2x_{1} + \lambda x_{2} - x_{3} = 1, \\
+				\lambda x_{1} - x_{2} + x_{3} = 2, \\
+				4x_{1} + 5x_{2} - 5x_{3} = -1
+			\end{cases}
+		\]
+		无解，有唯一解或有无穷多解？并在有无穷多解时写出方程组的通解.
+	\end{titwo}
+
+	\begin{titwo}
+		已知线性方程组
+		\[
+			\begin{cases}
+				x_{1} + x_{2} + x_{3} + x_{4} + x_{5} = a, \\
+				3x_{1} + 2x_{2} + x_{3} + x_{4} - 3x_{5} = 0, \\
+				x_{2} + 2x_{3} + 2x_{4} + 6x_{5} = b, \\
+				5x_{1} + 4x_{2} + 3x_{3} + 3x_{4} - x_{5} = 2.
+			\end{cases}
+		\]
+		\begin{enumerate}
+			\item $a,b$ 为何值时，方程组有解;
+			\item 方程组有解时，求方程组的导出组的基础解系;
+			\item 方程组有解时，求方程组的全部解.
+		\end{enumerate}
+	\end{titwo}
+
+	\begin{titwo}
+		齐次线性方程组
+		\[
+			\begin{cases}
+				\lambda x_{1} + x_{2} + \lambda^{2} x_{3} = 0, \\
+				x_{1} + \lambda x_{2} + x_{3} = 0, \\
+				x_{1} + x_{2} + \lambda x_{3} = 0
+			\end{cases}
+		\]
+		的系数矩阵为 $\bm A$，若存在 $3$ 阶矩阵 $\bm B \ne \bm O$，使得 $\bm A \bm B = \bm O$，则 \kuo
+
+		\twoch{$\lambda = -2$ 且 $|\bm B| = 0$}{$\lambda = -2$ 且 $|\bm B| \ne 0$}{$\lambda = 1$ 且 $|\bm B| = 0$}{$\lambda = 1$ 且 $|\bm B| \ne 0$}
+	\end{titwo}
+
+	\begin{titwo}
+		方程组
+		\[
+			\begin{cases}
+				x_{1} - x_{2} = a_{1}, \\
+				x_{2} - x_{3} = a_{2}, \\
+				x_{3} - x_{4} = a_{3}, \\
+				x_{4} - x_{5} = a_{4}, \\
+				x_{5} - x_{1} = a_{5}
+			\end{cases}
+		\]
+		有解的充要条件是 \htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设线性方程组
+		\[
+			\begin{cases}
+				x_{1} - x_{2} - x_{3} - x_{4} = \lambda x_{1}, \\
+				-x_{1} + x_{2} - x_{3} - x_{4} = \lambda x_{2}, \\
+				-x_{1} - x_{2} + x_{3} - x_{4} = \lambda x_{3}, \\
+				-x_{1} - x_{2} - x_{3} + x_{4} = \lambda x_{4}.
+			\end{cases}
+		\]
+		则当 $\lambda$ 为何值时，方程组有解，有解时，求出所有的解.
+	\end{titwo}
+
+	\begin{titwo}
+		已知 $\bm \eta_{1} = [-3,2,0]^{\TT}, \bm \eta_{2} = [-1,0,-2]^{\TT}$ 是线性方程组
+		\[
+			\begin{cases}
+				a x_{1} + b x_{2} + c x_{3} = 2, \\
+				x_{1} + 2x_{2} - x_{3} = 1, \\
+				2x_{1} + x_{2} + x_{3} = -4
+			\end{cases}
+		\]
+		的两个解向量，试求方程组的通解，并确定参数 $a,b,c$.
+	\end{titwo}
+
+	\begin{titwo}
+		已知方程组 (\Rmnum{1})
+		\[
+			\begin{cases}
+				x_{1} + x_{4} = 1, \\
+				x_{2} - 2x_{4} = 2, \\
+				x_{3} + x_{4} = -1
+			\end{cases}
+		\]
+		与方程组 (\Rmnum{2})
+		\[
+			\begin{cases}
+				-2x_{1} + x_{2} + ax_{3} - 5x_{4} = 1, \\
+				x_{1} + x_{2} - x_{3} + bx_{4} = 4, \\
+				3x_{1} + x_{2} + x_{3} + 2x_{4} = c
+			\end{cases}
+		\]
+		是同解方程组，试确定参数 $a,b,c$.
+	\end{titwo}
+
+	\begin{titwo}
+		设方程组
+		\[
+			\begin{cases}
+				x_{1} + x_{2} - x_{3} + 2x_{4} - x_{5} = 1, \\
+				x_{1} - x_{2} + 5x_{4} + ax_{5} = b, \\
+				2x_{1} + 4x_{2} - 3x_{3} + x_{4} - 4x_{5} = 1, \\
+				x_{1} + 3x_{2} - x_{3} - x_{4} = -1, \\
+				2x_{1} - x_{3} + ax_{4} - 4x_{5} = -1.
+			\end{cases}
+		\]
+		问：
+		\begin{enumerate}
+			\item $a,b$ 为何值时，方程组有唯一解;
+			\item $a,b$ 为何值时，方程组无解;
+			\item $a,b$ 为何值时，方程组有无穷多解，并求其通解.
+		\end{enumerate}
+	\end{titwo}
+
+	\begin{titwo}
+		已知方程组 (\Rmnum{1}) $\begin{cases}
+			x_{1} + 3x_{2} - 3x_{4} = 1,\\
+			-7x_{2} + 3x_{3} + x_{4} = -3
+		\end{cases}$ 及方程组 (\Rmnum{2}) 的通解为
+		\[
+			k_{1} [-1,1,1,0]^{\TT} + k_{2} [2,-1,0,1]^{\TT} + [-2,-3,0,0]^{\TT}.
+		\]
+		求方程组 (\Rmnum{1}), (\Rmnum{2}) 的公共解.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是 $n$ 阶矩阵，对于齐次线性方程组 (\Rmnum{1})~$\bm A^{n} \bm x = \bm 0$ 和 (\Rmnum{2}) $\bm A^{n + 1} \bm x = \bm 0$，现有命题\\
+		\circled{1}(\Rmnum{1}) 的解必是 (\Rmnum{2}) 的解;\\
+		\circled{2}(\Rmnum{2}) 的解必是 (\Rmnum{1}) 的解;\\
+		\circled{3}(\Rmnum{1}) 的解不一定是 (\Rmnum{2}) 的解;\\
+		\circled{4}(\Rmnum{2}) 的解不一定是 (\Rmnum{1}) 的解.\\
+		其中正确的是 \kuo.
+
+		\fourch{\circled{1}\circled{4}}{\circled{1}\circled{2}}{\circled{2}\circled{3}}{\circled{3}\circled{4}}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是 $n$ 阶实矩阵，则对线性方程组 (\Rmnum{1})~$\bm A \bm X = \bm 0$ 和 (\Rmnum{2})~$\bm A^{\TT} \bm A \bm X = \bm 0$，必有 \kuo.
+		
+		\onech{(\Rmnum{2}) 的解是 (\Rmnum{1}) 的解，(\Rmnum{1}) 的解也是 (\Rmnum{2}) 的解}%
+		{(\Rmnum{2}) 的解是 (\Rmnum{1}) 的解，但 (\Rmnum{1}) 的解不是 (\Rmnum{2}) 的解}%
+		{(\Rmnum{1}) 的解不是 (\Rmnum{2}) 的解，(\Rmnum{2}) 的解也不是 (\Rmnum{1}) 的解}%
+		{(\Rmnum{1}) 的解是 (\Rmnum{2}) 的解，但 (\Rmnum{2}) 的解不是 (\Rmnum{1}) 的解}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是 $m \times s$ 矩阵，$\bm B$ 是 $s \times n$ 矩阵，则齐次线性方程组 $\bm B \bm X = \bm 0$ 和 $\bm A \bm B \bm X = \bm 0$ 是同解方程组的一个充分条件是 \kuo.
+
+		\twoch{$r(\bm A) = m$}{$r(\bm A) = s$}{$r(\bm B) = s$}{$r(\bm B) = n$}
+	\end{titwo}
+
+	\begin{titwo}
+		设四元齐次线性方程组 (\Rmnum{1}) 为 $\begin{cases}
+			x_{1} + x_{2} = 0, \\
+			x_{2} - x_{4} = 0,
+		\end{cases}$ 又已知某齐次线性方程组 (\Rmnum{2}) 的通解为
+		\[
+			k_{1} [0,1,1,0]^{\TT} + k_{2} [-1,2,2,1]^{\TT}.
+		\]
+		\begin{enumerate}
+			\item 求线性方程组 (\Rmnum{1}) 的基础解系;
+			\item 问线性方程组 (\Rmnum{1}) 和 (\Rmnum{2}) 是否有非零公共解？若有，则求出所有的非零公共解. 若没有，则说明理由.
+		\end{enumerate}
+	\end{titwo}
+
+	\begin{titwo}
+		已知齐次线性方程组 (\Rmnum{1}) 的基础解系为 $\bm \xi_{1} = [1,0,1,1]^{\TT}$, $\bm \xi_{2} = [2,1,0,-1]^{\TT}$, $\bm \xi_{3} = [0,2,1,-1]^{\TT}$，添加两个方程
+		\[
+			\begin{cases}
+				x_{1} + x_{2} + x_{3} + x_{4} = 0, \\
+				x_{1} + 2x_{2} + 2x_{4} = 0
+			\end{cases}
+		\]
+		后组成齐次线性方程组 (\Rmnum{2})，求 (\Rmnum{2}) 的基础解系.
+	\end{titwo}
+
+	\begin{titwo}
+		已知线性方程组 (\Rmnum{1}) $\begin{cases}
+			3x_{1} - x_{2} + 8x_{3} + x_{4} = 0, \\
+			x_{1} + 3x_{2} - 9x_{3} + 7x_{4} = 0
+		\end{cases}$ 及线性方程组 (\Rmnum{2}) 的基础解系
+		\[
+			\bm \xi_{1} = [-3,7,2,0]^{\TT}, \bm \xi_{2} = [-1,-2,0,1]^{\TT}.
+		\]
+		求方程组 (\Rmnum{1}) 和 (\Rmnum{2}) 的公共解.
+	\end{titwo}
+
+	\begin{titwo}
+        已知齐次线性方程组 (\Rmnum{1}) 为
+        \[
+            \begin{cases}
+                x_{1} + x_{2} - x_{3} = 0, \\
+                x_{2} + x_{3} - x_{4} = 0,
+            \end{cases}
+        \]
+        齐次线性方程组 (\Rmnum{2}) 的基础解系为
+		\[
+			\bm \xi_{1} = [-1,1,2,4]^{\TT}, \bm \xi_{2} = [1,0,1,1]^{\TT}.
+		\]
+		\begin{enumerate}
+			\item 求方程组 (\Rmnum{1}) 的基础解系;
+			\item 求方程组 (\Rmnum{1}) 与 (\Rmnum{2}) 的全部非零公共解，并将非零公共解分别由方程组 (\Rmnum{1}), (\Rmnum{2}) 的基础解系线性表示.
+		\end{enumerate}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $\bm A$ 是 $4$ 阶方阵，则下列线性方程组是同解方程组的是 \kuo.
+
+		\twoch{$\bm A \bm x = \bm 0$; $\bm A^{2} \bm x = \bm 0$}{$\bm A^{2} \bm x = \bm 0$; $\bm A^{3} \bm x = \bm 0$}{$\bm A^{3} \bm x = \bm 0$; $\bm A^{4} \bm x = \bm 0$}{$\bm A^{4} \bm x = \bm 0$; $\bm A^{5} \bm x = \bm 0$}
+	\end{titwo}
+
+	\begin{titwo}
+		设线性方程组
+		\begin{equation}\label{eq:156.1}
+			\begin{cases}
+				x_{1} + 3x_{3} + 5x_{4} = 0, \\
+				x_{1} - x_{2} - 2x_{3} + 2x_{4} = 0, \\
+				2x_{1} - x_{2} + x_{3} + 3x_{4} = 0,
+			\end{cases}
+		\end{equation}
+		添加一个方程 $a x_{1} + 2x_{2} + b x_{3} - 5x_{4} = 0$ 后，成为方程组
+		\begin{equation}\label{eq:156.2}
+			\begin{cases}
+				x_{1} + 3x_{3} + 5x_{4} = 0, \\
+				x_{1} - x_{2} - 2x_{3} + 2x_{4} = 0, \\
+				2x_{1} - x_{2} + x_{3} + 3x_{4} = 0, \\
+				ax_{1} + 2x_{2} + bx_{3} - 5x_{4} = 0.
+			\end{cases}
+		\end{equation}
+		\begin{enumerate}
+			\item 求方程组~\eqref{eq:156.1} 的通解;
+			\item $a,b$ 满足什么条件时，\eqref{eq:156.1}~\eqref{eq:156.2} 是同解方程组.
+		\end{enumerate}
+	\end{titwo}
