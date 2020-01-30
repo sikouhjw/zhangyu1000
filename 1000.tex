@@ -194,81 +194,30 @@
 	% \input{chapter/chap1.tex}
 	% \input{chapter/chap2.tex}
 	
-	\subsection{特征值与特征向量}
+	\subsection{相似}
 	\begin{titwo}
-		已知 $\bm \alpha_{1} = [-1,1,a,4]^{\TT}$, $\bm \alpha_{2} = [-2,1,5,a]^{\TT}$, $\bm \alpha_{3} = [a,2,10,1]^{\TT}$ 是 $4$ 阶方阵 $\bm A$ 的 $3$ 个不同特征值对应的特征向量，则 $a$ 的取值范围为 \kuo.
+		下列矩阵中能相似于对角矩阵的是 \kuo.
 
-		\twoch{$a \ne 5$}{$a \ne -4$}{$a \ne -3$}{$a \ne -3$ 且 $a \ne -4$}
+		\twoch{$\bm A = \begin{bsmallmatrix}
+			1 & 2 & 0 \\
+			0 & 1 & 0 \\
+			0 & 0 & 2
+		\end{bsmallmatrix}$}{$\bm B = \begin{bsmallmatrix}
+			1 & 0 & 2 \\
+			0 & 2 & 0 \\
+			0 & 0 & 1
+		\end{bsmallmatrix}$}{$\bm C = \begin{bsmallmatrix}
+			1 & 2 & 0 \\
+			0 & 2 & 0 \\
+			0 & 0 & 1
+		\end{bsmallmatrix}$}{$\bm D = \begin{bsmallmatrix}
+			1 & 1 & 1 \\
+			0 & 1 & 0 \\
+			0 & 0 & 2
+		\end{bsmallmatrix}$}
 	\end{titwo}
 
 	\begin{titwo}
-		设 $\bm A$, $\bm B$ 为 $n$ 阶矩阵，且 $\bm A$ 与 $\bm B$ 相似，$\bm E$为 $n$ 阶单位矩阵，则 \kuo.
-
-		\onech{$\lambda \bm E - \bm A = \lambda \bm E - \bm B$}{$\bm A$ 与 $\bm B$ 有相同的特征值和特征向量}{$\bm A$ 与 $\bm B$ 都相似于一个对角矩阵}{对任意常数 $t$, $t \bm E - \bm A$ 与 $t \bm E - \bm B$ 相似}
-	\end{titwo}
-
-	\begin{titwo}
-		已知 $3$ 阶矩阵 $\bm A$ 有特征值 $\lambda_{1} = 1$, $\lambda_{2} = 2$, $\lambda_{3} = 3$，则 $2 \bm A^{\astt}$ 的特征值是 \kuo.
-
-		\fourch{$1,2,3$}{$4,6,12$}{$2,4,6$}{$8,16,24$}
-	\end{titwo}
-
-	\begin{titwo}
-		已知 $\bm \xi_{1}$, $\bm \xi_{2}$ 是方程 $(\lambda E - \bm A) \bm X = \bm 0$ 的两个不同的解向量，则下列向量中必是 $\bm A$ 的对应于特征值 $\lambda$ 的特征向量的是 \kuo.
-
-		\fourch{$\bm \xi_{1}$}{$\bm \xi_{2}$}{$\bm \xi_{1} - \bm \xi_{2}$}{$\bm \xi_{1} + \bm \xi_{2}$}
-	\end{titwo}
-
-	\begin{titwo}
-		设
-		\[
-			\bm A = \begin{bsmallmatrix}
-				-1 & 2 & 3 \\
-				2 & -1 & 0 \\
-				3 & 3 & 1
-			\end{bsmallmatrix},
-		\]
-		则下列选项中是 $\bm A$ 的特征向量的是 \kuo.
-
-		\twoch{$\bm \xi_{1} = [1,2,1]^{\TT}$}{$\bm \xi_{2} = [1,-2,1]^{\TT}$}{$\bm \xi_{3} = [2,1,2]^{\TT}$}{$\bm \xi_{4} = [2,1,-2]^{\TT}$}
-	\end{titwo}
-
-	\begin{titwo}
-		已知 $\bm A$, $\bm B$ 为 $3$ 阶相似矩阵，$\lambda_{1} = 1$, $\lambda_{2} = 2$ 为 $\bm A$ 的两个特征值，$|\bm B| = 2$，则行列式 $\begin{vsmallmatrix}
-			(\bm A + \bm E)^{-1} & \bm O \\
-			\bm O & (2 \bm B)^{\astt}
-		\end{vsmallmatrix} = $ \htwo.
-	\end{titwo}
-
-	\begin{titwo}
-		已知 $-2$ 是 $\bm A = \begin{bsmallmatrix}
-			0 & -2 & -2 \\
-			2 & x & -2 \\
-			-2 & 2 & b
-		\end{bsmallmatrix}$ 的特征值，其中 $b$ ($b \ne 0$) 是任意常数，则 $x = $ \htwo.
-	\end{titwo}
-
-	\begin{titwo}
-		设 $\bm A$ 是 $3$ 阶矩阵，$|\bm A| = 3$，且满足 $|\bm A^{2} + 2 \bm A| = 0$，$|2 \bm A^{2} + \bm A| = 0$，则 $\bm A^{\astt}$ 的特征值是 \htwo.
-	\end{titwo}
-
-	\begin{titwo}
-		设 $\bm A$ 是 $n$ 阶实对称矩阵，$\lambda_{1}$, $\lambda_{2}$, $\cdots$, $\lambda_{n}$ 是 $\bm A$ 的 $n$ 个互不相同的特征值，$\bm \xi_{1}$ 是 $\bm A$ 的对应于 $\lambda_{1}$ 的一个单位特征向量，则矩阵 $\bm B = \bm A - \lambda_{1} \bm \xi_{1} \bm \xi_{1}^{\TT}$ 的特征值是 \htwo.
-	\end{titwo}
-
-	\begin{titwo}
-		设 $\bm A$ 是 $3$ 阶矩阵，$\bm \xi_{1}$, $\bm \xi_{2}$, $\bm \xi_{3}$ 是三个线性无关的 $3$ 维列向量，满足 $\bm A \bm \xi_{i} = \bm \xi_{i}$, $i = 1,2,3$，则 $\bm A = $ \htwo.
-	\end{titwo}
-
-	\begin{titwo}
-		设 $\bm A$ 为 $n$ 阶矩阵，$\lambda_{1}$ 和 $\lambda_{2}$ 是 $\bm A$ 的两个不同的特征值，$\bm x_{1}$, $\bm x_{2}$ 是分别属于 $\lambda_{1}$ 和 $\lambda_{2}$ 的特征向量. 证明：$\bm x_{1} + \bm x_{2}$ 不是 $\bm A$ 的特征向量.
-	\end{titwo}
-
-	\begin{titwo}
-		已知 $\bm \alpha = [1,k,1]^{\TT}$ 是 $\bm A^{-1}$ 的特征向量，其中 $\bm A = \begin{bsmallmatrix}
-			2 & 1 & 1 \\
-			1 & 2 & 1 \\
-			1 & 1 & 2
-		\end{bsmallmatrix}$，求 $k$ 及 $\bm \alpha$ 所对应的 $\bm A$ 的特征值.
+		下列矩阵中不能相似于对角矩阵的是 \kuo.
 	\end{titwo}
 \end{document}
