@@ -86,8 +86,8 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LO]{\kaishu \rightmark}
-\fancyhead[RE]{\kaishu \leftmark}
+\fancyhead[LO]{\bfseries \rightmark}
+\fancyhead[RE]{\bfseries \leftmark}
 % \fancyhead[LE,RO]{
 % \@ifundefined{lastpage@lastpage}{%
 % 	\score{0}{10}%
@@ -95,9 +95,9 @@
 % 	\score{10 * \thepage / \lastpage@lastpage}{10}%
 % }%
 % }
-\fancyhead[C]{\kaishu \href{https://github.com/sikouhjw/zhangyu1000}{仅供学习使用，严禁商业使用}}
+\fancyhead[C]{\bfseries \href{https://github.com/sikouhjw/zhangyu1000}{仅供学习使用，严禁商业使用}}
 \fancyfoot[C]{\zihao{-5} {\kaishu 不论一个人的数学水平有多高，只要对数学拥有一颗真诚的心，他就在自己的心灵上得到了升华。}---{\itshape SCIbird}}
-\fancyhead[LE,RO]{\itshape --\thepage/\pageref{LastPage}--}
+\fancyhead[LE,RO]{\bfseries --\thepage/\pageref{LastPage}--}
 \makeatother
 
 \usepackage{caption}
@@ -142,7 +142,7 @@
 	\theoremstyle{change}
 	\theoremheaderfont{\bfseries}
 	\theorembodyfont{\normalfont}
-	\newtheorem{titwo}{}
+	\newtheorem{titwo}{}[chapter]
 }
 \renewcommand{\thetitwo}{\arabic{titwo}.}
 
@@ -160,6 +160,7 @@
 \def\ee{\mathrm{e}}
 \def\CC{\mathrm{C}}
 \def\TT{\mathrm{T}}
+\def\AA{\mathrm{A}}
 \def\astt{*}
 \edef\lim{\lim\limits}
 \edef\sum{\sum\limits}
@@ -183,6 +184,7 @@
 
 \title{\href{https://github.com/sikouhjw/zhangyu1000}{张宇考研数学题源探析经典 1000 题\\(习题分册·数学一)}}
 \author{张宇}
+\date{2019 年 3 月}
 
 
 \begin{document}
@@ -193,31 +195,10 @@
 	% \mainmatter
 	% \input{chapter/chap1.tex}
 	% \input{chapter/chap2.tex}
+	% \input{chapter/chap3.tex}
 	
-	\subsection{相似}
+	\section{一维随机变量及其分布}
 	\begin{titwo}
-		下列矩阵中能相似于对角矩阵的是 \kuo.
-
-		\twoch{$\bm A = \begin{bsmallmatrix}
-			1 & 2 & 0 \\
-			0 & 1 & 0 \\
-			0 & 0 & 2
-		\end{bsmallmatrix}$}{$\bm B = \begin{bsmallmatrix}
-			1 & 0 & 2 \\
-			0 & 2 & 0 \\
-			0 & 0 & 1
-		\end{bsmallmatrix}$}{$\bm C = \begin{bsmallmatrix}
-			1 & 2 & 0 \\
-			0 & 2 & 0 \\
-			0 & 0 & 1
-		\end{bsmallmatrix}$}{$\bm D = \begin{bsmallmatrix}
-			1 & 1 & 1 \\
-			0 & 1 & 0 \\
-			0 & 0 & 2
-		\end{bsmallmatrix}$}
-	\end{titwo}
-
-	\begin{titwo}
-		下列矩阵中不能相似于对角矩阵的是 \kuo.
+		
 	\end{titwo}
 \end{document}
