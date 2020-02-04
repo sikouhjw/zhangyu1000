@@ -1,9 +1,5 @@
 \documentclass[openany,twocolumn]{ctexbook}
 \usepackage{amsmath,amssymb,mathtools,upgreek}
-\let\lvert\relax
-\let\rvert\relax
-\let\lVert\relax
-\let\rVert\relax
 \usepackage{fourier}
 \usepackage{esint}
 \usepackage{bm}
@@ -72,12 +68,13 @@
 	 \parbox[b][\paperheight]{\paperwidth}{%
 		\vfill
 		\centering
-		\tikz[opacity=0.075] \node[inner sep=0pt] {\includegraphics[width=#1\paperwidth,height=#1\paperheight,keepaspectratio]{#2}};%
+		\tikz[opacity=0.075] \node[inner sep=0pt] {\includegraphics[angle=90,width=#1\paperwidth,height=#1\paperheight,keepaspectratio]{#2}};%
 		\vfill
 	 }}
   }
 }
 % \CenterWallPaper{1}{figure/ctanlion.pdf}
+% \CenterWallPaper{1}{figure/wallpaper.pdf}
 
 \usepackage{tabularx}
 
@@ -197,8 +194,5 @@
 	% \input{chapter/chap2.tex}
 	% \input{chapter/chap3.tex}
 	
-	\section{一维随机变量及其分布}
-	\begin{titwo}
-		
-	\end{titwo}
+	\section{二维随机变量及其分布}
 \end{document}
