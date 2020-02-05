@@ -76,7 +76,7 @@
 % \CenterWallPaper{1}{figure/ctanlion.pdf}
 % \CenterWallPaper{1}{figure/wallpaper.pdf}
 
-\usepackage{tabularx}
+\usepackage{tabularx,diagbox}
 
 \setlength{\headheight}{13pt}
 \makeatletter
@@ -166,7 +166,13 @@
 \let\grad\relax
 \DeclareMathOperator{\grad}{grad}
 \DeclareMathOperator{\rot}{rot}
-
+\long\def\guanggao{
+	\vspace*{\fill}
+	\begin{center}
+		\bfseries 广告位招租
+	\end{center}
+	\vspace*{\fill}
+}
 \def\theenumi{\arabic{enumi}}
 \def\labelenumi{(\theenumi)}
 
@@ -195,4 +201,101 @@
 	% \input{chapter/chap3.tex}
 	
 	\section{二维随机变量及其分布}
+	\begin{titwo}
+		已知随机变量 $(X_{1},X_{2})$ 的概率密度为 $f_{1}(x_{1},x_{2})$，设 $Y_{1} = 2X_{1}$, $Y_{2} = \frac{1}{3} X_{2}$，则随机变量 $(Y_{1},Y_{2})$ 的概率密度 $f_{2}(y_{1},y_{2}) = $ \kuo.
+
+		\twoch{$f_{1} \bigl( \frac{y_{1}}{2}, 3y_{2} \bigr)$}{$\frac{3}{2} f_{1} \bigl( \frac{y_{1}}{2}, 3y_{2} \bigr)$}{$f_{1} \bigl( 2 y_{1}, \frac{y_{2}}{3} \bigr)$}{$\frac{2}{3} f_{1} \bigl( 2 y_{1}, \frac{y_{2}}{3} \bigr)$}
+	\end{titwo}
+
+	\begin{titwo}
+		设随机变量 $X$ 与 $Y$ 相互独立，且 $X \sim N\bigl( 0,\sigma_{1}^{2} \bigr)$, $Y \sim N\bigl( 0,\sigma_{2}^{2} \bigr)$，则概率 $P \{ |X - Y| < 1 \}$ \kuo.
+
+		\onech{随 $\sigma_{1}$ 的增加而增加，随 $\sigma_{2}$ 的增加而减少}{随 $\sigma_{1}$ 的增加而减少，随 $\sigma_{2}$ 的减少而减少}{随 $\sigma_{1}$ 的增加而减少，随 $\sigma_{2}$ 的减少而增加}{随 $\sigma_{1}$ 的增加而增加，随 $\sigma_{2}$ 的减少而减少}
+	\end{titwo}
+
+	\begin{titwo}
+		已知二维随机变量 $(X,Y)$ 的概率分布为
+		\begin{center}
+			\begin{tabular}{c|cc}
+				\hline
+				\diagbox{$X$}{$Y$} & $0$ & $1$ \\
+				\hline
+				$0$ & $a$ & $0.4$ \\
+				$1$ & $0.1$ & $b$ \\
+				\hline
+			\end{tabular}
+		\end{center}
+		若随机事件 $\{ X = 0 \}$ 与 $\{ X + Y = 1 \}$ 相互独立，令 $U = \max \{ X, Y \}$, $V = \min \{ X, Y \}$，则 $P \{ U + V = 1 \} = $ \kuo.
+
+		\fourch{$0.1$}{$0.3$}{$0.5$}{$0.7$}
+	\end{titwo}
+
+	\begin{titwo}
+		设随机变量 $X$ 与 $Y$ 相互独立，且 $X \sim N(0,1)$, $Y \sim B(n,p)(0 < p < 1)$，则 $X + Y$ 的分布函数 \kuo.
+
+		\twoch{为连续函数}{恰有 $n + 1$ 个间断点}{恰有 $1$ 个间断点}{有无穷多个间断点}
+	\end{titwo}
+
+	\begin{titwo}
+		设随机变量 $X$ 与 $Y$ 相互独立，且 $X \sim N \bigl( \mu_{1},\sigma_{1}^{2} \bigr)$, $Y \sim N\bigl( \mu_{2},\sigma_{2}^{2} \bigr)$，若 $P\{ X > Y \} < \frac{1}{2}$，则 \kuo.
+
+		\fourch{$\mu_{1} < \mu_{2}$}{$\mu_{1} > \mu_{2}$}{$\sigma_{1} < \sigma_{2}$}{$\sigma_{1} > \sigma_{2}$}
+	\end{titwo}
+
+	\begin{titwo}
+		设二维随机变量 $(X,Y)$ 在区域 $D = \bigl\{ (x,y) \bigl| 1 \leq x \leq \ee^{2}, 0 \leq y \leq \frac{1}{x} \bigr\}$ 上服从均匀分布，则 $(X,Y)$ 关于 $X$ 的边缘概率密度 $f_{X}(x)$ 在点 $x = \ee$ 处的值为 \htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设二维随机变量 $(X,Y)$ 的概率密度为 $f(x,y) = \begin{cases}
+			4xy \ee^{-( x^{2} + y^{2} )}, & x > 0, y > 0, \\
+			0, & \text{其他},
+		\end{cases}$ 则对 $x > 0$, $f_{Y|X} (y|x) = $ \htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设二维随机变量 $(X,Y)$ 在 $G = \bigl\{ (x,y) \bigl| - \frac{1}{2} < x < 0, 0 < y < 2x + 1 \bigr\}$ 上服从均匀分布，则条件概率 $P \bigl\{ - \frac{1}{4} < X < 0 \bigl| \frac{1}{2} < Y \leq 1 \bigr\} = $ \htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设二维随机变量的分布律为
+		\begin{center}
+			\begin{tabular}{c|ccc}
+				\hline
+				\diagbox{$X$}{$Y$} & 1 & 2 & 3 \\
+				\hline
+				0 & $\frac{1}{6}$ & $\frac{1}{9}$ & $\frac{1}{18}$ \\
+				1 & $\frac{1}{3}$ & $\frac{2}{9}$ & $\frac{1}{9}$ \\
+				\hline
+			\end{tabular}
+		\end{center}
+		则随机变量 $Z = Y \cdot \min\{ X,Y \}$ 的分布律为 \htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设随机变量 $X$ 与 $Y$ 相互独立，且都服从参数为 $1$ 的指数分布，则随机变量 $Z = \frac{Y}{X}$ 的概率密度为 \htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设二维随机变量 $(X,Y)$ 的概率密度为 $f(x,y)$，则随机变量 $(2X,Y+1)$ 的概率密度 $f_{1}(x,y) = $ \htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		已知随机变量 $X_{1}$ 与 $X_{2}$ 的概率分布，
+		\[
+			X_{1} \sim \begin{psmallmatrix}
+				-1 & 0 & 1 \\
+				\frac{1}{4} & \frac{1}{2} & \frac{1}{4}
+			\end{psmallmatrix},
+			X_{2} \sim \begin{psmallmatrix}
+				0 & 1 \\
+				\frac{1}{2} & \frac{1}{2}
+			\end{psmallmatrix},
+		\]
+		且 $P\{ X_{1} X_{2} = 0 \} = 1$.
+		\begin{enumerate}
+			\item 求 $X_{1}$ 与 $X_{2}$ 的联合分布;
+			\item 问 $X_{1}$ 与 $X_{2}$ 是否独立？为什么？
+		\end{enumerate}
+	\end{titwo}
 \end{document}
