@@ -1,35 +1,29 @@
 \documentclass[openany,twocolumn]{ctexbook}
 \usepackage{amsmath,amssymb,mathtools,upgreek}
-\usepackage{fourier}
-\usepackage{esint}
-\usepackage{bm}
+\usepackage{fourier,esint,bm}
 \makeatletter
 \def\vdots@i#1#2#3{\vbox{
   #1\baselineskip#2\p@ \lineskiplimit\z@
   \kern#3\p@\hbox{.}\hbox{.}\hbox{.}}}
 \DeclareRobustCommand\vdots{
   \mathchoice
-    {\vdots@i{}{4}{6}}
-    {\vdots@i{}{4}{6}}
-    {\vdots@i{\scriptsize}{2}{1}}
-    {\vdots@i{\tiny}{2}{1}}
+	{\vdots@i{}{4}{6}}
+	{\vdots@i{}{4}{6}}
+	{\vdots@i{\scriptsize}{2}{1}}
+	{\vdots@i{\tiny}{2}{1}}
 }
 \makeatother
-\usepackage{physics}
-\usepackage{siunitx}
-\usepackage{lastpage}
-\usepackage{graphicx}
+\usepackage{physics,siunitx,lastpage,graphicx}
 \numberwithin{figure}{section}
 \renewcommand\thefigure{\arabic{chapter}-\arabic{section}-\arabic{figure}}
-\usepackage{floatrow}
-\usepackage{subcaption}
-% \renewcommand\thesubfigure{(\alph{subfigure})}
-% \captionsetup[sub]{labelformat=simple}
+\usepackage{floatrow,subcaption}
+\renewcommand\thesubfigure{(\alph{subfigure})}
+\captionsetup[sub]{labelformat=simple}
 \xeCJKDeclareCharClass{FullRight}{"2236}
 \newcommand\ratio[2]{#1^^^^2236#2}
 
 \usepackage[a4paper,top=2.5cm,bottom=2.5cm,inner=1.5cm,outer=3cm]{geometry}
-% \usepackage[toc]{multitoc}
+\usepackage[toc]{multitoc}
 
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric,calc}
@@ -42,26 +36,6 @@
 \newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
 \makeatother
 
-\newcommand\score[2]{
-\pgfmathsetmacro\pgfxa{#1+1}
-\tikzstyle{scorestars}=[star, star points=5, star point ratio=2.25, draw,inner sep=0.15em,anchor=outer point 3]
-\begin{tikzpicture}[baseline]
-  \foreach \i in {1,...,#2} {
-	\pgfmathparse{(\i<=#1?"black":"white")}
-	\edef\starcolor{\pgfmathresult}
-	\draw (\i*1em,0) node[name=star\i,scorestars,fill=\starcolor]  {};
-   }
-   \pgfmathparse{(#1>int(#1)?int(#1+1):0}
-   \let\partstar=\pgfmathresult
-   \ifnum\partstar>0
-	 \pgfmathsetmacro\starpart{#1-(int(#1))}
-	 \path [clip] ($(star\partstar.outer point 3)!(star\partstar.outer point 2)!(star\partstar.outer point 4)$) rectangle 
-	($(star\partstar.outer point 2 |- star\partstar.outer point 1)!\starpart!(star\partstar.outer point 1 -| star\partstar.outer point 5)$);
-	 \fill (\partstar*1em,0) node[scorestars,fill=black]  {};
-   \fi
-,\end{tikzpicture}
-}
-
 \usepackage{wallpaper}
 \renewcommand{\CenterWallPaper}[2]{%
 \AddToShipoutPicture{\put(\LenToUnit{\wpXoffset},\LenToUnit{\wpYoffset}){%
@@ -73,8 +47,7 @@
 	 }}
   }
 }
-% \CenterWallPaper{1}{figure/ctanlion.pdf}
-% \CenterWallPaper{1}{figure/wallpaper.pdf}
+\CenterWallPaper{1}{figure/wallpaper.pdf}
 
 \usepackage{tabularx,diagbox}
 
@@ -85,14 +58,7 @@
 \fancyhf{}
 \fancyhead[LO]{\bfseries \rightmark}
 \fancyhead[RE]{\bfseries \leftmark}
-% \fancyhead[LE,RO]{
-% \@ifundefined{lastpage@lastpage}{%
-% 	\score{0}{10}%
-% }{%
-% 	\score{10 * \thepage / \lastpage@lastpage}{10}%
-% }%
-% }
-\fancyhead[C]{\bfseries \href{https://github.com/sikouhjw/zhangyu1000}{仅供学习使用，严禁商业使用}}
+\fancyhead[C]{\bfseries 仅供学习使用，严禁商业使用}
 \fancyfoot[C]{\zihao{-5} {\kaishu 不论一个人的数学水平有多高，只要对数学拥有一颗真诚的心，他就在自己的心灵上得到了升华。}---{\itshape SCIbird}}
 \fancyhead[LE,RO]{\bfseries --\thepage/\pageref{LastPage}--}
 \makeatother
@@ -143,13 +109,12 @@
 }
 \renewcommand{\thetitwo}{\arabic{titwo}.}
 
-\newcommand{\hone}[1]{ \uline{\hspace{#1 pc}}}
 \def\htwo{\CJKunderline*[hidden = true]{瞻彼阕者虚室生白}}
 \def\kuo{ \mbox{(\hspace{1pc})}}
 
-\newcommand{\fourch}[4]{\noindent\begin{tabular}{*{4}{@{}p{1.97cm}}}(\texttt{A})~#1 & (\texttt{B})~#2 & (\texttt{C})~#3 & (\texttt{D})~#4\end{tabular}} % 一行
-\newcommand{\twoch}[4]{\noindent\begin{tabular}{*{2}{@{}p{3.94cm}}}(\texttt{A})~#1 & (\texttt{B})~#2\end{tabular}\\\begin{tabular}{*{2}{@{}p{3.94cm}}}(\texttt{C})~#3 & (\texttt{D})~#4\end{tabular}}  %两行
-\newcommand{\onech}[4]{\noindent(\texttt{A})~#1 \\ (\texttt{B})~#2 \\ (\texttt{C})~#3 \\ (\texttt{D})~#4}  % 四行
+\newcommand{\fourch}[4]{\noindent\begin{tabular}{*{4}{@{}p{1.97cm}}}(\texttt{A})~#1 & (\texttt{B})~#2 & (\texttt{C})~#3 & (\texttt{D})~#4\end{tabular}}
+\newcommand{\twoch}[4]{\noindent\begin{tabular}{*{2}{@{}p{3.94cm}}}(\texttt{A})~#1 & (\texttt{B})~#2\end{tabular}\\\begin{tabular}{*{2}{@{}p{3.94cm}}}(\texttt{C})~#3 & (\texttt{D})~#4\end{tabular}}
+\newcommand{\onech}[4]{\noindent(\texttt{A})~#1 \\ (\texttt{B})~#2 \\ (\texttt{C})~#3 \\ (\texttt{D})~#4}
 
 \def\leq{\leqslant}
 \def\geq{\geqslant}
@@ -176,59 +141,29 @@
 \def\theenumi{\arabic{enumi}}
 \def\labelenumi{(\theenumi)}
 
-% \setCJKmainfont{SourceHanSerifCN}[
-% UprightFont    = *-Regular,
-% BoldFont       = *-Bold,
-% ItalicFont     = *-Regular,
-% BoldItalicFont = *-Bold
-% ]
-% \setCJKfamilyfont{kaishu}{FZXKTJW.ttf}
-% \def\kaishu{\CJKfamily{kaishu}}
+\setCJKmainfont{SourceHanSerifCN}[
+UprightFont    = *-Regular,
+BoldFont       = *-Bold,
+ItalicFont     = *-Regular,
+BoldItalicFont = *-Bold
+]
+\setCJKfamilyfont{kaishu}{FZXKTJW.ttf}
+\def\kaishu{\CJKfamily{kaishu}}
 
-\usepackage[bookmarksopen=true,bookmarksnumbered=true,hidelinks]{hyperref}
+\usepackage[bookmarksopen=true,bookmarksnumbered=true,hidelinks,pdftitle=2020张宇1000题(数一),pdfauthor=张宇]{hyperref}
 
-\title{\href{https://github.com/sikouhjw/zhangyu1000}{张宇考研数学题源探析经典 1000 题\\(习题分册·数学一)}\thanks{Build time：\today，Releases：}}
+\title{张宇考研数学题源探析经典 1000 题\\(习题分册·数学一)\thanks{Build time：\today，Releases：v1.0}}
 \author{张宇}
 \date{2019 年 3 月}
 
 
 \begin{document}
-	% \frontmatter
-	% \maketitle
-	% \input{chapter/chap0.tex}
-	% \tableofcontents
-	% \mainmatter
-	% \input{chapter/chap1.tex}
-	% \input{chapter/chap2.tex}
-	% \input{chapter/chap3.tex}
-	
-	\section{统计量}
-	\begin{titwo}
-		设 $X_{1}$, $X_{2}$, $\cdots$, $X_{n}$ $(n > 1)$ 是来自总体 $N(0,1)$ 的简单随机样本，记 $\overline{X} = \frac{1}{n} \sum_{i=1}^{n} X_{i}$, $Q^{2} = \sum_{i=1}^{n} X_{i}^{2}$，则 \kuo.
-
-		\onech{$\overline{X} \sim N(0,1)$, $Q^{2} \sim \chi^{2}(n)$}%
-		{$\overline{X} \sim N(0,n)$, $Q^{2} \sim \chi^{2}(n-1)$}%
-		{$\overline{X} \sim N\bigl(0,\frac{1}{n}\bigr)$, $Q^{2} \sim \chi^{2}(n)$}%
-		{$\overline{X} \sim N\bigl(0,\frac{1}{n}\bigr)$, $Q^{2} \sim \chi^{2}(n-1)$}
-	\end{titwo}
-
-	\begin{titwo}
-		设 $X_{1}$, $X_{2}$, $\cdots$, $X_{8}$ 是来自总体 $N(2,1)$ 的简单随机样本，则统计量
-		\[
-			Y = \frac{2(X_{1} + X_{2} + X_{3} - 6)}{\sqrt{ 3(X_{4} + X_{5} - 4)^{2} + 2(X_{6} + X_{7} + X_{8} - 6)^{2} }}
-		\]
-		服从 \kuo.
-
-		\fourch{$\chi^{2}(2)$}{$\chi^{2}(3)$}{$t(2)$}{$t(3)$}
-	\end{titwo}
-
-	\begin{titwo}
-		设 $X_{1}$, $X_{2}$, $\cdots$, $X_{n}$ 是来自总体 $X \sim N(0,1)$ 的简单随机样本，则统计量
-		\[
-			Y = \frac{ \sqrt{n - 1}X_{1} }{\sqrt{ \sum_{i=2}^{n} X_{i}^{2} }}
-		\]
-		服从 \kuo.
-
-		\twoch{$Y \sim \chi^{2}(n-1)$}{$Y \sim t(n-1)$}{$Y \sim F(n,1)$}{$Y \sim F(1,n-1)$}
-	\end{titwo}
+	\frontmatter
+	\maketitle
+	\input{chapter/chap0.tex}
+	\tableofcontents
+	\mainmatter
+	\input{chapter/chap1.tex}
+	\input{chapter/chap2.tex}
+	\input{chapter/chap3.tex}
 \end{document}

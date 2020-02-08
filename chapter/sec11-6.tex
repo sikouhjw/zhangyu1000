@@ -1,0 +1,121 @@
+\section{统计量}
+	\begin{titwo}
+		设 $X_{1}$, $X_{2}$, $\cdots$, $X_{n}$ $(n > 1)$ 是来自总体 $N(0,1)$ 的简单随机样本，记 $\overline{X} = \frac{1}{n} \sum_{i=1}^{n} X_{i}$, $Q^{2} = \sum_{i=1}^{n} X_{i}^{2}$，则 \kuo.
+
+		\onech{$\overline{X} \sim N(0,1)$, $Q^{2} \sim \chi^{2}(n)$}%
+		{$\overline{X} \sim N(0,n)$, $Q^{2} \sim \chi^{2}(n-1)$}%
+		{$\overline{X} \sim N\bigl(0,\frac{1}{n}\bigr)$, $Q^{2} \sim \chi^{2}(n)$}%
+		{$\overline{X} \sim N\bigl(0,\frac{1}{n}\bigr)$, $Q^{2} \sim \chi^{2}(n-1)$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $X_{1}$, $X_{2}$, $\cdots$, $X_{8}$ 是来自总体 $N(2,1)$ 的简单随机样本，则统计量
+		\[
+			Y = \frac{2(X_{1} + X_{2} + X_{3} - 6)}{\sqrt{ 3(X_{4} + X_{5} - 4)^{2} + 2(X_{6} + X_{7} + X_{8} - 6)^{2} }}
+		\]
+		服从 \kuo.
+
+		\fourch{$\chi^{2}(2)$}{$\chi^{2}(3)$}{$t(2)$}{$t(3)$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $X_{1}$, $X_{2}$, $\cdots$, $X_{n}$ 是来自总体 $X \sim N(0,1)$ 的简单随机样本，则统计量
+		\[
+			Y = \frac{ \sqrt{n - 1}X_{1} }{\sqrt{ \sum_{i=2}^{n} X_{i}^{2} }}
+		\]
+		服从 \kuo.
+
+		\twoch{$Y \sim \chi^{2}(n-1)$}{$Y \sim t(n-1)$}{$Y \sim F(n,1)$}{$Y \sim F(1,n-1)$}
+	\end{titwo}
+
+	\begin{titwo}
+		设随机变量 $X \sim F(n,n)$，记 $p_{1} = P\{X \geq 1\}$, $p_{2} = P\{X \leq 1\}$，则 \kuo.
+
+		\twoch{$p_{1} < p_{2}$}{$p_{1} > p_{2}$}{$p_{1} = p_{2}$}{$p_{1}$, $p_{2}$ 大小无法比较}
+	\end{titwo}
+
+	\begin{titwo}
+		设总体 $X \sim N \bigl( a,\sigma^{2} \bigr)$, $Y \sim N\bigl( b,\sigma^{2} \bigr)$，且相互独立. 分别从 $X$ 和 $Y$ 中各抽取容量为 $9$ 和 $10$ 的简单随机样本，记它们的方差为 $S_{X}^{2}$ 和 $S_{Y}^{2}$，并记 $S_{12}^{2} = \frac{1}{2} \* \bigl( S_{X}^{2} + S_{Y}^{2} \bigr)$ 和 $S_{XY}^{2} = \frac{1}{18} \bigl( 8 S_{X}^{2} + 10 S_{Y}^{2} \bigr)$，则这四个统计量 $S_{X}^{2}$, $S_{Y}^{2}$, $S_{12}^{2}$, $S_{XY}^{2}$ 中，方差最小者是 \kuo.
+
+		\fourch{$S_{X}^{2}$}{$S_{Y}^{2}$}{$S_{12}^{2}$}{$S_{XY}^{2}$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $X_{1}$, $X_{2}$, $\cdots$, $X_{n}$ 是取自总体 $N\bigl( \mu,\sigma^{2} \bigr)$ 的样本，$\overline{X}$ 是样本均值，记
+		\begin{gather*}
+			S_{1}^{2} = \frac{1}{n-1} \sum_{i=1}^{n} \bigl( X_{i} - \overline{X} \bigr)^{2}, S_{2}^{2} = \frac{1}{n} \sum_{i=1}^{n} \bigl( X_{i} - \overline{X} \bigr)^{2}, \\
+			S_{3}^{2} = \frac{1}{n-1} \sum_{i=1}^{n} (X_{i} - \mu)^{2}, S_{4}^{2} = \frac{1}{n} \sum_{i=1}^{n} (X_{i} - \mu)^{2},
+		\end{gather*}
+		则服从自由度为 $n-1$ 的 $t$ 分布的随机变量是 \kuo.
+
+		\fourch{$\frac{\overline{X} - \mu}{S_{1}/\sqrt{n-1}}$}{$\frac{\overline{X} - \mu}{S_{2}/\sqrt{n-1}}$}{$\frac{\overline{X} - \mu}{S_{3}/\sqrt{n}}$}{$\frac{\overline{X} - \mu}{S_{4}/\sqrt{n}}$}
+	\end{titwo}
+
+	\begin{titwo}
+		设总体 $X$ 服从正态分布 $N\bigl( \mu,\sigma^{2} \bigr)$, $X_{1}$, $X_{2}$, $\cdots$, $X_{n}$ 是取自总体的简单随机样本，样本均值为 $\overline{X}$，样本方差为 $S^{2}$，则服从 $\chi^{2}(n)$ 的随机变量为 \kuo.
+
+		\twoch{$\frac{\overline{X}^{2}}{\sigma^{2}} + \frac{(n-1)S^{2}}{\sigma^{2}}$}{$\frac{n\overline{X}^{2}}{\sigma^{2}} + \frac{(n-1)S^{2}}{\sigma^{2}}$}{$\frac{(\overline{X} - \mu)^{2}}{\sigma^{2}} + \frac{(n-1)S^{2}}{\sigma^{2}}$}{$\frac{n(\overline{X} - \mu)^{2}}{\sigma^{2}} + \frac{(n-1)S^{2}}{\sigma^{2}}$}
+	\end{titwo}
+
+	\begin{titwo}
+		设总体 $X$ 与 $Y$ 都服从正态分布 $N\bigl(0,\sigma^{2}\bigr)$，已知 $X_{1}$, $X_{2}$, $\cdots$, $X_{m}$ 与 $Y_{1}$, $Y_{2}$, $\cdots$, $Y_{n}$ 是分别来自总体 $X$ 与 $Y$ 的两个相互独立的简单随机样本，统计量 $Y = \frac{ 2(X_{1} + X_{2} + \cdots + X_{m}) }{ \sqrt{Y_{1}^{2} + Y_{2}^{2} + \cdots + Y_{n}^{2}} }$ 服从 $t(n)$ 分布，则 $\frac{m}{n} = $ \kuo.
+
+		\fourch{$1$}{$\frac{1}{2}$}{$\frac{1}{3}$}{$\frac{1}{4}$}
+	\end{titwo}
+
+	\begin{titwo}
+		设总体 $X$ 服从正态分布 $N\bigl( \mu,\sigma^{2} \bigr)$, $X_{1}$, $X_{2}$, $\cdots$, $X_{n}$ $(n > 1)$ 是取自总体的简单随机样本，样本均值为 $\overline{X}$，如果 $P \{ |X - \mu| < a \} = P \bigl\{ \bigl| \overline{X} - \mu \bigr| < b \bigr\}$，则比值 $\frac{a}{b}$ \kuo.
+
+		\onech{与 $\sigma$ 及 $n$ 都有关}{与 $\sigma$ 及 $n$ 都无关}{与 $\sigma$ 无关，与 $n$ 有关}{与 $\sigma$ 有关，与 $n$ 无关}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $X_{1}$, $X_{2}$, $\cdots$, $X_{8}$ 和 $Y_{1}$, $Y_{2}$, $\cdots$, $Y_{10}$ 分别是来自正态总体 $N(-1,4)$ 和 $N(2,5)$ 的简单随机样本，且相互独立，$S_{1}^{2}$, $S_{2}^{2}$ 分别为这两个样本的方差，则服从 $F(7,9)$ 分布的统计量是 \kuo.
+
+		\fourch{$\frac{2 S_{1}^{2}}{5 S_{2}^{2}}$}{$\frac{4 S_{2}^{2}}{5 S_{1}^{2}}$}{$\frac{5 S_{1}^{2}}{2 S_{2}^{2}}$}{$\frac{5 S_{1}^{2}}{4 S_{2}^{2}}$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $X_{1}$, $X_{2}$, $\cdots$, $X_{n}$ 独立同分布 $N\bigl( \mu,\sigma^{2} \bigr)$，令 $\overline{X} = \frac{1}{n} \sum_{i=1}^{n} X_{i}$, $V_{i} = X_{i} - \overline{X}$, $i = 1$, $2$, $\cdots$, $n$，则
+		\[
+			Z_{k} = \frac{(k+1)V_{k} + V_{k+1} + \cdots + V_{n-1}}{\sigma\sqrt{k(k+1)}}
+		\]
+		$(k = 1,2,\cdots,n-1)$ 服从的分布为 \kuo.
+
+		\fourch{$t(n-1)$}{$N(0,1)$}{$\chi^{2}(1)$}{$F(1,1)$}
+	\end{titwo}
+
+	\begin{titwo}
+		设总体 $X \sim P(\lambda)$, $X_{1}$, $X_{2}$, $\cdots$, $X_{n}$ 是来自总体 $X$ 的简单随机样本，它的均值和方差分别为 $\overline{X}$ 和 $S^{2}$，则 $E\Bigl( \overline{X}^{2} \Bigr)$ 和 $E\bigl( S^{2} \bigr)$ 分别为 \htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $X_{1}$, $X_{2}$, $X_{3}$, $X_{4}$ 是来自正态总体 $X \sim N \bigl( \mu,\sigma^{2} \bigr)$ 的简单随机样本，则统计量
+		\[
+			Y = \frac{X_{3} - X_{4}}{\sqrt{ (X_{1} - \mu)^{2} + (X_{2} - \mu)^{2} }}
+		\]
+		服从的分布是 \htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设总体 $X \sim N(a,2)$, $Y \sim N(b,2)$，且独立，由分别来自总体 $X$ 和 $Y$ 的容量分别为 $m$ 和 $n$ 的简单随机样本得样本方差 $S_{X}^{2}$ 和 $S_{Y}^{2}$，则统计量 $T = \frac{1}{2} \bigl[ (m-1) \* S_{X}^{2} + (n-1) \* S_{Y}^{2} \bigr]$ 服从的分布是 \htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $X_{1}$, $X_{2}$, $\cdots$, $X_{n}$ 为来自总体 $X$ 的一个简单随机样本，$EX = \mu$, $DX = \sigma^{2} < +\infty$，求 $E\overline{X}$, $D\overline{X}$ 和 $E \bigl( S^{2} \bigr)$.
+	\end{titwo}
+
+	\begin{titwo}
+		从装有 $1$ 个白球和 $2$ 个黑球的罐子里有放回地取球，记
+		\[
+			X = \begin{cases}
+				0, & \text{取到白球}, \\
+				1, & \text{取到黑球},
+			\end{cases}
+		\]
+		这样连续取 $5$ 次得样本 $X_{1}$, $X_{2}$, $X_{3}$, $X_{4}$, $X_{5}$. 记 $Y = X_{1} + X_{2} + \cdots + X_{5}$，求：
+		\begin{enumerate}
+			\item $Y$ 的分布律，$EY$, $E\bigl( Y^{2} \bigr)$;
+			\item $E\overline{X}$, $E\bigl( S^{2} \bigr)$ (其中 $\overline{X}$, $S^{2}$ 分别为样本 $X_{1}$, $X_{2}$, $\cdots$, $X_{5}$ 的均值与方差).
+		\end{enumerate}
+	\end{titwo}

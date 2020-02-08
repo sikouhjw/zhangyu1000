@@ -1,0 +1,182 @@
+\section{点估计}
+	\begin{titwo}
+		设 $x_{1}$, $x_{2}$, $\cdots$, $x_{n}$ 是来自总体 $X \sim N\bigl( \mu,\sigma^{2} \bigr)$ ($\mu$, $\sigma^{2}$ 都未知) 的简单随机样本的观察值，则 $\sigma^{2}$ 的最大似然估计值为 \kuo.
+
+		\twoch{$\frac{1}{n} \sum_{i=1}^{n} (x_{i} - \mu)^{2}$}{$\frac{1}{n} \sum_{i=1}^{n} \bigl(x_{i} - \overline{x}\bigr)^{2}$}{$\frac{1}{n-1} \sum_{i=1}^{n} (x_{i} - \mu)^{2}$}{$\frac{1}{n-1} \sum_{i=1}^{n} \bigl(x_{i} - \overline{x}\bigr)^{2}$}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $X \sim P(\lambda)$，其中 $\lambda > 0$ 是未知参数，$x_{1}$, $x_{2}$, $\cdots$, $x_{n}$ 是总体 $X$ 的一组样本值，则 $P\{X = 0\}$ 的最大似然估计值为 \kuo.
+
+		\twoch{$\ee^{-\frac{1}{\overline{x}}}$}{$\frac{1}{n} \sum_{i=1}^{n} \ln x_{i}$}{$\frac{1}{\ln \overline{x}}$}{$\ee^{-\overline{x}}$}
+	\end{titwo}
+
+	\begin{titwo}
+		设总体 $X \sim P(\lambda)$ ($\lambda$ 为未知参数)，$X_{1}$, $X_{2}$, $\cdots$, $X_{n}$ 是来自总体 $X$ 的简单随机样本，其均值与方差分别为 $\overline{X}$ 与 $S^{2}$，则为使 $\hat \lambda = a \* \overline{X} + (2-3a) \* S^{2}$ 是 $\lambda$ 的无偏估计量，常数 $a$ 应为 \kuo.
+
+		\fourch{$-1$}{$0$}{$\frac{1}{2}$}{$1$}
+	\end{titwo}
+
+	\begin{titwo}
+		设总体 $X$ 的概率密度为
+		\[
+			f(x) = \begin{cases}
+				(\theta + 1) x^{\theta}, & 0 < x < 1, \\
+				0, & \text{其他},
+			\end{cases}
+		\]
+		其中 $\theta > -1$ 为参数. $x_{1}$, $x_{2}$, $\cdots$, $x_{n}$ 是来自总体 $X$ 的样本观测值，则未知参数 $\theta$ 的最大似然估计值为 \htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设总体 $X$ 的概率密度为
+		\[
+		f(x;\theta) = \begin{cases}
+			\sqrt{\theta} x^{ \sqrt{\theta} - 1 }, & 0 < x < 1, \\
+			0, & \text{其他},
+		\end{cases}
+		\]
+		其中 $\theta > 0$ 为未知参数，又设 $x_{1}$, $x_{2}$, $\cdots$, $x_{n}$ 是 $X$ 的一组样本值，则参数 $\theta$ 的最大似然估计值为 \htwo.
+	\end{titwo}
+
+	\begin{titwo}
+		设总体 $X$ 的概率密度为
+		\[
+			f(x;\theta) = \begin{cases}
+				\frac{6x}{\theta^{3}} (\theta - x), & 0 < x < \theta, \\
+				0, & \text{其他},
+			\end{cases}
+		\]
+		又设 $X_{1}$, $X_{2}$, $\cdots$, $X_{n}$ 是来自 $X$ 的一个简单随机样本，求未知参数 $\theta$ 的矩估计量 $\hat \theta$，并求 $E \hat \theta$ 和 $D \hat \theta$.
+	\end{titwo}
+
+	\begin{titwo}
+		设总体 $X$ 的概率密度为
+		\[
+			f(x;\alpha) = \begin{cases}
+				(\alpha + 1) x^{\alpha}, & 0 < x < 1, \\
+				0, & \text{其他},
+			\end{cases}
+		\]
+		试用样本 $X_{1}$, $X_{2}$, $\cdots$, $X_{n}$ 求参数 $\alpha$ 的矩估计和最大似然估计.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $X_{1}$, $X_{2}$, $\cdots$, $X_{n}$ 是来自对数级数分布
+		\[
+			P\{X = k\} = - \frac{1}{\ln(1 - p)} \frac{p^{k}}{k} (0 < p < 1, k = 1,2,\cdots)
+		\]
+		的一个样本，求 $p$ 的矩估计.
+	\end{titwo}
+
+	\begin{titwo}
+		设总体 $X$ 服从参数为 $N$ 和 $p$ 的二项分布，$X_{1}$, $X_{2}$, $\cdots$, $X_{n}$ 为取自 $X$ 的简单随机样本，试求参数 $N$ 和 $p$ 的矩估计.
+	\end{titwo}
+
+	\begin{titwo}
+		设总体 $X$ 的分布列为截尾几何分布
+		\begin{gather*}
+			P\{X = k\} = \theta^{k-1} (1 - \theta), k = 1,2,\cdots,r, \\
+			P\{X = r + 1\} = \theta^{r},
+		\end{gather*}
+		从中抽得样本 $X_{1}$, $X_{2}$, $\cdots$, $X_{n}$，其中有 $m$ 个取值为 $r+1$，求 $\theta$ 的最大似然估计.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $X_{1}$, $X_{2}$, $\cdots$, $X_{n}$ 是取自均匀分布 $(0,\theta)$ 上的一个样本，试证：$T_{n} = \max\{ X_{1}$, $X_{2}$, $\cdots$, $X_{n} \}$ 是 $\theta$ 的相合估计量.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $X_{1}$, $X_{2}$, $\cdots$, $X_{n}$ 为来自总体 $X$ 的简单随机样本，且 $X$ 的概率密度为
+		\[
+			f(x) = \begin{cases}
+				\frac{4x^{2}}{\alpha^{3} \sqrt{\uppi}} \ee^{ - (\frac{x}{\alpha})^{2} }, & x > 0, \alpha > 0, \\
+				0, & \text{其他}.
+			\end{cases}
+		\]
+		\begin{enumerate}
+			\item 求未知参数 $\alpha$ 的矩估计和最大似然估计;
+			\item 验证所求得的矩估计是否为 $\alpha$ 的无偏估计.
+		\end{enumerate}
+	\end{titwo}
+
+	\begin{titwo}
+		设从均值为 $\mu$，方差为 $\sigma^{2} > 0$ 的总体中分别抽取容量为 $n_{1}$, $n_{2}$ 的两个独立样本，样本均值分别为 $\overline{X}$, $\overline{Y}$. 证明：对于任何满足条件 $a + b = 1$ 的常数 $a$, $b$, $T = a \* \overline{X} + b \* \overline{Y}$ 是 $\mu$ 的无偏估计量，并确定常数 $a$, $b$ 的值，使得方差 $DT$ 达到最小.
+	\end{titwo}
+
+	\begin{titwo}
+		设总体 $X \sim N \bigl( \mu_{1},\sigma^{2} \bigr)$, $Y \sim N\bigl( \mu_{2},\sigma^{2} \bigr)$. 从总体 $X$, $Y$ 中独立地抽取两个容量为 $m$, $n$ 的样本 $X_{1}$, $X_{2}$, $\cdots$, $X_{m}$ 和 $Y_{1}$, $Y_{2}$, $\cdots$, $Y_{n}$. 记样本均值分别为 $\overline{X}$, $\overline{Y}$. 若 $Z = C \Bigl[ \bigl( \overline{X} - \mu_{1} \bigr)^{2} + \bigl( \overline{Y} - \mu_{2} \bigr)^{2} \Bigr]$ 是 $\sigma^{2}$ 的无偏估计. 求：
+		\begin{enumerate}
+			\item $C$;
+			\item $Z$ 的方差 $DZ$.
+		\end{enumerate}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $X_{1}$, $X_{2}$, $\cdots$, $X_{n}$ 为来自总体 $X$ 的简单随机样本，且 $X$ 的概率分布为
+		\[
+			X \sim \begin{psmallmatrix}
+				1 & 2 & 3 \\
+				\theta^{2} & 2 \theta (1 - \theta) & (1 - \theta)^{2}
+			\end{psmallmatrix},
+		\]
+		其中 $0 < \theta < 1$. 分别以 $v_{1}$, $v_{2}$ 表示 $X_{1}$, $X_{2}$, $\cdots$, $X_{n}$ 中 $1$, $2$ 出现的次数，试求：
+		\begin{enumerate}
+			\item 未知参数 $\theta$ 的最大似然估计量;
+			\item 未知参数 $\theta$ 的矩估计量;
+			\item 当样本值为 $1$, $1$, $2$, $1$, $3$, $2$ 时的最大似然估计值和矩估计值.
+		\end{enumerate}
+	\end{titwo}
+
+	\begin{titwo}
+		假设一批产品的不合格品数与合格品数之比为 $R$ (未知常数). 现在按还原抽样方式随意抽取的 $n$ 件中发现 $k$ 件不合格品. 试求 $R$ 的最大似然估计值.
+	\end{titwo}
+
+	\begin{titwo}
+		设袋中有编号为 $1 \sim N$ 的 $N$ 张卡片，其中 $N$ 未知，现从中有放回地任取 $n$ 张，所得号码为 $x_{1}$, $x_{2}$, $\cdots$, $x_{n}$.
+		\begin{enumerate}
+			\item 求 $N$ 的矩估计量 $\hat N_{1}$，并计算概率 $P\bigl\{ \hat N_{1} = 1 \bigr\}$;
+			\item 求 $N$ 的最大似然估计量 $\hat N_{2}$，并求 $\hat N_{2}$ 的分布律.
+		\end{enumerate}
+	\end{titwo}
+
+	\begin{titwo}
+		设 $X_{1}$, $X_{2}$, $\cdots$, $X_{n}$ 是来自总体 $X$ 的简单随机样本，$X$ 的概率密度为
+		\[
+			f(x;\theta) = \begin{cases}
+				\frac{x}{\theta^{2}} \ee^{ - \frac{x^{2}}{2 \theta^{2}} }, & x > 0, \\
+				0, & x \leq 0,
+			\end{cases}
+		\]
+		其中 $\theta > 0$，试求 $\theta$ 的最大似然估计.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $X_{1}$, $X_{2}$, $\cdots$, $X_{n}$ 是来自总体 $X$ 的一个简单随机样本，$\hat \theta_{n}(X_{1},X_{2},\cdots,X_{n})$ 是 $\theta$ 的一个估计量，若 $E\hat \theta_{n} = \theta + k_{n}$, $D\hat \theta_{n} = \sigma_{n}^{2}$，且 $\lim_{n \to \infty} k_{n} = \lim_{n \to \infty} \sigma_{n}^{2} = 0$. 试证：$\hat \theta_{n}$ 是 $\theta$ 的相合(一致)估计量.
+	\end{titwo}
+
+	\begin{titwo}
+		设总体 $X \sim N\bigl( \mu,\sigma^{2} \bigr)$, $X_{1}$, $X_{2}$, $X_{3}$ 是来自 $X$ 的简单随机样本，试证估计量
+		\begin{align*}
+			\hat \mu_{1} &= \frac{1}{5} X_{1} + \frac{3}{10} X_{2} + \frac{1}{2} X_{3}, \\
+			\hat \mu_{2} &= \frac{1}{3} X_{1} + \frac{1}{4} X_{2} + \frac{5}{12} X_{3}, \\
+			\hat \mu_{3} &= \frac{1}{3} X_{1} + \frac{1}{6} X_{2} + \frac{1}{2} X_{3}
+		\end{align*}
+		都是 $\mu$ 的无偏估计，并指出它们中哪一个最有效.
+	\end{titwo}
+
+	\begin{titwo}
+		设 $X_{1}$, $X_{2}$, $\cdots$, $X_{n}$ 为来自总体 $X$ 的一个简单随机样本，设 $EX = \mu$, $DX = \sigma^{2}$，试确定常数 $C$，使 $\overline{X}^{2} - CS^{2}$ 为 $\mu^{2}$ 的无偏估计.
+	\end{titwo}
+
+	\begin{titwo}
+		设总体 $X$ 服从 $U(0,\theta)$, $X_{1}$, $X_{2}$, $\cdots$, $X_{n}$ 为来自总体的简单随机样本. 证明：$\hat \theta = 2 \overline{X}$ 为 $\theta$ 的一致估计.
+	\end{titwo}
+
+	\begin{titwo}
+		设总体 $X \sim N \bigl( \mu,\sigma^{2} \bigr)$, $X_{1}$, $X_{2}$, $\cdots$, $X_{2n}$ $(n \geq 2)$ 是 $X$ 的简单随机样本，且 $\overline{X} = \frac{1}{2n} \* \sum_{i=1}^{2n} X_{i}$ 及统计量 $Y = \sum_{i=1}^{n} \bigl( X_{i} + X_{n+i} - 2 \overline{X} \bigr)^{2}$.
+		\begin{enumerate}
+			\item 求统计量 $Y$ 是否为 $\sigma^{2}$ 的无偏估计;
+			\item 当 $\mu = 0$ 时，试求 $D \Bigl( \overline{X}^{2} \Bigr)$.
+		\end{enumerate}
+	\end{titwo}
