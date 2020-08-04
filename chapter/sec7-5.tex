@@ -14,7 +14,8 @@
 	\begin{ti}
 		设 $f(x,y,z)$ 为连续函数，$S$ 为曲面 $z = \frac{1}{2} \bigl( x^{2} + y^{2} \bigr)$ 介于 $z = 2$ 与 $z = 8$ 之间的上侧部分，求
 		\begin{align*}
-			\iint_{S} \bigl[ y f(x,y,z) + x \bigr] \dd{y} \dd{z} &+ \bigl[ x f(x,y,z) + y \bigr] \dd{z} \dd{x}\\
+			&\iint_{S} \bigl[ y f(x,y,z) + x \bigr] \dd{y} \dd{z}\\
+			&+ \bigl[ x f(x,y,z) + y \bigr] \dd{z} \dd{x}\\
 			&+ \bigl[ 2xy f(x,y,z) + z \bigr] \dd{x} \dd{y}.
 		\end{align*}
 	\end{ti}
@@ -54,7 +55,9 @@
 			\item 计算 $\div \bm F |_{(1,1,1)}$ 的值;
 			\item 设空间区域 $\varOmega$ 由锥面 $y^{2} + z^{2} = x^{2}$ 与球面 $x^{2} + y^{2} + z^{2} = a^{2}, x^{2} + y^{2} + z^{2} = 4 a^{2}$ 所围成 $(x > 0)$，其中 $a$ 为正常数，记 $\varOmega$ 表面的外侧为 $\varSigma$，计算积分
 			\begin{align*}
-				I =& \oiint_{\varSigma} x^{2} y z^{2} \dd{y} \dd{z} + \Biggl( \frac{1}{z} \arctan \frac{y}{z} - x y^{2} z^{2} \Biggr) \dd{z} \dd{x}\\
+				I
+				&= \oiint_{\varSigma} x^{2} y z^{2} \dd{y} \dd{z}\\
+				&+ \Biggl( \frac{1}{z} \arctan \frac{y}{z} - x y^{2} z^{2} \Biggr) \dd{z} \dd{x}\\
 				&+ \Biggl[ \frac{1}{y} \arctan \frac{y}{z} + z(1 + xyz) \Biggr] \dd{x} \dd{y}.
 			\end{align*}
 		\end{enumerate}

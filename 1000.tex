@@ -1,6 +1,7 @@
-\documentclass[openany,twocolumn]{ctexbook}
-\usepackage{amsmath,amssymb,mathtools,upgreek}
-\usepackage{fourier,esint,bm}
+\documentclass[openany,twocolumn,fontset=none]{ctexbook}
+\usepackage{xeCJKfntef}
+\usepackage{amsmath,mathtools,unicode-math}
+\setmathfont[partial=upright,StylisticSet=8]{XITS Math}
 \makeatletter
 \def\vdots@i#1#2#3{\vbox{
   #1\baselineskip#2\p@ \lineskiplimit\z@
@@ -47,7 +48,6 @@
 	 }}
   }
 }
-\CenterWallPaper{1}{figure/wallpaper.pdf}
 
 \usepackage{tabularx,diagbox}
 
@@ -59,7 +59,7 @@
 \fancyhead[LO]{\bfseries \rightmark}
 \fancyhead[RE]{\bfseries \leftmark}
 \fancyhead[C]{\bfseries 仅供学习使用，严禁商业使用}
-\fancyfoot[C]{\zihao{-5} {\kaishu 不论一个人的数学水平有多高，只要对数学拥有一颗真诚的心，他就在自己的心灵上得到了升华。}---{\itshape SCIbird}}
+\fancyfoot[C]{\zihao{-5} {\kaishu 不论一个人的数学水平有多高，只要对数学拥有一颗真诚的心，他就在自己的心灵上得到了升华。}——{\itshape SCIbird}}
 \fancyhead[LE,RO]{\bfseries --\thepage/\pageref{LastPage}--}
 \makeatother
 
@@ -112,10 +112,63 @@
 \def\htwo{\CJKunderline*[hidden = true]{瞻彼阕者虚室生白}}
 \def\kuo{ \mbox{(\hspace{1pc})}}
 
-\newcommand{\fourch}[4]{\noindent\begin{tabular}{*{4}{@{}p{1.97cm}}}(\texttt{A})~#1 & (\texttt{B})~#2 & (\texttt{C})~#3 & (\texttt{D})~#4\end{tabular}}
-\newcommand{\twoch}[4]{\noindent\begin{tabular}{*{2}{@{}p{3.94cm}}}(\texttt{A})~#1 & (\texttt{B})~#2\end{tabular}\\\begin{tabular}{*{2}{@{}p{3.94cm}}}(\texttt{C})~#3 & (\texttt{D})~#4\end{tabular}}
-\newcommand{\onech}[4]{\noindent(\texttt{A})~#1 \\ (\texttt{B})~#2 \\ (\texttt{C})~#3 \\ (\texttt{D})~#4}
+\usepackage{calc,ifthen}
 
+\newlength{\choicelengtha}
+\newlength{\choicelengthb}
+\newlength{\choicelengthc}
+\newlength{\choicelengthd}
+\newlength{\choicelengthe}
+\newlength{\maxlength}
+
+\makeatletter
+\newcommand{\fourch}[4]{
+  \par
+  \settowidth{\choicelengtha}{A．#1}
+  \settowidth{\choicelengthb}{B．#2}
+  \settowidth{\choicelengthc}{C．#3}
+  \settowidth{\choicelengthd}{D．#4}
+  \ifthenelse{\lengthtest{\choicelengtha>\choicelengthb}}{\setlength{\maxlength}{\choicelengtha}}{\setlength{\maxlength}{\choicelengthb}}
+  \ifthenelse{\lengthtest{\choicelengthc>\maxlength}}{\setlength{\maxlength}{\choicelengthc}}{}
+  \ifthenelse{\lengthtest{\choicelengthd>\maxlength}}{\setlength{\maxlength}{\choicelengthd}}{}
+  \ifthenelse{\lengthtest{\maxlength>0.48\linewidth}}
+  {%
+    \noindent%
+    \begin{tabular}{@{}p{\linewidth}@{}}
+      \setlength\tabcolsep{0pt}
+      \@hangfrom{\textsf A．}#1 \\
+      \@hangfrom{\textsf B．}#2 \\
+      \@hangfrom{\textsf C．}#3 \\
+      \@hangfrom{\textsf D．}#4 \\
+    \end{tabular}
+  }%
+  {%
+    \ifthenelse{\lengthtest{\maxlength>0.22\linewidth}}
+    {%
+      \noindent%
+      \begin{tabular}{@{}p{0.48\linewidth}@{\hspace*{0.04\linewidth}}p{0.48\linewidth}@{}}
+        \setlength\tabcolsep{0pt}
+        \@hangfrom{\textsf A．}#1 & \@hangfrom{\textsf B．}#2 \\
+        \@hangfrom{\textsf C．}#3 & \@hangfrom{\textsf D．}#4 \\
+      \end{tabular}
+    }%
+    {%
+      \noindent%
+      \begin{tabular}{@{}*{3}{p{0.22\linewidth}@{\hspace*{0.04\linewidth}}}p{0.22\linewidth}@{}}
+        \setlength\tabcolsep{0pt}
+        \@hangfrom{\textsf A．}#1  & \@hangfrom{\textsf B．}#2 & \@hangfrom{\textsf C．}#3 & \@hangfrom{\textsf D．}#4 \\
+      \end{tabular}
+    }%
+  }%
+  \unskip\unskip
+}
+\makeatother
+\let\twoch=\fourch
+\let\onech=\fourch
+
+\let\bm=\symbfit
+\let\mathrm=\symup
+\let\mathbb=\symbb
 \def\leq{\leqslant}
 \def\geq{\geqslant}
 \def\ee{\mathrm{e}}
@@ -123,8 +176,10 @@
 \def\TT{\mathrm{T}}
 \def\AA{\mathrm{A}}
 \def\astt{*}
-\edef\lim{\lim\limits}
-\edef\sum{\sum\limits}
+\let\mylim=\lim
+\def\lim{\mylim\limits}
+\let\mysum=\sum
+\def\sum{\mysum\limits}
 \let\div\relax
 \DeclareMathOperator{\div}{div}
 \let\grad\relax
@@ -141,18 +196,30 @@
 \def\theenumi{\arabic{enumi}}
 \def\labelenumi{(\theenumi)}
 
-\setCJKmainfont{SourceHanSerifCN}[
-UprightFont    = *-Regular,
-BoldFont       = *-Bold,
-ItalicFont     = *-Regular,
-BoldItalicFont = *-Bold
-]
-\setCJKfamilyfont{kaishu}{FZXKTJW.ttf}
-\def\kaishu{\CJKfamily{kaishu}}
+\setmainfont{XITS}
+\defaultCJKfontfeatures{Mapping=fullwidth-stop}
+\IfFontExistsTF{Source Han Serif SC}{
+  \setCJKmainfont{Source Han Serif SC}[
+    UprightFont     = *-Regular,
+    BoldFont        = *-Bold,
+    ItalicFont      = 方正新楷体简体,
+    BoldItalicFont  = *-Bold
+  ]
+  \setCJKsansfont{Source Han Sans SC}[
+    UprightFont     = *-Regular,
+    BoldFont        = *-Bold,
+    BoldItalicFont  = *-Bold
+  ]
+	\setCJKmonofont{仿宋}
+	\newCJKfontfamily[kaishu]\kaishu{方正新楷体简体}
+}{
+  \ctexset{fontset=fandol}
+}
 
-\usepackage[bookmarksopen=true,bookmarksnumbered=true,hidelinks,pdftitle=2020张宇1000题(数一),pdfauthor=张宇]{hyperref}
 
-\title{张宇考研数学题源探析经典 1000 题\\(习题分册·数学一)\thanks{Build time：\today，Releases：v1.0}}
+\usepackage[bookmarksopen=true,bookmarksnumbered=true,hidelinks,pdftitle=2020张宇1000题（数一）,pdfauthor=张宇]{hyperref}
+
+\title{《考研数学题源探析经典 1000 题》（习题分册·数学一）\\\LaTeX{}重排版\thanks{Build time：\today，Releases：v1.1}}
 \author{张宇}
 \date{2019 年 3 月}
 
