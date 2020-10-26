@@ -1,4 +1,6 @@
-\documentclass[openany,twocolumn,fontset=none]{ctexbook}
+\documentclass[openany,twocolumn,fontset=zy]{ctexbook}
+\setmainfont{XITS}
+\usepackage{sourcesanspro,sourcecodepro}
 \usepackage{xeCJKfntef}
 \usepackage{amsmath,mathtools,unicode-math}
 \setmathfont[partial=upright,StylisticSet=8]{XITS Math}
@@ -25,6 +27,8 @@
 
 \usepackage[a4paper,top=2.5cm,bottom=2.5cm,inner=1.5cm,outer=3cm]{geometry}
 \usepackage[toc]{multitoc}
+\setlength{\lineskip}{2.5pt}
+\setlength{\lineskiplimit}{2.5pt}
 
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric,calc}
@@ -136,10 +140,10 @@
     \noindent%
     \begin{tabular}{@{}p{\linewidth}@{}}
       \setlength\tabcolsep{0pt}
-      \@hangfrom{\textsf A．}#1 \\
-      \@hangfrom{\textsf B．}#2 \\
-      \@hangfrom{\textsf C．}#3 \\
-      \@hangfrom{\textsf D．}#4 \\
+      \@hangfrom{\texttt A．}#1 \\
+      \@hangfrom{\texttt B．}#2 \\
+      \@hangfrom{\texttt C．}#3 \\
+      \@hangfrom{\texttt D．}#4 \\
     \end{tabular}
   }%
   {%
@@ -148,15 +152,15 @@
       \noindent%
       \begin{tabular}{@{}p{0.48\linewidth}@{\hspace*{0.04\linewidth}}p{0.48\linewidth}@{}}
         \setlength\tabcolsep{0pt}
-        \@hangfrom{\textsf A．}#1 & \@hangfrom{\textsf B．}#2 \\
-        \@hangfrom{\textsf C．}#3 & \@hangfrom{\textsf D．}#4 \\
+        \@hangfrom{\texttt A．}#1 & \@hangfrom{\texttt B．}#2 \\
+        \@hangfrom{\texttt C．}#3 & \@hangfrom{\texttt D．}#4 \\
       \end{tabular}
     }%
     {%
       \noindent%
       \begin{tabular}{@{}*{3}{p{0.22\linewidth}@{\hspace*{0.04\linewidth}}}p{0.22\linewidth}@{}}
         \setlength\tabcolsep{0pt}
-        \@hangfrom{\textsf A．}#1  & \@hangfrom{\textsf B．}#2 & \@hangfrom{\textsf C．}#3 & \@hangfrom{\textsf D．}#4 \\
+        \@hangfrom{\texttt A．}#1  & \@hangfrom{\texttt B．}#2 & \@hangfrom{\texttt C．}#3 & \@hangfrom{\texttt D．}#4 \\
       \end{tabular}
     }%
   }%
@@ -169,19 +173,21 @@
 \let\bm=\symbfit
 \let\mathrm=\symup
 \let\mathbb=\symbb
-\def\leq{\leqslant}
-\def\geq{\geqslant}
 \def\ee{\mathrm{e}}
 \def\CC{\mathrm{C}}
 \def\TT{\mathrm{T}}
 \def\AA{\mathrm{A}}
 \def\astt{*}
-\let\mylim=\lim
-\def\lim{\mylim\limits}
-\let\mysum=\sum
-\def\sum{\mysum\limits}
-\let\div\relax
-\DeclareMathOperator{\div}{div}
+\AtBeginDocument{
+  \let\div\relax
+	\DeclareMathOperator{\div}{div}
+	\def\leq{\leqslant}
+  \def\geq{\geqslant}
+  \let\mylim=\lim
+  \def\lim{\mylim\limits}
+  \let\mysum=\sum
+  \def\sum{\mysum\limits}
+}
 \let\grad\relax
 \DeclareMathOperator{\grad}{grad}
 \DeclareMathOperator{\rot}{rot}
@@ -196,30 +202,9 @@
 \def\theenumi{\arabic{enumi}}
 \def\labelenumi{(\theenumi)}
 
-\setmainfont{XITS}
-\defaultCJKfontfeatures{Mapping=fullwidth-stop}
-\IfFontExistsTF{Source Han Serif SC}{
-  \setCJKmainfont{Source Han Serif SC}[
-    UprightFont     = *-Regular,
-    BoldFont        = *-Bold,
-    ItalicFont      = 方正新楷体简体,
-    BoldItalicFont  = *-Bold
-  ]
-  \setCJKsansfont{Source Han Sans SC}[
-    UprightFont     = *-Regular,
-    BoldFont        = *-Bold,
-    BoldItalicFont  = *-Bold
-  ]
-	\setCJKmonofont{仿宋}
-	\newCJKfontfamily[kaishu]\kaishu{方正新楷体简体}
-}{
-  \ctexset{fontset=fandol}
-}
-
-
 \usepackage[bookmarksopen=true,bookmarksnumbered=true,hidelinks,pdftitle=2020张宇1000题（数一）,pdfauthor=张宇]{hyperref}
 
-\title{《考研数学题源探析经典 1000 题》（习题分册·数学一）\\\LaTeX{}重排版\thanks{Build time：\today，Releases：v1.1}}
+\title{《考研数学题源探析经典 1000 题》（习题分册·数学一）\\\LaTeX{}重排版\thanks{Final build time：\today，Releases：v1.2}}
 \author{张宇}
 \date{2019 年 3 月}
 
